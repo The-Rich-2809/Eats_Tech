@@ -1,0 +1,89 @@
+﻿@{
+    Layout = "_LayoutSimple";
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a la Taquería</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Leckerli One', cursive;
+        }
+
+        .bg {
+            position: relative;
+            background-image: url('../Images/fondo-taqueria.jpg'); /* Reemplaza 'fondo-taqueria.jpg' con la ruta de tu imagen */
+            background-position: center;
+            background-size: cover;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+            .bg::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.2); /* Filtro gris */
+            }
+
+        .navbar-custom {
+            background-color: #e74c3c;
+            border-bottom: 1px solid #c0392b;
+        }
+
+            .navbar-custom .navbar-brand,
+            .navbar-custom .nav-link {
+                color: white;
+                font-family: 'Leckerli One', cursive;
+            }
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <a class="navbar-brand" href="@Url.Action("Home", "Pedido")">Taquería</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                @foreach (var i in ViewBag.Categorias)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Menu", "Pedido", new { Categoria = i.NombreCategoria })">@i.NombreCategoria</a>
+                    </li>
+                }
+            </ul>
+            <form>
+                <button asp-action="Orden" asp-controller="Pedido" class="btn btn-danger">Finalizar orden</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="bg">
+        <div class="container">
+            <div class="content">
+                <h1>Bienvenido a la Taquería</h1>
+                <p>Disfruta de la mejor comida mexicana en nuestro restaurante.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

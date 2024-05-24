@@ -1,0 +1,114 @@
+﻿@{
+    Layout = "_LayoutSimple";
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Leckerli One', cursive;
+        }
+
+        .bg {
+            position: relative;
+            background-image: url('../Images/Fondo.jpg'); /* Reemplaza 'fondo-login.jpg' con la ruta de tu imagen */
+            background-position: center;
+            background-size: cover;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .bg::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.2); /* Filtro gris */
+            }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+            .form-group label {
+                font-weight: bold;
+                font-size: 20px;
+                color: #e74c3c;
+            }
+
+        .form-control {
+            border-radius: 5px;
+        }
+
+        .btn-login {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+            .btn-login:hover {
+                background-color: #c0392b;
+            }
+
+        .text-center {
+            color: #333;
+        }
+
+        .error-message {
+            color: #c0392b;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg">
+        <div class="container">
+            <h2 class="text-center">¡Bienvenido a la Taquería!</h2>
+            <form method="post">
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input name="Correo" type="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico">
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input name="Contrasena" type="password" class="form-control" id="password" placeholder="Ingrese su contraseña">
+                </div>
+                <button asp-action="Index" asp-controller="Home" type="submit" class="btn btn-login">Iniciar sesión</button>
+            </form>
+            @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+            {
+                <h1 class="error-message">@ViewBag.ErrorMessage</h1>
+            }
+        </div>
+    </div>
+
+</body>
+</html>

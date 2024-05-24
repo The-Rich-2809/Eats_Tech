@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Eats_Tech</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Eats_Tech.styles.css" asp-append-version="true" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar-custom {
+            background-color: #e74c3c;
+        }
+
+            .navbar-custom .navbar-brand,
+            .navbar-custom .nav-link,
+            .navbar-custom .btn {
+                color: white;
+                font-family: 'Leckerli One', cursive;
+            }
+
+            .navbar-custom .btn {
+                margin-left: 10px;
+            }
+
+        .bg {
+            position: relative;
+            min-height: 100vh;
+            background-image: url('../Images/Fondo2.jpg'); /* Reemplaza 'tu-imagen.jpg' con la ruta de tu imagen */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .bg::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5); /* Cambia el 0.5 por el nivel de opacidad que prefieras */
+                z-index: 1;
+            }
+
+        .content {
+            position: relative;
+            text-align: center;
+            z-index: 2; /* Asegura que el contenido esté por encima del filtro */
+            background: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .title {
+            font-family: 'Leckerli One', cursive; /* Tipografía estilo taquería */
+            font-size: 48px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .menu-section {
+            padding: 50px 0;
+            z-index: 2; /* Asegura que el contenido esté por encima del filtro */
+        }
+
+        .menu-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+            .menu-item:hover {
+                transform: scale(1.05);
+            }
+
+            .menu-item img {
+                max-width: 100%;
+                border-radius: 10px;
+                margin-bottom: 15px;
+            }
+
+        .menu-item-title {
+            font-family: 'Leckerli One', cursive;
+            font-size: 24px;
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <a class="navbar-brand" href="#">Taquería</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Categoría 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Categoría 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Categoría 3</a>
+                    </li>
+                </ul>
+                <form>
+                    <button asp-action="Orden" asp-controller="Pedido" class="btn btn-danger">Finalizar orden</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    @RenderBody()
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

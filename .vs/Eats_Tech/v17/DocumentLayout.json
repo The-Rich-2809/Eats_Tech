@@ -1,0 +1,296 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\programaci\u00F3n\\c#\\web\\eats_tech\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\programaci\u00F3n\\c#\\web\\eats_tech\\controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|solutionrelative:controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\programaci\u00F3n\\c#\\web\\eats_tech\\views\\pedido\\platillo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|solutionrelative:views\\pedido\\platillo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\programaci\u00F3n\\c#\\web\\eats_tech\\views\\pedido\\menu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|solutionrelative:views\\pedido\\menu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\programaci\u00F3n\\c#\\web\\eats_tech\\models\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|solutionrelative:models\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\programaci\u00F3n\\c#\\web\\eats_tech\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\programaci\u00F3n\\c#\\web\\eats_tech\\views\\pedido\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|solutionrelative:views\\pedido\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\programaci\u00F3n\\c#\\web\\eats_tech\\views\\pedido\\orden.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|solutionrelative:views\\pedido\\orden.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\programaci\u00F3n\\c#\\web\\eats_tech\\models\\eats_techdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|solutionrelative:models\\eats_techdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\programaci\u00F3n\\c#\\web\\eats_tech\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|solutionrelative:models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\programaci\u00F3n\\c#\\web\\eats_tech\\views\\pedido\\registro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|solutionrelative:views\\pedido\\registro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\programaci\u00F3n\\c#\\web\\eats_tech\\views\\shared\\_layoutpedido.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|solutionrelative:views\\shared\\_layoutpedido.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\programaci\u00F3n\\c#\\web\\eats_tech\\views\\pedido\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|solutionrelative:views\\pedido\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\programaci\u00F3n\\c#\\web\\eats_tech\\views\\cocina\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|solutionrelative:views\\cocina\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\programaci\u00F3n\\c#\\web\\eats_tech\\controllers\\cocinacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|solutionrelative:controllers\\cocinacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\programaci\u00F3n\\c#\\web\\eats_tech\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF4F464B-C0EB-4E91-87B8-94249E3AA19C}|Eats_Tech.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAAwEoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T07:09:58.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Categoria.cs",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Models\\Categoria.cs",
+              "RelativeDocumentMoniker": "Models\\Categoria.cs",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Models\\Categoria.cs",
+              "RelativeToolTip": "Models\\Categoria.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T06:36:42.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Home.cshtml",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Views\\Pedido\\Home.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pedido\\Home.cshtml",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Views\\Pedido\\Home.cshtml",
+              "RelativeToolTip": "Views\\Pedido\\Home.cshtml",
+              "ViewState": "AQIAADQAAAAAAAAAAAAAwDsAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-24T06:15:52.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAAAGkAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-24T05:45:06.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Menu.cs",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Models\\Menu.cs",
+              "RelativeDocumentMoniker": "Models\\Menu.cs",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Models\\Menu.cs",
+              "RelativeToolTip": "Models\\Menu.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T05:26:13.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Eats_TechDB.cs",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Models\\Eats_TechDB.cs",
+              "RelativeDocumentMoniker": "Models\\Eats_TechDB.cs",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Models\\Eats_TechDB.cs",
+              "RelativeToolTip": "Models\\Eats_TechDB.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T05:23:07.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Models\\Usuario.cs",
+              "RelativeToolTip": "Models\\Usuario.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T05:22:04.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Orden.cshtml",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Views\\Pedido\\Orden.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pedido\\Orden.cshtml",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Views\\Pedido\\Orden.cshtml",
+              "RelativeToolTip": "Views\\Pedido\\Orden.cshtml",
+              "ViewState": "AQIAAI0AAAAAAAAAAAAAwKIAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-24T04:57:50.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Platillo.cshtml",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Views\\Pedido\\Platillo.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pedido\\Platillo.cshtml",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Views\\Pedido\\Platillo.cshtml",
+              "RelativeToolTip": "Views\\Pedido\\Platillo.cshtml",
+              "ViewState": "AQIAAJMAAAAAAAAAAAAAAJcAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-24T03:43:11.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Menu.cshtml",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Views\\Pedido\\Menu.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pedido\\Menu.cshtml",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Views\\Pedido\\Menu.cshtml",
+              "RelativeToolTip": "Views\\Pedido\\Menu.cshtml",
+              "ViewState": "AQIAAIsAAAAAAAAAAAAAAIwAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-24T03:42:59.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PedidoController.cs",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Controllers\\PedidoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PedidoController.cs",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Controllers\\PedidoController.cs",
+              "RelativeToolTip": "Controllers\\PedidoController.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAD4vzoAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T03:34:28.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_LayoutPedido.cshtml",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Views\\Shared\\_LayoutPedido.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LayoutPedido.cshtml",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Views\\Shared\\_LayoutPedido.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LayoutPedido.cshtml",
+              "ViewState": "AQIAAIQAAAAAAAAAAAAAAJIAAABfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-24T06:24:46.661Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Registro.cshtml",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Views\\Pedido\\Registro.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pedido\\Registro.cshtml",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Views\\Pedido\\Registro.cshtml",
+              "RelativeToolTip": "Views\\Pedido\\Registro.cshtml",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAAAGYAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-24T03:36:01.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Views\\Pedido\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pedido\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Views\\Pedido\\Index.cshtml",
+              "RelativeToolTip": "Views\\Pedido\\Index.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-24T03:34:49.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CocinaController.cs",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Controllers\\CocinaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CocinaController.cs",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Controllers\\CocinaController.cs",
+              "RelativeToolTip": "Controllers\\CocinaController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-24T06:02:28.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Views\\Cocina\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cocina\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\Programaci\u00F3n\\C#\\Web\\Eats_Tech\\Views\\Cocina\\Index.cshtml",
+              "RelativeToolTip": "Views\\Cocina\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-24T06:02:39.616Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
