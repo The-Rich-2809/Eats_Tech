@@ -1,0 +1,52 @@
+﻿@{
+    Layout = "_LayoutAdmin";
+}
+@model IEnumerable<Eats_Tech.Models.Usuario>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Usuarios Registrados</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Mesas Registradas</h1>
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo Electrónico</th>
+                    <th><a type="submit" href="@Url.Action("AgregarMesas", "Admin")" class="btn btn-primary btn-sm">Agregar</a></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    @foreach (var i in Model)
+                    {
+                        if (i.TipoUsuario == "Mesa" && i.Activo != 777)
+                        {
+                        <tr>
+                            <td>@i.Nombre</td>
+                            <td>@i.Correo</td>
+                            <td>
+                                <form >
+                                    <input type="hidden" name="Correo" value="@i.Correo" />
+                                    <a href="@Url.Action("ModMesas", "Admin", new { Correo = i.Correo })" type="submit" class="btn btn-primary btn-sm">Modificar</a>
+                                    <a href="@Url.Action("EliMesas", "Admin", new { Correo = i.Correo })" type="submit" class="btn btn-danger btn-sm">Eliminar</a>
+                                </form>
+                            </td>
+                        </tr>
+                        }
+                    }
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

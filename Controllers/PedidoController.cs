@@ -10,9 +10,10 @@ namespace Eats_Tech.Controllers
         {
             _contextDB = contextDB;
         }
+        public int IdMesa { get; set; }
         public void Cookies()
         {
-            var miCookie = HttpContext.Request.Cookies["MiCookie"];
+            var miCookie = HttpContext.Request.Cookies["Cookie_EatsTech"];
 
             if (miCookie != null)
             {
@@ -21,6 +22,7 @@ namespace Eats_Tech.Controllers
                 {
                     if (miCookie == user.Correo)
                     {
+                        IdMesa = user.ID;
                         ViewBag.Nombre = user.Nombre;
                         ViewBag.Nivel = user.TipoUsuario;
                         ViewBag.FotoPerfil = user.DireccionImagen;
@@ -39,6 +41,19 @@ namespace Eats_Tech.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public IActionResult Registro(string Nombre)
+        {
+            Cookies();
+            var insetarCliente = new Cliente[]
+            {
+                new Cliente {Nombre = Nombre, IdMesa = IdMesa, Status = "Empezando", PrecioFinal = 0, Hora = DateTime.Now}
+            };
+            foreach(var item in insetarCliente)
+                _contextDB.Add(item);
+            _contextDB.SaveChanges();
+            return RedirectToAction("Home", "Pedido");
+        }
         [HttpGet]
         public IActionResult Home()
         {
@@ -50,9 +65,8 @@ namespace Eats_Tech.Controllers
         {
             Cookies();
             List<Menu> menu = _contextDB.Menu.ToList();
-            menu.First().Categoria = Categoria;
-            ViewBag.Menu = menu;
-            return View();
+            ViewBag.Categoria = Categoria;
+            return View(menu);
         }
         [HttpGet]
         public IActionResult Platillo(int Platillo)
@@ -76,6 +90,7 @@ namespace Eats_Tech.Controllers
         [HttpGet]
         public IActionResult Orden()
         {
+            Cookies();
             return View();
         }
 

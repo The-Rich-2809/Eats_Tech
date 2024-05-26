@@ -16,6 +16,21 @@
             font-family: Arial, sans-serif;
         }
 
+        .navbar-custom {
+            background-color: #e74c3c;
+        }
+
+            .navbar-custom .navbar-brand,
+            .navbar-custom .nav-link,
+            .navbar-custom .btn {
+                color: white;
+                font-family: 'Leckerli One', cursive;
+            }
+
+            .navbar-custom .btn {
+                margin-left: 10px;
+            }
+
         .bg {
             position: relative;
             min-height: 100vh;
@@ -51,6 +66,24 @@
             max-width: 600px;
             text-align: center;
             margin-bottom: 30px;
+        }
+
+        .platillo-img {
+            max-width: 50px;
+            margin-right: 10px;
+            vertical-align: middle;
+            border-radius: 5px;
+        }
+
+        .platillo-name {
+            font-family: 'Leckerli One', cursive;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .logo {
+            max-width: 150px;
+            margin-bottom: 20px;
         }
 
         .title {
@@ -96,28 +129,32 @@
             .finalize-btn:hover {
                 background-color: #c0392b;
             }
-
-        .platillo-img {
-            max-width: 50px;
-            margin-right: 10px;
-            vertical-align: middle;
-            border-radius: 5px;
-        }
-
-        .platillo-name {
-            font-family: 'Leckerli One', cursive;
-            font-size: 18px;
-            color: #333;
-        }
     </style>
 </head>
 <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <a class="navbar-brand" href="@Url.Action("Home", "Pedido")">Taquería</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                @foreach (var i in ViewBag.Categorias)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Menu", "Pedido", new { Categoria = i.NombreCategoria })">@i.NombreCategoria</a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </nav>
+
     <!-- Fondo con Resumen -->
     <div class="bg">
         <div class="content">
             <h2 class="title">Resumen de tu Orden</h2>
 
-            <!-- Tabla de Resumen -->
             <table class="summary-table">
                 <thead>
                     <tr>
@@ -159,9 +196,8 @@
             </table>
 
             <div class="total">Total: $56.00</div>
-            <form>
-                <button asp-action="Orden" asp-controller="Pedido" class="finalize-btn">Finalizar orden</button>
-            </form>
+
+            <button class="finalize-btn">Finalizar orden</button>
         </div>
     </div>
 
@@ -170,3 +206,12 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+

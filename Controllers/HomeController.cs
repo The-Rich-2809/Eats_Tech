@@ -1,5 +1,6 @@
 using Eats_Tech.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
 namespace Eats_Tech.Controllers
@@ -14,7 +15,7 @@ namespace Eats_Tech.Controllers
             _logger = logger;
             _contextDB = contextDB;
         }
-
+        public static string Correo {  get; set; }
         public IActionResult Index()
         {
             Initialize();
@@ -23,11 +24,27 @@ namespace Eats_Tech.Controllers
             if (miCookie != null)
             {
                 List<Usuario> listaUsuarios = _contextDB.Usuario.ToList();
+                List<Cliente> listaClientes = _contextDB.Cliente.ToList();
                 foreach (var user in listaUsuarios)
                 {
                     if (miCookie == user.Correo)
                     {
-                        return RedirectToAction("Index", "Pedido");
+                        Correo = user.Correo;
+
+                        foreach (var item in listaClientes)
+                        {
+                            if (item.IdMesa == user.ID && item.Status == "Empezando")
+                            {
+                                return RedirectToAction("Orden", "Pedido");
+                            }
+                        }
+
+                        if (user.TipoUsuario == "Admin")
+                            return RedirectToAction("Index", "Admin");
+                        if (user.TipoUsuario == "Mesa")
+                            return RedirectToAction("Index", "Pedido");
+                        if (user.TipoUsuario == "Cocina")
+                            return RedirectToAction("Index", "Cocina");
                     }
                 }
             }
@@ -41,16 +58,47 @@ namespace Eats_Tech.Controllers
             {
                 if(user.Correo == Correo && user.Contrasena == Contrasena)
                 {
-                    if(user.TipoUsuario == "Admin")
-                        return RedirectToAction("Index", "Admin");
-                    if (user.TipoUsuario == "Mesa")
-                        return RedirectToAction("Index", "Pedido");
-                    if (user.TipoUsuario == "Cocina")
-                        return RedirectToAction("Index", "Cocina");
+                    if(user.Activo != 1)
+                    {
+                        if(user.Activo != 777)
+                        {
+                            var u = _contextDB.Usuario.FirstOrDefault(e => e.Correo == user.Correo);
+                            u.Activo = 1;
+                            _contextDB.Entry(u).State = EntityState.Modified; ;
+                            _contextDB.SaveChanges();
+
+                            CookieOptions options = new CookieOptions();
+                            options.Expires = DateTime.Now.AddDays(365);
+                            options.IsEssential = true;
+                            options.Path = "/";
+                            HttpContext.Response.Cookies.Append("Cookie_EatsTech", Correo, options);
+
+                            if (user.TipoUsuario == "Admin")
+                                return RedirectToAction("Index", "Admin");
+                            if (user.TipoUsuario == "Mesa")
+                                return RedirectToAction("Index", "Pedido");
+                            if (user.TipoUsuario == "Cocina")
+                                return RedirectToAction("Index", "Cocina");
+                        }
+                        ViewBag.ErrorMessage = "Esta mesa ya esta no esta activa";
+                        break;
+                    }
+                    ViewBag.ErrorMessage = "Este usuario ya esta activo";
+                    break;
                 } 
             }
             ViewBag.ErrorMessage = "Correo y/o contrasena incorrectos";
             return View();
+        }
+        [HttpGet]
+        public IActionResult CerrarSesion()
+        {
+            var u = _contextDB.Usuario.FirstOrDefault(e => e.Correo == Correo);
+            u.Activo = 0;
+            _contextDB.Entry(u).State = EntityState.Modified; ;
+            _contextDB.SaveChanges();
+            HttpContext.Response.Cookies.Delete("Cookie_EatsTech");
+            return RedirectToAction("Index");
         }
         public void Initialize()
         {
@@ -63,7 +111,7 @@ namespace Eats_Tech.Controllers
 
             var insertarusuario = new Usuario[]
             {
-                new Usuario {Nombre = "Rich", Contrasena = "1234", Correo = "ricardo_138@outlook.com", TipoUsuario = "Admin", DireccionImagen = "h"},
+                new Usuario {Nombre = "Rich", Contrasena = "1234", Correo = "ricardo_138@outlook.com", TipoUsuario = "Admin", Activo = 0, DireccionImagen = "h"},
                 new Usuario {Nombre = "Mesa 1", Contrasena = "1234", Correo = "mesa1@eatstech.com", TipoUsuario = "Mesa", Activo = 0, DireccionImagen = "h"}
             };
 

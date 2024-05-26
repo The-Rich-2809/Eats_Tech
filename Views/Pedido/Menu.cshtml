@@ -1,6 +1,7 @@
 ﻿@{
     Layout = "_LayoutSimple";
 }
+@model IEnumerable<Eats_Tech.Models.Menu>;
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -141,17 +142,20 @@
         <!-- Sección del Menú -->
         <div class="container menu-section">
             <div class="row">
-                @foreach(var i in ViewBag.Menu)
+                @foreach(var i in Model)
                 {
-                    <div class="col-md-4">
-                        <a href="@Url.Action("Platillo", "Pedido", new { Platillo = i.Id })">
-                            <div class="menu-item">
-                                <img src="@i.RutaImagen" alt="@i.NombrePlatillo"> <!-- Reemplaza 'platillo1.jpg' con la ruta de la imagen del platillo -->
-                                <div class="menu-item-title">@i.NombrePlatillo</div>
-                                <p>@i.Descripcion</p>
-                            </div>
-                        </a>
-                    </div>
+                    if (i.Categoria == ViewBag.Categoria)
+                    {
+                        <div class="col-md-4">
+                            <a href="@Url.Action("Platillo", "Pedido", new { Platillo = i.Id })">
+                                <div class="menu-item">
+                                    <img src="@i.RutaImagen" alt="@i.NombrePlatillo"> <!-- Reemplaza 'platillo1.jpg' con la ruta de la imagen del platillo -->
+                                    <div class="menu-item-title">@i.NombrePlatillo</div>
+                                    <p>@i.Descripcion</p>
+                                </div>
+                            </a>
+                        </div>
+                    }
                 }
             </div>
         </div>

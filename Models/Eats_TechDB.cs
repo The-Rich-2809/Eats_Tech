@@ -12,5 +12,7 @@ namespace Eats_Tech.Models
 
         public DbSet<Menu> Menu { get; set; }
         public DbSet<Categoria> Categoria { get; set; }
+        public DbSet<Cliente> Cliente { get; set; }
+
     }
 }

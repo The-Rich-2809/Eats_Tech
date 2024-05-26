@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<Eats_TechDB>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ConexionSql")));
 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
