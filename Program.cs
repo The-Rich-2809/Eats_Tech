@@ -11,10 +11,7 @@ builder.Services.AddDbContext<Eats_TechDB>(options => options.UseSqlServer(build
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Home/Error");
-}
+app.UseDeveloperExceptionPage();
 app.UseStaticFiles();
 
 app.UseRouting();

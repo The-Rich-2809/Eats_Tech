@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Eats_Tech.props" />
+</Project>

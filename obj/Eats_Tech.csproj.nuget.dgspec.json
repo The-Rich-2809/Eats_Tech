@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ricar\\Documents\\Programación\\C#\\Consola\\Eats_Tech\\Eats_Tech.csproj": {}
+    "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Eats_Tech.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ricar\\Documents\\Programación\\C#\\Consola\\Eats_Tech\\Eats_Tech.csproj": {
+    "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Eats_Tech.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ricar\\Documents\\Programación\\C#\\Consola\\Eats_Tech\\Eats_Tech.csproj",
+        "projectUniqueName": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Eats_Tech.csproj",
         "projectName": "Eats_Tech",
-        "projectPath": "C:\\Users\\ricar\\Documents\\Programación\\C#\\Consola\\Eats_Tech\\Eats_Tech.csproj",
+        "projectPath": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Eats_Tech.csproj",
         "packagesPath": "C:\\Users\\ricar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ricar\\Documents\\Programación\\C#\\Consola\\Eats_Tech\\obj\\",
+        "outputPath": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ricar\\AppData\\Roaming\\NuGet\\NuGet.Config",

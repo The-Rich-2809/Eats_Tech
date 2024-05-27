@@ -1,5 +1,7 @@
 ﻿using Eats_Tech.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Hosting;
 
 namespace Eats_Tech.Controllers
 {
@@ -11,6 +13,9 @@ namespace Eats_Tech.Controllers
             _contextDB = contextDB;
         }
         public int IdMesa { get; set; }
+        public static int IdM {  get; set; }
+        public static int IdPlatillo {  get; set; }
+        public static int IdCliente { get; set; }
         public void Cookies()
         {
             var miCookie = HttpContext.Request.Cookies["Cookie_EatsTech"];
@@ -22,11 +27,23 @@ namespace Eats_Tech.Controllers
                 {
                     if (miCookie == user.Correo)
                     {
+                        IdM = user.ID;
                         IdMesa = user.ID;
+                        ViewBag.Mesa = user.Nombre;
                         ViewBag.Nombre = user.Nombre;
                         ViewBag.Nivel = user.TipoUsuario;
                         ViewBag.FotoPerfil = user.DireccionImagen;
+                        break;
                     }
+                }
+            }
+            List<Cliente> listaCliente = _contextDB.Cliente.ToList();
+            foreach(var cliente in listaCliente)
+            {
+                if (cliente.IdMesa == IdM)
+                {
+                    IdCliente = cliente.Id;
+                    break;
                 }
             }
             List<Categoria> categorias  = _contextDB.Categoria.ToList();
@@ -34,6 +51,16 @@ namespace Eats_Tech.Controllers
         }
         public IActionResult Index()
         {
+            Cookies();
+            List<Cliente> clientes  = _contextDB.Cliente.ToList();
+            foreach(Cliente cliente in clientes)
+            {
+                if(cliente.IdMesa == IdM && cliente.Status == "Empezando")
+                {
+                    return RedirectToAction("Orden", "Pedido");
+                }
+            }
+
             return View();
         }
         [HttpGet]
@@ -77,6 +104,7 @@ namespace Eats_Tech.Controllers
             {
                 if(item.Id == Platillo)
                 {
+                    IdPlatillo = item.Id;
                     ViewBag.Nombre = item.NombrePlatillo;
                     ViewBag.Descripcion = item.Descripcion;
                     ViewBag.Costo = item.Costo;
@@ -84,15 +112,94 @@ namespace Eats_Tech.Controllers
                     break;
                 }
             }
-
             return View();
         }
+        [HttpPost]
+        public IActionResult Platillo(string Cantidad)
+        {
+            Cookies();
+            int Can = Convert.ToInt32(Cantidad);
+            double Total = 0;
+            double costo = 0;
+
+
+            List<Orden> orden = _contextDB.Orden.ToList();
+            foreach(Orden o in orden)
+            {
+                if (o.IdCliente == IdCliente && o.IdMenu == IdPlatillo && o.Status == "Por pedir")
+                {
+                    var u = _contextDB.Orden.FirstOrDefault(o => o.IdCliente == IdCliente && o.IdMenu == IdPlatillo && o.Status == "Por pedir");
+                    costo = o.Costo / o.Cantidad;
+                    Can += u.Cantidad;
+                    u.Cantidad = Can;
+                    u.Costo = u.Cantidad * costo;
+                    _contextDB.Entry(u).State = EntityState.Modified; ;
+                    _contextDB.SaveChanges();
+                    return RedirectToAction("Orden");
+                }
+            }
+
+
+            List<Menu> menu = _contextDB.Menu.ToList();
+            foreach (Menu item in menu)
+            {
+                if (item.Id == IdPlatillo)
+                {
+                    Total = item.Costo * Can;
+                    var insertarOrden = new Orden[]
+                    {
+                        new Orden {IdCliente = IdCliente, IdMenu = IdPlatillo, Cantidad = Can ,Costo = Total, Status = "Por pedir"}
+                    };
+                    foreach (var u in insertarOrden)
+                        _contextDB.Orden.Add(u);
+                    _contextDB.SaveChanges();
+                }
+            }
+            return RedirectToAction("Orden");
+        }
+
         [HttpGet]
         public IActionResult Orden()
         {
             Cookies();
-            return View();
-        }
 
+            ViewBag.IdCliente = IdCliente;
+            List<Usuario> usuarios = _contextDB.Usuario.ToList();
+            List<Cliente> clientes = _contextDB.Cliente.ToList();
+            List<Menu> menu = _contextDB.Menu.ToList();
+            List<Orden> orden = _contextDB.Orden.ToList();
+
+
+            var viewmodel = new Tablas
+            {
+                Orden = orden,
+                Menu = menu,
+                Usuario = usuarios,
+                Cliente = clientes
+            };
+            return View(viewmodel);
+        }
+        [HttpPost]
+        public IActionResult Orden()
+        {
+            Cookies();
+            List<Usuario> usuarios = _contextDB.Usuario.ToList();
+            List<Cliente> clientes = _contextDB.Cliente.ToList();
+            List<Menu> menu = _contextDB.Menu.ToList();
+            List<Orden> orden = _contextDB.Orden.ToList();
+
+            foreach (var i in orden)
+            {
+                if(i.IdCliente == IdCliente)
+                {
+                    var u = _contextDB.Orden.FirstOrDefault(o => o.IdCliente == IdCliente);
+                    u.Status = "En preparacion";
+                    _contextDB.Entry(u).State = EntityState.Modified; ;
+                    _contextDB.SaveChanges();
+                    
+                }
+            }
+            return RedirectToAction("Orden");
+        }
     }
 }

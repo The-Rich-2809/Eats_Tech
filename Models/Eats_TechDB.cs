@@ -9,10 +9,10 @@ namespace Eats_Tech.Models
 
         }
         public DbSet<Usuario> Usuario { get; set; }
-
         public DbSet<Menu> Menu { get; set; }
         public DbSet<Categoria> Categoria { get; set; }
         public DbSet<Cliente> Cliente { get; set; }
+        public DbSet<Orden> Orden { get; set; }
 
     }
 }

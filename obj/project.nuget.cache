@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qcIYB5GTV2GkGVzTysVBhahZJb8O7t+sePA/pw3uls+E/yp3pZzRsMoqwUxKB9iAcNC6ist+FmOqKqCRW+S7qw==",
+  "dgSpecHash": "DTtuCgmwatu6CBlGzH/+eDz8Bi38SXbY/jBJU3gQkm+h0WRuW6xD+6H/jBkhzQIwmWTMimj53CFvYwbrryxFNA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ricar\\Documents\\Programación\\C#\\Consola\\Eats_Tech\\Eats_Tech.csproj",
+  "projectFilePath": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Eats_Tech.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ricar\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\ricar\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

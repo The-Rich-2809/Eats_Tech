@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Eats_Tech.Models.Tablas
+@{
     Layout = "_LayoutSimple";
 }
 <!DOCTYPE html>
@@ -147,58 +148,58 @@
                     </li>
                 }
             </ul>
+            <a class="navbar-brand">@ViewBag.Mesa</a>
         </div>
     </nav>
 
     <!-- Fondo con Resumen -->
     <div class="bg">
-        <div class="content">
-            <h2 class="title">Resumen de tu Orden</h2>
+        @{
+            double Total = 0;
+            <div class="content">
+                <h2 class="title">Resumen de tu Orden</h2>
 
-            <table class="summary-table">
-                <thead>
-                    <tr>
-                        <th>Platillo</th>
-                        <th>Cantidad</th>
-                        <th>Precio</th>
-                        <th>Total</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <img src="platillo1.jpg" alt="Platillo 1" class="platillo-img"> <!-- Reemplaza 'platillo1.jpg' con la ruta de la imagen del platillo -->
-                            <span class="platillo-name">Platillo 1</span>
-                        </td>
-                        <td>2</td>
-                        <td>$10.00</td>
-                        <td>$20.00</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="platillo2.jpg" alt="Platillo 2" class="platillo-img"> <!-- Reemplaza 'platillo2.jpg' con la ruta de la imagen del platillo -->
-                            <span class="platillo-name">Platillo 2</span>
-                        </td>
-                        <td>1</td>
-                        <td>$12.00</td>
-                        <td>$12.00</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="platillo3.jpg" alt="Platillo 3" class="platillo-img"> <!-- Reemplaza 'platillo3.jpg' con la ruta de la imagen del platillo -->
-                            <span class="platillo-name">Platillo 3</span>
-                        </td>
-                        <td>3</td>
-                        <td>$8.00</td>
-                        <td>$24.00</td>
-                    </tr>
-                </tbody>
-            </table>
+                <table class="summary-table">
+                    <thead>
+                        <tr>
+                            <th>Platillo</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var i in Model.Orden)
+                        {
+                            if (i.IdCliente == ViewBag.IdCliente && i.Status == "Por pedir")
+                            {
+                                foreach (var j in Model.Menu)
+                                {
+                                    if (j.Id == i.IdMenu)
+                                    {
+                                        Total += i.Costo;
+                                        <tr>
+                                            <td>
+                                                <img src="@j.RutaImagen" alt="Platillo 1" class="platillo-img"> <!-- Reemplaza 'platillo1.jpg' con la ruta de la imagen del platillo -->
+                                                <span class="platillo-name">@j.NombrePlatillo</span>
+                                            </td>
+                                            <td>@i.Cantidad</td>
+                                            <td>$@j.Costo</td>
+                                            <td>$@i.Costo</td>
+                                        </tr>
+                                        break;
+                                    }
+                                }
+                            }
+                        }
+                    </tbody>
+                </table>
 
-            <div class="total">Total: $56.00</div>
+                <div class="total">Total: $@Total</div>
 
-            <button class="finalize-btn">Finalizar orden</button>
-        </div>
+                <button class="finalize-btn">Finalizar orden</button>
+            </div>
+        }
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

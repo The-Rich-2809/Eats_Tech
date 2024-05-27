@@ -124,21 +124,16 @@ namespace Eats_Tech.Controllers
             var insetarplatillo = new Menu[]
             {
                 new Menu() { NombrePlatillo = "Taco al Pastor", Descripcion = "Carne de cerdo marinada en una mezcla de chiles, achiote y especias, cocinada en un trompo vertical y servida con piña, cilantro, cebolla y salsa.", Costo = 20.50, Categoria = "Tacos", RutaImagen = "../Images/taco-pastor.jpg" },
-                new Menu() { NombrePlatillo = "Taco de Carnitas", Descripcion = "Carne de cerdo cocida lentamente en su propia grasa hasta que queda tierna, generalmente acompañada de cebolla, cilantro y salsa.", Costo = 18.75, Categoria = "Tacos", RutaImagen = "taco_de_carnitas.jpg" },
-                new Menu() { NombrePlatillo = "Taco de Barbacoa", Descripcion = "Carne de res, cordero o cabra cocida al vapor o en horno enterrado, desmenuzada y servida con cebolla, cilantro y salsa.", Costo = 22.00, Categoria = "Tacos", RutaImagen = "taco_de_barbacoa.jpg" },
-                new Menu() { NombrePlatillo = "Taco de Asada", Descripcion = "Carne de res asada a la parrilla, generalmente acompañada de cebolla, cilantro y salsa.", Costo = 21.00, Categoria = "Tacos", RutaImagen = "taco_de_asada.jpg" },
-                new Menu() { NombrePlatillo = "Taco de Cochinita Pibil", Descripcion = "Carne de cerdo marinada en achiote y cítricos, cocida lentamente y servida con cebolla morada encurtida y salsa de habanero.", Costo = 23.50, Categoria = "Tacos", RutaImagen = "taco_de_cochinita_pibil.jpg" },
-                new Menu() { NombrePlatillo = "Taco de Pescado", Descripcion = "Filete de pescado rebozado y frito o a la parrilla, servido con col, mayonesa, limón y salsa.", Costo = 25.00, Categoria = "Tacos", RutaImagen = "taco_de_pescado.jpg" },
-                new Menu() { NombrePlatillo = "Taco de Camarón", Descripcion = "Camarones cocidos a la parrilla o fritos, servidos con col, mayonesa, limón y salsa.", Costo = 28.00, Categoria = "Tacos", RutaImagen = "taco_de_camaron.jpg" },
-                new Menu() { NombrePlatillo = "Taco de Suadero", Descripcion = "Carne de res cocida lentamente, con un sabor y textura únicos, generalmente servida con cebolla, cilantro y salsa.", Costo = 19.50, Categoria = "Tacos", RutaImagen = "taco_de_suadero.jpg" },
-                new Menu() { NombrePlatillo = "Taco de Tripa", Descripcion = "Tripa de res bien cocida hasta quedar crujiente, servida con cebolla, cilantro y salsa.", Costo = 17.50, Categoria = "Tacos", RutaImagen = "taco_de_tripa.jpg" },
-                new Menu() { NombrePlatillo = "Taco de Lengua", Descripcion = "Lengua de res cocida hasta quedar tierna, desmenuzada y servida con cebolla, cilantro y salsa.", Costo = 19.00, Categoria = "Tacos", RutaImagen = "taco_de_lengua.jpg" },
-                new Menu() { NombrePlatillo = "Taco de Birria", Descripcion = "Carne de res o chivo cocida en un caldo especiado, desmenuzada y servida con cebolla, cilantro y salsa.", Costo = 24.00, Categoria = "Tacos", RutaImagen = "taco_de_birria.jpg" },
-                new Menu() { NombrePlatillo = "Taco de Chorizo", Descripcion = "Chorizo mexicano frito, servido con cebolla, cilantro y salsa.", Costo = 16.00, Categoria = "Tacos", RutaImagen = "taco_de_chorizo.jpg" },
-                new Menu() { NombrePlatillo = "Taco de Pollo", Descripcion = "Pollo cocido o asado, desmenuzado y servido con cebolla, cilantro y salsa.", Costo = 18.00, Categoria = "Tacos", RutaImagen = "taco_de_pollo.jpg" },
-                new Menu() { NombrePlatillo = "Taco de Nopales", Descripcion = "Tiras de nopal cocidas, a menudo mezcladas con jitomate, cebolla y chile, servidas con queso fresco y salsa.", Costo = 16.50, Categoria = "Tacos", RutaImagen = "taco_de_nopales.jpg" },
-                new Menu() { NombrePlatillo = "Taco de Tinga", Descripcion = "Pollo desmenuzado en una salsa de jitomate, cebolla y chile chipotle, servido con crema y queso fresco.", Costo = 19.50, Categoria = "Tacos", RutaImagen = "taco_de_tinga.jpg" }
+                new Menu() { NombrePlatillo = "Taco de Carnitas", Descripcion = "Carne de cerdo cocida lentamente en su propia grasa hasta que queda tierna, generalmente acompañada de cebolla, cilantro y salsa.", Costo = 18.75, Categoria = "Tacos", RutaImagen = "../Images/tacos-carnitas.jpg" },
+                new Menu() { NombrePlatillo = "Taco de Barbacoa", Descripcion = "Carne de res, cordero o cabra cocida al vapor o en horno enterrado, desmenuzada y servida con cebolla, cilantro y salsa.", Costo = 22.00, Categoria = "Tacos", RutaImagen = "../Images/tacos-de-barbacoa.jpg" },
             };
+            var insertarBebida = new Menu[]
+            {
+                new Menu(){NombrePlatillo = "Coca Cola", Descripcion = "Una cocona bien elodia de 600 ml", Costo = 20, Categoria = "Bebidas", RutaImagen = "../Images/Cocacola.png"},
+                new Menu(){NombrePlatillo = "Caguama", Descripcion = "Un caguamon bien muerta",  Costo = 60, Categoria = "Bebidas", RutaImagen = "../Images/caguamon.jpg"},
+                new Menu(){NombrePlatillo = "Boing Mango", Descripcion = "Un boing de mango", Costo = 15, Categoria = "Bebidas", RutaImagen = "../Images/BoingMango.png"}
+            };
+
             foreach(var u in insertarusuario)
                 _contextDB.Usuario.Add(u);
             _contextDB.SaveChanges();
@@ -148,6 +143,10 @@ namespace Eats_Tech.Controllers
             _contextDB.SaveChanges();
 
             foreach (var u in insetarplatillo)
+                _contextDB.Menu.Add(u);
+            _contextDB.SaveChanges();
+
+            foreach(var u in insertarBebida)
                 _contextDB.Menu.Add(u);
             _contextDB.SaveChanges();
         }

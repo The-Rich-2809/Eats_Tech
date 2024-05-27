@@ -144,21 +144,26 @@
                 <button asp-action="Orden" asp-controller="Pedido" class="btn btn-danger">Finalizar orden</button>
             </form>
         </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <a class="navbar-brand">@ViewBag.Mesa</a>
+        </div>
     </nav>
 
     <!-- Detalles del Platillo -->
     <div class="details-container">
         <div class="details-content">
-            <div class="details-left">
-                <h2>@ViewBag.Nombre</h2> <!-- Reemplaza 'Platillo 1' con el nombre del platillo -->
-                <p>@ViewBag.Descripcion</p> <!-- Reemplaza con la descripción del platillo -->
-                <div class="price">$@ViewBag.Costo</div> <!-- Reemplaza con el precio del platillo -->
-                <div class="quantity">
-                    <label for="quantity">Cantidad:</label>
-                    <input type="number" id="quantity" name="quantity" value="1" min="1">
+            <form method="post">
+                <div class="details-left">
+                    <h2>@ViewBag.Nombre</h2> <!-- Reemplaza 'Platillo 1' con el nombre del platillo -->
+                    <p>@ViewBag.Descripcion</p> <!-- Reemplaza con la descripción del platillo -->
+                    <div class="price">$@ViewBag.Costo</div> <!-- Reemplaza con el precio del platillo -->
+                    <div class="quantity">
+                        <label for="quantity">Cantidad:</label>
+                        <input type="number" id="quantity" name="Cantidad" value="1" min="1">
+                    </div>
+                        <button type="submit" asp-action="Platillo" asp-controller="Pedido" class="btn btn-custom">Agregar al pedido</button>
                 </div>
-                <button class="btn btn-custom">Agregar al pedido</button>
-            </div>
+            </form>
             <div class="details-right">
                 <img src="@ViewBag.Imagen" alt="Platillo 1"> <!-- Reemplaza 'platillo1.jpg' con la ruta de la imagen del platillo -->
             </div>
