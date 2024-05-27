@@ -180,7 +180,7 @@ namespace Eats_Tech.Controllers
             return View(viewmodel);
         }
         [HttpPost]
-        public IActionResult Orden()
+        public IActionResult Orden(string h)
         {
             Cookies();
             List<Usuario> usuarios = _contextDB.Usuario.ToList();

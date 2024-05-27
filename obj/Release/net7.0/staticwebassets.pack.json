@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\Eats_Tech.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\BoingMango.png",
+      "PackagePath": "staticwebassets\\Images\\BoingMango.png"
+    },
+    {
+      "Id": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Cocacola.png",
+      "PackagePath": "staticwebassets\\Images\\Cocacola.png"
+    },
+    {
       "Id": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Fondo.jpg",
       "PackagePath": "staticwebassets\\Images\\Fondo.jpg"
     },
@@ -17,8 +25,20 @@
       "PackagePath": "staticwebassets\\Images\\LogoTaco.jpg"
     },
     {
+      "Id": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\caguamon.jpg",
+      "PackagePath": "staticwebassets\\Images\\caguamon.jpg"
+    },
+    {
       "Id": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\taco-pastor.jpg",
       "PackagePath": "staticwebassets\\Images\\taco-pastor.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\tacos-carnitas.jpg",
+      "PackagePath": "staticwebassets\\Images\\tacos-carnitas.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\tacos-de-barbacoa.jpg",
+      "PackagePath": "staticwebassets\\Images\\tacos-de-barbacoa.jpg"
     },
     {
       "Id": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\wwwroot\\css\\site.css",
