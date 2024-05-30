@@ -2,6 +2,8 @@
 using Eats_Tech.Models;
 
 using Eats_Tech.Models;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Threading;
 
 namespace Eats_Tech.Controllers
 {
@@ -13,6 +15,22 @@ namespace Eats_Tech.Controllers
         public AdminController( Eats_TechDB contextDB)
         {
             _contextDB = contextDB;
+        }
+        public void Cookies()
+        {
+            var miCookie = HttpContext.Request.Cookies["Cookie_EatsTech"];
+
+            if (miCookie != null)
+            {
+                List<Usuario> listaUsuarios = _contextDB.Usuario.ToList();
+                foreach (var user in listaUsuarios)
+                {
+                    if (miCookie == user.Correo)
+                    {
+                        ViewBag.Mesa = user.Nombre;
+                    }
+                }
+            }
         }
         public IActionResult Index()
         {
@@ -75,6 +93,20 @@ namespace Eats_Tech.Controllers
         public IActionResult EliMesas()
         {
             AdminModel admin = new AdminModel(_contextDB);
+            List<Usuario> usuarios = _contextDB.Usuario.ToList();
+            List<Cliente> clientes = _contextDB.Cliente.ToList();
+            foreach(Cliente cliente in clientes)
+            {
+                foreach(Usuario usuario in usuarios)
+                {
+                    if(usuario.Correo == CorreoS && usuario.ID == cliente.IdMesa && cliente.Status != "Finalizado")
+                    {
+                        ViewBag.Mensaje = "No puedes eliminar esta mesa ya que se esta ocupando Xd";
+                        var Usuario = _contextDB.Usuario.FirstOrDefault(c => c.Correo == CorreoS);
+                        return View(Usuario);
+                    }
+                }
+            }
             admin.Correo = CorreoS;
             admin.EliMesa();
             return RedirectToAction("Mesas");
@@ -95,7 +127,61 @@ namespace Eats_Tech.Controllers
         [HttpGet]
         public IActionResult Ordenes()
         {
-            return View();
+            Cookies();
+            List<Usuario> usuarios = _contextDB.Usuario.ToList();
+            List<Cliente> clientes = _contextDB.Cliente.ToList();
+            List<Orden> orden = _contextDB.Orden.ToList();
+            List<Menu> menu = _contextDB.Menu.ToList();
+
+            string[,] cliente = new string[clientes.Count,2];
+            int i = 0;
+            int j = 0;
+            string[,] ordenes = new string[orden.Count,6];
+            ViewBag.Rango = orden.Count;
+
+            foreach (var o in orden)
+            {
+                if (o.Status == "Preparando")
+                {
+                    foreach (var c in clientes)
+                    {
+                        if (c.Id == o.IdCliente)
+                        {
+                            foreach (var u in usuarios)
+                            {
+                                if (u.ID == c.IdMesa)
+                                {
+                                    foreach (var m in menu)
+                                    {
+                                        if (m.Id == o.IdMenu)
+                                        {
+                                            ordenes[i, 0] = Convert.ToString(o.IdCliente);
+                                            ordenes[i, 1] = m.RutaImagen;
+                                            ordenes[i, 2] = m.NombrePlatillo;
+                                            ordenes[i, 3] = Convert.ToString(o.Cantidad);
+                                            ordenes[i, 4] = o.Status;
+                                            ordenes[i, 5] = Convert.ToString(o.Costo);
+                                            ViewBag.Ordenes = ordenes;
+                                            i++;
+                                            break;
+                                        }
+                                    }
+                                    break;
+                                }
+                            }
+                            break;
+                        }
+                    }
+
+                }
+            }
+
+            var viewmodel = new Tablas
+            {
+                Usuario = usuarios,
+                Cliente = clientes
+            };
+            return View(viewmodel);
         }
 
     }

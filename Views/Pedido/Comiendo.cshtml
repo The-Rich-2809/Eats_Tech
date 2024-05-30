@@ -134,30 +134,13 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-custom">
-        <a class="navbar-brand" href="@Url.Action("Home", "Pedido")">Taquería</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mr-auto">
-                @foreach (var i in ViewBag.Categorias)
-                {
-                    <li class="nav-item">
-                        <a class="nav-link" href="@Url.Action("Menu", "Pedido", new { Categoria = i.NombreCategoria })">@i.NombreCategoria</a>
-                    </li>
-                }
-            </ul>
-            <a class="navbar-brand">@ViewBag.Mesa</a>
-        </div>
-    </nav>
 
     <!-- Fondo con Resumen -->
     <div class="bg">
         @{
             double Total = 0;
             <div class="content">
-                <h2 class="title">Resumen de tu Orden</h2>
+                <h2 class="">Gracias por consumir con nosotros, en un momento se te entregara tu orden</h2>
 
                 <table class="summary-table">
                     <thead>
@@ -171,7 +154,7 @@
                     <tbody>
                         @foreach (var i in Model.Orden)
                         {
-                            if (i.IdCliente == ViewBag.IdCliente && i.Status == "Por pedir")
+                            if (i.IdCliente == ViewBag.IdCliente && i.Status == "Preparando")
                             {
                                 foreach (var j in Model.Menu)
                                 {
@@ -196,11 +179,7 @@
                 </table>
 
                 <div class="total">Total: $@Total</div>
-                <form method="post">
-                    <input type="hidden" name="Total" value="@Total" />
-                    <button asp-action="Orden" asp-controller="Pedido" type="submit" class="finalize-btn">Finalizar orden</button>
-                </form>
-                
+
             </div>
         }
     </div>
@@ -210,12 +189,4 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
 

@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="mb-4">Mesas Registradas</h1>
+        <h3 class="mb-4">Clientes por pedir</h3>
         <table class="table table-bordered table-striped">
             <thead class="thead-dark">
                 <tr>
@@ -43,6 +43,44 @@
                                 <td>@i.PrecioFinal</td>
                                 <td>@i.MetodoPago</td>
                             </tr>
+                        }
+                    }
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container mt-5">
+        <h3 class="mb-4">Clientes por recibir</h3>
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Mesa</th>
+                    <th>Status</th>
+                    <th>Monto de la compra</th>
+                    <th>Metodo de pago</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    @foreach (var i in Model.Cliente)
+                    {
+                        if (i.Status == "Por recibir")
+                        {
+                        <tr>
+                            <td>@i.Nombre</td>
+                                @foreach (var j in Model.Usuario)
+                                {
+                                    @if (j.ID == i.IdMesa)
+                                    {
+                                    <td>@j.Nombre</td>
+                                        break;
+                                    }
+                                }
+                            <td>@i.Status</td>
+                            <td>@i.PrecioFinal</td>
+                            <td>@i.MetodoPago</td>
+                        </tr>
                         }
                     }
                 </tr>

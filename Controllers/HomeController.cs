@@ -2,6 +2,7 @@ using Eats_Tech.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
+using System.Runtime.Intrinsics.Arm;
 
 namespace Eats_Tech.Controllers
 {
@@ -16,6 +17,7 @@ namespace Eats_Tech.Controllers
             _contextDB = contextDB;
         }
         public static string Correo {  get; set; }
+        [HttpGet]
         public IActionResult Index()
         {
             Initialize();
@@ -34,9 +36,10 @@ namespace Eats_Tech.Controllers
                         foreach (var item in listaClientes)
                         {
                             if (item.IdMesa == user.ID && item.Status == "Empezando")
-                            {
                                 return RedirectToAction("Orden", "Pedido");
-                            }
+
+                            if (item.IdMesa == user.ID && item.Status == "Por recibir")
+                                return RedirectToAction("Comiendo", "Pedido");
                         }
 
                         if (user.TipoUsuario == "Admin")
@@ -73,18 +76,14 @@ namespace Eats_Tech.Controllers
                             options.Path = "/";
                             HttpContext.Response.Cookies.Append("Cookie_EatsTech", Correo, options);
 
-                            if (user.TipoUsuario == "Admin")
-                                return RedirectToAction("Index", "Admin");
-                            if (user.TipoUsuario == "Mesa")
-                                return RedirectToAction("Index", "Pedido");
-                            if (user.TipoUsuario == "Cocina")
-                                return RedirectToAction("Index", "Cocina");
+                            return RedirectToAction("Index");
+
                         }
                         ViewBag.ErrorMessage = "Esta mesa ya esta no esta activa";
-                        break;
+                        return View();
                     }
                     ViewBag.ErrorMessage = "Este usuario ya esta activo";
-                    break;
+                    return View();
                 } 
             }
             ViewBag.ErrorMessage = "Correo y/o contrasena incorrectos";
@@ -93,12 +92,30 @@ namespace Eats_Tech.Controllers
         [HttpGet]
         public IActionResult CerrarSesion()
         {
+            Correo = Cookies();
             var u = _contextDB.Usuario.FirstOrDefault(e => e.Correo == Correo);
             u.Activo = 0;
             _contextDB.Entry(u).State = EntityState.Modified; ;
             _contextDB.SaveChanges();
             HttpContext.Response.Cookies.Delete("Cookie_EatsTech");
             return RedirectToAction("Index");
+        }
+        public string Cookies()
+        {
+            var miCookie = HttpContext.Request.Cookies["Cookie_EatsTech"];
+
+            if (miCookie != null)
+            {
+                List<Usuario> listaUsuarios = _contextDB.Usuario.ToList();
+                foreach (var user in listaUsuarios)
+                {
+                    if (miCookie == user.Correo)
+                    {
+                        return user.Correo;
+                    }
+                }
+            }
+            return "";
         }
         public void Initialize()
         {

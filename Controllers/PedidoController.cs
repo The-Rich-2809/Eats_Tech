@@ -180,7 +180,7 @@ namespace Eats_Tech.Controllers
             return View(viewmodel);
         }
         [HttpPost]
-        public IActionResult Orden(string h)
+        public IActionResult Orden(double Total)
         {
             Cookies();
             List<Usuario> usuarios = _contextDB.Usuario.ToList();
@@ -192,14 +192,49 @@ namespace Eats_Tech.Controllers
             {
                 if(i.IdCliente == IdCliente)
                 {
-                    var u = _contextDB.Orden.FirstOrDefault(o => o.IdCliente == IdCliente);
-                    u.Status = "En preparacion";
-                    _contextDB.Entry(u).State = EntityState.Modified; ;
-                    _contextDB.SaveChanges();
-                    
+                    foreach(var m in menu)
+                    {
+                        if(m.Id == i.IdMenu)
+                        {
+                            var u = _contextDB.Orden.FirstOrDefault(o => o.IdCliente == IdCliente && o.IdMenu == i.IdMenu);
+                            u.Status = "Preparando";
+                            _contextDB.Entry(u).State = EntityState.Modified; ;
+                            _contextDB.SaveChanges();
+                            break;
+                        }
+
+                    }
                 }
             }
-            return RedirectToAction("Orden");
+
+            var c = _contextDB.Cliente.FirstOrDefault(o => o.Id == IdCliente);
+            c.Status = "Por recibir";
+            c.PrecioFinal = Convert.ToDouble(Total);
+            _contextDB.Entry(c).State = EntityState.Modified; ;
+            _contextDB.SaveChanges();
+            return RedirectToAction("Comiendo");
         }
+        [HttpGet]
+        public IActionResult Comiendo()
+        {
+            Cookies();
+
+            ViewBag.IdCliente = IdCliente;
+            List<Usuario> usuarios = _contextDB.Usuario.ToList();
+            List<Cliente> clientes = _contextDB.Cliente.ToList();
+            List<Menu> menu = _contextDB.Menu.ToList();
+            List<Orden> orden = _contextDB.Orden.ToList();
+
+
+            var viewmodel = new Tablas
+            {
+                Orden = orden,
+                Menu = menu,
+                Usuario = usuarios,
+                Cliente = clientes
+            };
+            return View(viewmodel);
+        }
+
     }
 }
