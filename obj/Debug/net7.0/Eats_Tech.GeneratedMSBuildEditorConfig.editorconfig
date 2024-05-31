@@ -54,12 +54,40 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29jaW5hXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ricar/Documents/GitHub/Eats_Tech/Views/Cocina/OrdenesCocinadas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29jaW5hXE9yZGVuZXNDb2NpbmFkYXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ricar/Documents/GitHub/Eats_Tech/Views/Cocina/OrdenesCocinar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29jaW5hXE9yZGVuZXNDb2NpbmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ricar/Documents/GitHub/Eats_Tech/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ricar/Documents/GitHub/Eats_Tech/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ricar/Documents/GitHub/Eats_Tech/Views/Mesero/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzZXJvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ricar/Documents/GitHub/Eats_Tech/Views/Mesero/OrdenesCobrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzZXJvXE9yZGVuZXNDb2JyYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ricar/Documents/GitHub/Eats_Tech/Views/Mesero/OrdenesEntregadas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzZXJvXE9yZGVuZXNFbnRyZWdhZGFzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ricar/Documents/GitHub/Eats_Tech/Views/Mesero/OrdenesEnviar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzZXJvXE9yZGVuZXNFbnZpYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ricar/Documents/GitHub/Eats_Tech/Views/Mesero/OrdenesTerminar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzZXJvXE9yZGVuZXNUZXJtaW5hci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ricar/Documents/GitHub/Eats_Tech/Views/Pedido/Comiendo.cshtml]
@@ -96,6 +124,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ricar/Documents/GitHub/Eats_Tech/Views/Shared/_LayoutAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ricar/Documents/GitHub/Eats_Tech/Views/Shared/_LayoutCocina.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRDb2NpbmEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ricar/Documents/GitHub/Eats_Tech/Views/Shared/_LayoutMesero.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRNZXNlcm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ricar/Documents/GitHub/Eats_Tech/Views/Shared/_ValidationScriptsPartial.cshtml]

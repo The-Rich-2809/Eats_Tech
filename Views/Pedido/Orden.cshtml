@@ -196,11 +196,14 @@
                 </table>
 
                 <div class="total">Total: $@Total</div>
-                <form method="post">
-                    <input type="hidden" name="Total" value="@Total" />
-                    <button asp-action="Orden" asp-controller="Pedido" type="submit" class="finalize-btn">Finalizar orden</button>
-                </form>
-                
+                @if(Total != 0)
+                {
+                    <form method="post">
+                        <input type="hidden" name="Total" value="@Total" />
+                        <button asp-action="Orden" asp-controller="Pedido" type="submit" class="finalize-btn">Finalizar orden</button>
+                    </form>
+                }
+
             </div>
         }
     </div>

@@ -220,10 +220,33 @@ namespace Eats_Tech.Controllers
             Cookies();
 
             ViewBag.IdCliente = IdCliente;
+
             List<Usuario> usuarios = _contextDB.Usuario.ToList();
             List<Cliente> clientes = _contextDB.Cliente.ToList();
             List<Menu> menu = _contextDB.Menu.ToList();
             List<Orden> orden = _contextDB.Orden.ToList();
+
+            foreach (Cliente cliente in clientes)
+            {
+                if(cliente.Id == IdCliente)
+                {
+                    if(cliente.Status == "Por recibir")
+                        ViewBag.Mensaje = "Hola";
+                    if (cliente.Status == "Por enviar")
+                        ViewBag.Mensaje = "Buenas";
+                    if (cliente.Status == "Comiendo")
+                    {
+                        ViewBag.Mensaje = "Metodo";
+                        ViewBag.Status = "Comiendo";
+                    }
+                    if (cliente.Status == "Por terminar")
+                    {
+                        ViewBag.Mensaje = "Cobrar";
+                        ViewBag.Status = "Cobrar";
+                    }
+                    break;
+                }
+            }
 
 
             var viewmodel = new Tablas
@@ -234,6 +257,29 @@ namespace Eats_Tech.Controllers
                 Cliente = clientes
             };
             return View(viewmodel);
+        }
+        [HttpPost]
+        public IActionResult Comiendo(string h)
+        {
+            List<Cliente> clientes = _contextDB.Cliente.ToList();
+            List<Orden> orden = _contextDB.Orden.ToList();
+
+            foreach (Orden orden1 in orden)
+            {
+                if (orden1.IdCliente == IdCliente)
+                {
+                    var c = _contextDB.Orden.FirstOrDefault(o => o.IdCliente == IdCliente && o.Id == orden1.Id);
+                    c.Status = "Por terminar";
+                    _contextDB.Entry(c).State = EntityState.Modified; ;
+                    _contextDB.SaveChanges();
+                }
+            }
+
+            var u = _contextDB.Cliente.FirstOrDefault(o => o.Id == IdCliente);
+            u.Status = "Por terminar";
+            _contextDB.Entry(u).State = EntityState.Modified; ;
+            _contextDB.SaveChanges();
+            return RedirectToAction("Comiendo");
         }
 
     }

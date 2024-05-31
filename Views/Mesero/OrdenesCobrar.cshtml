@@ -1,0 +1,81 @@
+﻿@{
+    Layout = "_LayoutMesero";
+}
+@model Eats_Tech.Models.Tablas
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Usuarios Registrados</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .platillo-img {
+            max-width: 50px;
+            margin-right: 10px;
+            vertical-align: middle;
+            border-radius: 5px;
+        }
+
+        .platillo-name {
+            font-family: 'Leckerli One', cursive;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    @{
+        int IdCliente = 0;
+        string[] Nombre = new string[3];
+        <div class="container mt-5">
+            <h1 class="mb-4">Ordenes Cocinadas</h1>
+            @foreach (var c in Model.Cliente)
+            {
+                if (c.Status == "Cuenta")
+                {
+                    foreach (var u in Model.Usuario)
+                    {
+                        if (u.ID == c.IdMesa)
+                        {
+                            <h3 class="mb-4">Nombre del Cliente: @c.Nombre, Mesa: @u.Nombre Total: $@c.PrecioFinal </h3>
+                            break;
+                        }
+                    }
+                    <table class="table table-bordered table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Nombre del platillo</th>
+                                <th>Cantidad</th>
+                                <th>Status</th>
+                                <th>Monto de la compra</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (int i = 0; i < ViewBag.Rango; i++)
+                            {
+                                if (ViewBag.Ordenes[i, 0] == Convert.ToString(c.Id))
+                                {
+                                    <tr>
+                                        <td>
+                                            <img src="@ViewBag.Ordenes[i,1]" alt="Platillo 1" class="platillo-img"> <!-- Reemplaza 'platillo1.jpg' con la ruta de la imagen del platillo -->
+                                            <span class="platillo-name">@ViewBag.Ordenes[i, 2]</span>
+                                        </td>
+                                        <td>@ViewBag.Ordenes[i, 3]</td>
+                                        <td>@ViewBag.Ordenes[i, 4]</td>
+                                        <td>@ViewBag.Ordenes[i, 5]</td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                }
+            }
+        </div>
+    }
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

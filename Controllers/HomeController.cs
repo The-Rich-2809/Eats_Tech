@@ -37,9 +37,9 @@ namespace Eats_Tech.Controllers
                         {
                             if (item.IdMesa == user.ID && item.Status == "Empezando")
                                 return RedirectToAction("Orden", "Pedido");
-
-                            if (item.IdMesa == user.ID && item.Status == "Por recibir")
+                            if (item.IdMesa == user.ID && item.Status != "Empezando")
                                 return RedirectToAction("Comiendo", "Pedido");
+
                         }
 
                         if (user.TipoUsuario == "Admin")
@@ -48,6 +48,8 @@ namespace Eats_Tech.Controllers
                             return RedirectToAction("Index", "Pedido");
                         if (user.TipoUsuario == "Cocina")
                             return RedirectToAction("Index", "Cocina");
+                        if (user.TipoUsuario == "Mesero")
+                            return RedirectToAction("Index", "Mesero");
                     }
                 }
             }
@@ -129,6 +131,8 @@ namespace Eats_Tech.Controllers
             var insertarusuario = new Usuario[]
             {
                 new Usuario {Nombre = "Rich", Contrasena = "1234", Correo = "ricardo_138@outlook.com", TipoUsuario = "Admin", Activo = 0, DireccionImagen = "h"},
+                new Usuario {Nombre = "Ale", Contrasena = "1234", Correo = "cocinero@eatstech.com", TipoUsuario = "Cocina", Activo = 0, DireccionImagen = "h"},
+                new Usuario {Nombre = "Juan", Contrasena = "1234", Correo = "mesero@eatstech.com", TipoUsuario = "Mesero", Activo = 0, DireccionImagen = "h"},
                 new Usuario {Nombre = "Mesa 1", Contrasena = "1234", Correo = "mesa1@eatstech.com", TipoUsuario = "Mesa", Activo = 0, DireccionImagen = "h"}
             };
 

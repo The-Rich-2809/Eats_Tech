@@ -65,8 +65,8 @@
                 <tr>
                     @foreach (var i in Model.Cliente)
                     {
-                        if (i.Status == "Por recibir")
-                        {
+                        if (i.Status == "Por recibir" || i.Status == "Por enviar")
+                                {
                         <tr>
                             <td>@i.Nombre</td>
                                 @foreach (var j in Model.Usuario)
