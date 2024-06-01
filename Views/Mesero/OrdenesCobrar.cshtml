@@ -29,16 +29,36 @@
         int IdCliente = 0;
         string[] Nombre = new string[3];
         <div class="container mt-5">
-            <h1 class="mb-4">Ordenes Cocinadas</h1>
+            <h1 class="mb-4">Ordenes por Cobrar</h1>
             @foreach (var c in Model.Cliente)
             {
-                if (c.Status == "Cuenta")
+                if (c.Status == "Cobrar")
                 {
                     foreach (var u in Model.Usuario)
                     {
                         if (u.ID == c.IdMesa)
                         {
-                            <h3 class="mb-4">Nombre del Cliente: @c.Nombre, Mesa: @u.Nombre Total: $@c.PrecioFinal </h3>
+                            string MetodoP = "";
+                            if (c.MetodoPago == 1)
+                                MetodoP = "Efectivo";
+                            if (c.MetodoPago == 2)
+                                MetodoP = "Tarjeta";
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <h3 class="mb-4">Nombre del Cliente: @c.Nombre, Mesa: @u.Nombre Total: $@c.PrecioFinal, Metodo de pago: @MetodoP </h3>
+                                        </th>
+                                        <th>
+                                            <form method="post">
+                                                <input type="hidden" value="@c.Id" name="IdCliente" />
+                                                <button asp-action="OrdenesCobrar" type="submit" class="btn btn-primary">Orden Cobrada</button>
+                                            </form>
+
+                                        </th>
+                                    </tr>
+                                </thead>
+                            </table>
                             break;
                         }
                     }

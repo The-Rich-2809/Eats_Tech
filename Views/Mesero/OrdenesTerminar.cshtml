@@ -29,7 +29,7 @@
         int IdCliente = 0;
         string[] Nombre = new string[3];
         <div class="container mt-5">
-            <h1 class="mb-4">Ordenes Cocinadas</h1>
+            <h1 class="mb-4">Ordenes Terminadas</h1>
             @foreach (var c in Model.Cliente)
             {
                 if (c.Status == "Terminada")
@@ -38,7 +38,12 @@
                     {
                         if (u.ID == c.IdMesa)
                         {
-                            <h3 class="mb-4">Nombre del Cliente: @c.Nombre, Mesa: @u.Nombre Total: $@c.PrecioFinal </h3>
+                            string MetodoP = "";
+                            if (c.MetodoPago == 1)
+                                MetodoP = "Efectivo";
+                            if (c.MetodoPago == 2)
+                                MetodoP = "Tarjeta";
+                            <h3 class="mb-4">Nombre del Cliente: @c.Nombre, Mesa: @u.Nombre Total: $@c.PrecioFinal, Metodo de pago: @MetodoP </h3>
                             break;
                         }
                     }

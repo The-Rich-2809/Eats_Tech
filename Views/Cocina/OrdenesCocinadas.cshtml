@@ -32,7 +32,7 @@
             <h1 class="mb-4">Ordenes Cocinadas</h1>
             @foreach (var c in Model.Cliente)
             {
-                if (c.Status == "Por enviar")
+                if (c.Status != "Por recibir")
                 {
                     foreach (var u in Model.Usuario)
                     {

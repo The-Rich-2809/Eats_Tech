@@ -133,7 +133,7 @@ namespace Eats_Tech.Controllers
 
             foreach (var o in orden)
             {
-                if (o.Status == "Preparada")
+                if (o.Status != "Preparando")
                 {
                     foreach (var c in clientes)
                     {

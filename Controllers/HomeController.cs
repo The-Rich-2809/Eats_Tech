@@ -37,7 +37,7 @@ namespace Eats_Tech.Controllers
                         {
                             if (item.IdMesa == user.ID && item.Status == "Empezando")
                                 return RedirectToAction("Orden", "Pedido");
-                            if (item.IdMesa == user.ID && item.Status != "Empezando")
+                            if (item.IdMesa == user.ID && (item.Status != "Empezando" && item.Status != "Terminada") )
                                 return RedirectToAction("Comiendo", "Pedido");
 
                         }

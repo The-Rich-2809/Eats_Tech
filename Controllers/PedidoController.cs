@@ -40,7 +40,7 @@ namespace Eats_Tech.Controllers
             List<Cliente> listaCliente = _contextDB.Cliente.ToList();
             foreach(var cliente in listaCliente)
             {
-                if (cliente.IdMesa == IdM)
+                if (cliente.IdMesa == IdM && cliente.Status != "Terminada")
                 {
                     IdCliente = cliente.Id;
                     break;
@@ -231,18 +231,27 @@ namespace Eats_Tech.Controllers
                 if(cliente.Id == IdCliente)
                 {
                     if(cliente.Status == "Por recibir")
-                        ViewBag.Mensaje = "Hola";
+                        ViewBag.Mensaje = "Gracias por comer con nosotros, en un momento estara listo su comida";
+
                     if (cliente.Status == "Por enviar")
-                        ViewBag.Mensaje = "Buenas";
+                        ViewBag.Mensaje = "Gracias por su tiempo de espera, un mesero vendra a entregarle su comida";
+
                     if (cliente.Status == "Comiendo")
                     {
-                        ViewBag.Mensaje = "Metodo";
+                        ViewBag.Mensaje = "Esperando que sea de su agrado sus alimentos, cuando gusten pueden pedir su cuenta";
                         ViewBag.Status = "Comiendo";
                     }
-                    if (cliente.Status == "Por terminar")
+
+                    if (cliente.Status == "Cobrar")
                     {
-                        ViewBag.Mensaje = "Cobrar";
+                        ViewBag.Mensaje = "En un momento un mesero vendra para hacer el cobro";
                         ViewBag.Status = "Cobrar";
+                    }
+
+                    if(cliente.Status == "Terminada")
+                    {
+                        ViewBag.Mensaje = "Terminada";
+                        ViewBag.Nombre = cliente.Nombre;
                     }
                     break;
                 }
@@ -259,7 +268,7 @@ namespace Eats_Tech.Controllers
             return View(viewmodel);
         }
         [HttpPost]
-        public IActionResult Comiendo(string h)
+        public IActionResult Comiendo(int MetodoPago)
         {
             List<Cliente> clientes = _contextDB.Cliente.ToList();
             List<Orden> orden = _contextDB.Orden.ToList();
@@ -276,10 +285,16 @@ namespace Eats_Tech.Controllers
             }
 
             var u = _contextDB.Cliente.FirstOrDefault(o => o.Id == IdCliente);
-            u.Status = "Por terminar";
+            u.Status = "Cobrar";
+            u.MetodoPago = MetodoPago;
             _contextDB.Entry(u).State = EntityState.Modified; ;
             _contextDB.SaveChanges();
             return RedirectToAction("Comiendo");
+        }
+        [HttpGet]
+        public IActionResult Terminar()
+        {
+            return RedirectToAction("Index");
         }
 
     }
