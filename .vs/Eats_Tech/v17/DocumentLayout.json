@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\github\\eats_tech\\views\\pedido\\menu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:views\\pedido\\menu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\github\\eats_tech\\views\\pedido\\comiendo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:views\\pedido\\comiendo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\github\\eats_tech\\views\\pedido\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:views\\pedido\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\github\\eats_tech\\views\\pedido\\registro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:views\\pedido\\registro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\github\\eats_tech\\views\\pedido\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:views\\pedido\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\github\\eats_tech\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -14,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,13 +42,78 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Comiendo.cshtml",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Views\\Pedido\\Comiendo.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pedido\\Comiendo.cshtml",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Views\\Pedido\\Comiendo.cshtml",
+              "RelativeToolTip": "Views\\Pedido\\Comiendo.cshtml",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAAAFkAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-02T08:11:09.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Menu.cshtml",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Views\\Pedido\\Menu.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pedido\\Menu.cshtml",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Views\\Pedido\\Menu.cshtml",
+              "RelativeToolTip": "Views\\Pedido\\Menu.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAHsAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-02T08:04:46.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Home.cshtml",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Views\\Pedido\\Home.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pedido\\Home.cshtml",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Views\\Pedido\\Home.cshtml",
+              "RelativeToolTip": "Views\\Pedido\\Home.cshtml",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAADgAAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-02T07:58:29.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Registro.cshtml",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Views\\Pedido\\Registro.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pedido\\Registro.cshtml",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Views\\Pedido\\Registro.cshtml",
+              "RelativeToolTip": "Views\\Pedido\\Registro.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAA8AAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-02T07:57:06.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Views\\Pedido\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pedido\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Views\\Pedido\\Index.cshtml",
+              "RelativeToolTip": "Views\\Pedido\\Index.cshtml",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAAAEkAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-02T07:56:09.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAkAAAA",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAAAAQAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-01T07:14:11.916Z",
               "EditorCaption": ""

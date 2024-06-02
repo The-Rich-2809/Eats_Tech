@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\Images\\Cocacola.png"
     },
     {
+      "Id": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Comiendo.jpg",
+      "PackagePath": "staticwebassets\\Images\\Comiendo.jpg"
+    },
+    {
       "Id": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Fondo.jpg",
       "PackagePath": "staticwebassets\\Images\\Fondo.jpg"
     },
@@ -21,8 +25,28 @@
       "PackagePath": "staticwebassets\\Images\\Fondo2.jpg"
     },
     {
+      "Id": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\FondoH.jpg",
+      "PackagePath": "staticwebassets\\Images\\FondoH.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\FondoI.jpg",
+      "PackagePath": "staticwebassets\\Images\\FondoI.jpg"
+    },
+    {
       "Id": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\LogoTaco.jpg",
       "PackagePath": "staticwebassets\\Images\\LogoTaco.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Mantel.jpg",
+      "PackagePath": "staticwebassets\\Images\\Mantel.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Menu.jpg",
+      "PackagePath": "staticwebassets\\Images\\Menu.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Orden.jpg",
+      "PackagePath": "staticwebassets\\Images\\Orden.jpg"
     },
     {
       "Id": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\caguamon.jpg",
