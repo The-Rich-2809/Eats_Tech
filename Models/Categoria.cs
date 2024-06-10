@@ -9,5 +9,6 @@ namespace Eats_Tech.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string NombreCategoria { get; set; }
+        public int Activo { get; set; }
     }
 }

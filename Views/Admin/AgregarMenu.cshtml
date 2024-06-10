@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "_LayoutAdmin";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Bootstrap</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2>Agregar Categoria</h2>
+        <form method="post" asp-action="AgregarMenu" asp-controller="Admin">
+            <div class="form-group">
+                <label for="Name">Nombre de la categoria:</label>
+                <input required name="Categoria" type="text" class="form-control" id="name" placeholder="Ingrese el nombre de la categoria">
+            </div>
+            <button type="submit" class="btn btn-primary">Agregar categoria</button>
+        </form>
+        <h1 class="text-center">@ViewBag.Mensaje</h1>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

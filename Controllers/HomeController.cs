@@ -138,8 +138,8 @@ namespace Eats_Tech.Controllers
 
             var insertarcategoria = new Categoria[]
             {
-                new Categoria(){NombreCategoria = "Tacos"},
-                new Categoria(){NombreCategoria = "Bebidas"}
+                new Categoria(){NombreCategoria = "Tacos", Activo = 1},
+                new Categoria(){NombreCategoria = "Bebidas", Activo = 1}
             };
 
             var insetarplatillo = new Menu[]

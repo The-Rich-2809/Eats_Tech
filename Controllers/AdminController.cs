@@ -4,6 +4,8 @@ using Eats_Tech.Models;
 using Eats_Tech.Models;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Threading;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Hosting;
 
 namespace Eats_Tech.Controllers
 {
@@ -11,6 +13,7 @@ namespace Eats_Tech.Controllers
     {
         private readonly Eats_TechDB _contextDB;
         public static string CorreoS { get; set;}
+        public static int IdCat { get; set;}
 
         public AdminController( Eats_TechDB contextDB)
         {
@@ -36,22 +39,128 @@ namespace Eats_Tech.Controllers
         {
             return View();
         }
+
+        [HttpGet]
+        public IActionResult Menu()
+        {
+            List<Categoria> categoria = _contextDB.Categoria.ToList();
+            return View(categoria);
+        }
+
+        [HttpGet]
+        public IActionResult AgregarMenu()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult AgregarMenu(string Categoria)
+        {
+            List<Categoria> categoria = _contextDB.Categoria.ToList();
+            foreach(var i in categoria)
+            {
+                if(i.NombreCategoria == Categoria)
+                {
+                    ViewBag.Mensaje = "Esta categoria ya existe";
+                    return View();
+                }
+            }
+
+            var insertarcategoria = new Categoria[]
+            {
+                new Categoria(){NombreCategoria = Categoria, Activo = 1},
+            };
+
+            foreach (var u in insertarcategoria)
+                _contextDB.Categoria.Add(u);
+            _contextDB.SaveChanges();
+
+            return RedirectToAction("Menu");
+        }
+        [HttpGet]
+        public IActionResult ModMenu(string Categoria, int IdCategoria)
+        {
+            ViewBag.Categoria = Categoria;
+            IdCat = IdCategoria;
+            return View();
+        }
+        [HttpPost]
+        public IActionResult ModMenu(string Categoria)
+        {
+            List<Categoria> categoria = _contextDB.Categoria.ToList();
+            foreach (var i in categoria)
+            {
+                if (i.NombreCategoria == Categoria)
+                {
+                    ViewBag.Mensaje = "Esta categoria ya existe";
+                    return View();
+                }
+            }
+
+            var u = _contextDB.Categoria.FirstOrDefault(o => o.Id == IdCat);
+            string cat = u.NombreCategoria;
+            u.NombreCategoria = Categoria;
+            _contextDB.Entry(u).State = EntityState.Modified; ;
+            _contextDB.SaveChanges();
+
+            List<Menu> menu = _contextDB.Menu.ToList();
+
+           for(int i = 0; i < menu.Count; i++)
+           {
+                var j = _contextDB.Menu.FirstOrDefault(o => o.Categoria == cat);
+                if(j != null)
+                {
+                    j.Categoria = Categoria;
+                    _contextDB.Entry(j).State = EntityState.Modified; ;
+                    _contextDB.SaveChanges();
+                }
+           }
+
+            return RedirectToAction("Menu");
+        }
+        [HttpGet]
+        public IActionResult EliMenu(int IdCategoria)
+        {
+            var Cat = _contextDB.Categoria.FirstOrDefault(c => c.Id == IdCategoria);
+            IdCat = IdCategoria;
+            return View(Cat);
+        }
+        [HttpPost]
+        public IActionResult EliMenu()
+        {
+            var u = _contextDB.Categoria.FirstOrDefault(o => o.Id == IdCat);
+            u.Activo = 0;
+            _contextDB.Entry(u).State = EntityState.Modified; ;
+            _contextDB.SaveChanges();
+            return RedirectToAction("Menu");
+        }
+
+        [HttpGet]
+        public IActionResult Platillo(string Categoria)
+        {
+            ViewBag.NombreCategoria = Categoria;
+            List<Menu> menu = _contextDB.Menu.ToList();
+            return View(menu);
+        }
+
         [HttpGet]
         public IActionResult Usuarios()
         {
             return View();
         }
+
         [HttpGet]
         public IActionResult Mesas()
         {
             List<Usuario> usuarios = _contextDB.Usuario.ToList();
             return View(usuarios);
         }
+
         [HttpGet]
         public IActionResult AgregarMesas()
         {
             return View();
         }
+
         [HttpPost]
         public IActionResult AgregarMesas(string Mesa, string Contrasena, string Contrasena2)
         {

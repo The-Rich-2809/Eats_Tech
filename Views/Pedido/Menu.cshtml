@@ -124,9 +124,12 @@
             <ul class="navbar-nav mr-auto">
                 @foreach (var i in ViewBag.Categorias)
                 {
-                    <li class="nav-item">
-                        <a class="nav-link" href="@Url.Action("Menu", "Pedido", new { Categoria = i.NombreCategoria })">@i.NombreCategoria</a>
-                    </li>
+                    if (i.Activo == 1)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Menu", "Pedido", new { Categoria = i.NombreCategoria })">@i.NombreCategoria</a>
+                        </li>
+                    }
                 }
             </ul>
             <form>

@@ -1,0 +1,45 @@
+﻿@{
+    Layout = "_LayoutAdmin";
+}
+@model IEnumerable<Eats_Tech.Models.Categoria>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Usuarios Registrados</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Categorias</h1>
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Nombre de la categoria</th>
+                    <th><a type="submit" class="btn btn-primary btn-sm" href="@Url.Action("AgregarMenu", "Admin")" >Agregar Categoria</a></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var i in Model){
+                    if(i.Activo == 1)
+                    {
+                        <tr>
+                            <td>@i.NombreCategoria</td>
+                            <td>
+                                <a type="submit" href="@Url.Action("Platillo", "Admin", new { Categoria = i.NombreCategoria })" class="btn btn-success btn-sm">Ver platillos</a>
+                                <a type="submit" href="@Url.Action("ModMenu", "Admin", new { Categoria = i.NombreCategoria, IdCategoria = i.Id })" class="btn btn-primary btn-sm">Modificar</a>
+                                <a type="submit" href="@Url.Action("EliMenu", "Admin", new { IdCategoria = i.Id })" class="btn btn-danger btn-sm">Eliminar</a>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
