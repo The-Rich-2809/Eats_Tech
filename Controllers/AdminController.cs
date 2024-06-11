@@ -14,6 +14,7 @@ namespace Eats_Tech.Controllers
         private readonly Eats_TechDB _contextDB;
         public static string CorreoS { get; set;}
         public static int IdCat { get; set;}
+        public static int IdPlat { get; set; }
         public static string NameCat { get; set;}
 
         public AdminController( Eats_TechDB contextDB)
@@ -163,7 +164,10 @@ namespace Eats_Tech.Controllers
         [HttpGet]
         public IActionResult Platillo(string Categoria)
         {
-            ViewBag.NombreCategoria = Categoria;
+            if (Categoria != null)
+                NameCat = Categoria;
+
+            ViewBag.NombreCategoria = NameCat;
             List<Menu> menu = _contextDB.Menu.ToList();
             return View(menu);
         }
@@ -173,40 +177,81 @@ namespace Eats_Tech.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult AgregarPlatillo(string NombrePlatillo, string Descripcion, double Precio, string Categoria)
+        public IActionResult AgregarPlatillo(string NombrePlatillo, string Descripcion, double Precio)
         {
             List<Menu> menu = _contextDB.Menu.ToList();
             foreach(var m in menu)
             {
-                if(m.NombrePlatillo == NombrePlatillo)
+                if(m.NombrePlatillo == NombrePlatillo && m.Activo == 1)
                 {
-                    if (m.Activo == 0)
-                    {
-                        var r = _contextDB.Menu.FirstOrDefault(o => o.NombrePlatillo == NombrePlatillo);
-                        r.Activo = 1;
-                        NameCat = Categoria;
-                        _contextDB.Entry(r).State = EntityState.Modified; ;
-                        _contextDB.SaveChanges();
-                        return RedirectToAction("Platillo", NameCat);
-                    }
-                    else
-                    {
-                        ViewBag.Mensaje = "Esta categoria ya existe";
-                        return View();
-                    }
+                    ViewBag.Mensaje = "Esta platillo ya existe";
+                    return View();
                 }
             }
 
             var insertarPlatillo = new Menu[]
             {
-                new Menu(){NombrePlatillo = NombrePlatillo, Costo = Precio, Descripcion = Descripcion, RutaImagen = "", Categoria = Categoria, Activo = 1},
+                new Menu(){NombrePlatillo = NombrePlatillo, Costo = Precio, Descripcion = Descripcion, RutaImagen = "", Categoria = NameCat, Activo = 1},
             };
 
             foreach (var u in insertarPlatillo)
                 _contextDB.Menu.Add(u);
             _contextDB.SaveChanges();
 
-            return RedirectToAction("Platillo", NameCat);
+            return RedirectToAction("Platillo");
+        }
+        [HttpGet]
+        public IActionResult ModPlatillo(int IdPlatillo)
+        {
+            IdPlat = IdPlatillo;
+            List<Menu> menu = _contextDB.Menu.ToList();
+            foreach (var m in menu)
+            {
+                if(m.Id == IdPlatillo)
+                {
+                    NameCat = m.Categoria;
+                    ViewBag.Nombre = m.NombrePlatillo;
+                    ViewBag.Costo = m.Costo;
+                    ViewBag.Descripcion = m.Descripcion;
+                }
+            }
+            return View();
+        }
+        [HttpPost]
+        public IActionResult ModPlatillo(string NombrePlatillo, string Descripcion, double Precio)
+        {
+            List<Menu> menu = _contextDB.Menu.ToList();
+            foreach (var m in menu)
+            {
+                if (m.NombrePlatillo == NombrePlatillo && m.Activo == 1 && m.Id != IdPlat)
+                {
+                    ViewBag.Mensaje = "Esta platillo ya existe";
+                    return View();
+                }
+            }
+
+            var u = _contextDB.Menu.FirstOrDefault(o => o.Id == IdPlat);
+            u.NombrePlatillo = NombrePlatillo;
+            u.Descripcion = Descripcion;
+            u.Costo = Precio;
+            _contextDB.Entry(u).State = EntityState.Modified; ;
+            _contextDB.SaveChanges();
+            return RedirectToAction("Platillo");
+        }
+        public IActionResult EliPlatillo(int IdPlatillo)
+        {
+            var Cat = _contextDB.Menu.FirstOrDefault(c => c.Id == IdPlatillo);
+            IdPlat = IdPlatillo;
+            return View(Cat);
+        }
+        [HttpPost]
+        public IActionResult EliPlatillo()
+        {
+            var u = _contextDB.Menu.FirstOrDefault(o => o.Id == IdPlat);
+            u.Activo = 0;
+            _contextDB.Entry(u).State = EntityState.Modified; ;
+            _contextDB.SaveChanges();
+            return RedirectToAction("Platillo");
         }
 
         [HttpGet]

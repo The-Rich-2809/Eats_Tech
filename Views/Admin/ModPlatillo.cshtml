@@ -14,13 +14,13 @@
 <body>
     <main class="container">
         <div class="my-3 p-3 bg-body rounded shadow-sm">
-            <h1>Agregar Platillo</h1>
+            <h1>Modificar Platillo</h1>
             <form class="needs-validation" novalidate method="post" enctype="multipart/form-data">
                 <div class="row g-3">
 
                     <div class="col-sm-11">
                         <label for="Producto" class="form-label">Nombre del Platillo</label>
-                        <input name="NombrePlatillo" type="text" class="form-control" id="Producto" placeholder="" value="" required>
+                        <input name="NombrePlatillo" type="text" class="form-control" id="Producto" placeholder="" value="@ViewBag.Nombre" required>
                         <div class="invalid-feedback">
                             Se requiere un nombre válido.
                         </div>
@@ -30,7 +30,7 @@
                         <label for="Precio" class="form-label">Precio del platillo</label>
                         <div class="input-group mb-3">
                             <span class="input-group-text">$</span>
-                            <input name="Precio" type="text" class="form-control" aria-label="Amount (to the nearest dollar)" required>
+                            <input name="Precio" type="text" class="form-control" value="@ViewBag.Costo" aria-label="Amount (to the nearest dollar)" required>
                             <span class="input-group-text">MXN</span>
                         </div>
                         <div class="invalid-feedback">
@@ -51,7 +51,7 @@
                 <div class="col-sm-11">
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Descripción del platillo</label>
-                        <textarea name="Descripcion" class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                        <textarea name="Descripcion" class="form-control" id="exampleFormControlTextarea1" va rows="3" required>@ViewBag.Descripcion</textarea>
                     </div>
                     <div class="invalid-feedback">
                         Se requiere una descripción.
@@ -60,7 +60,7 @@
 
                 <hr class="my-4">
 
-                <button asp-controller="Admin" asp-action="AgregarPlatillo" method="post" class="w-100 btn btn-primary btn-lg" type="submit">Agregar Platillo</button>
+                <button asp-controller="Admin" asp-action="ModPlatillo" method="post" class="w-100 btn btn-primary btn-lg" type="submit">Modificar Platillo</button>
             </form>
             <br />
             <h1>@ViewBag.Mensaje</h1>

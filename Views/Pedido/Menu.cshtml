@@ -148,7 +148,7 @@
             <div class="row">
                 @foreach(var i in Model)
                 {
-                    if (i.Categoria == ViewBag.Categoria)
+                    if (i.Categoria == ViewBag.Categoria && i.Activo == 1)
                     {
                         <div class="col-md-4">
                             <a href="@Url.Action("Platillo", "Pedido", new { Platillo = i.Id })">

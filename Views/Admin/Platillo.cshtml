@@ -25,13 +25,16 @@
                 {
                     if (ViewBag.NombreCategoria == i.Categoria)
                     {
-                        <tr>
-                            <td>@i.NombrePlatillo</td>
-                            <td>
-                                <button class="btn btn-primary btn-sm">Modificar</button>
-                                <button class="btn btn-danger btn-sm">Eliminar</button>
-                            </td>
-                        </tr>
+                        if (i.Activo == 1)
+                        {
+                            <tr>
+                                <td>@i.NombrePlatillo</td>
+                                <td>
+                                    <a type="submit" href="@Url.Action("ModPlatillo", "Admin", new { IdPlatillo = i.Id })" class="btn btn-primary btn-sm">Modificar</a>
+                                    <a type="submit" href="@Url.Action("EliPlatillo", "Admin", new { IdPlatillo = i.Id })" class="btn btn-danger btn-sm">Eliminar</a>
+                                </td>
+                            </tr>
+                        }
                     }
                 }
             </tbody>
