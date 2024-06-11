@@ -13,5 +13,6 @@ namespace Eats_Tech.Models
         public double Costo {  get; set; }
         public string Categoria { get; set; }
         public string RutaImagen { get; set; }
+        public int Activo { get; set; }
     }
 }

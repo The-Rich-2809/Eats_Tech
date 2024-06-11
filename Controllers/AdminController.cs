@@ -14,6 +14,7 @@ namespace Eats_Tech.Controllers
         private readonly Eats_TechDB _contextDB;
         public static string CorreoS { get; set;}
         public static int IdCat { get; set;}
+        public static string NameCat { get; set;}
 
         public AdminController( Eats_TechDB contextDB)
         {
@@ -60,8 +61,20 @@ namespace Eats_Tech.Controllers
             {
                 if(i.NombreCategoria == Categoria)
                 {
-                    ViewBag.Mensaje = "Esta categoria ya existe";
-                    return View();
+                    if(i.Activo == 0)
+                    {
+                        var u = _contextDB.Categoria.FirstOrDefault(o => o.NombreCategoria == Categoria);
+                        u.Activo = 1;
+                        _contextDB.Entry(u).State = EntityState.Modified; ;
+                        _contextDB.SaveChanges();
+                        return RedirectToAction("Menu");
+                    }
+                    else
+                    {
+                        ViewBag.Mensaje = "Esta categoria ya existe";
+                        return View();
+                    }
+                    
                 }
             }
 
@@ -86,18 +99,31 @@ namespace Eats_Tech.Controllers
         [HttpPost]
         public IActionResult ModMenu(string Categoria)
         {
+            var u = _contextDB.Categoria.FirstOrDefault(o => o.Id == IdCat);
+            string cat = u.NombreCategoria;
+
             List<Categoria> categoria = _contextDB.Categoria.ToList();
             foreach (var i in categoria)
             {
                 if (i.NombreCategoria == Categoria)
                 {
-                    ViewBag.Mensaje = "Esta categoria ya existe";
-                    return View();
+                    if (i.Activo == 0)
+                    {
+                        var r = _contextDB.Categoria.FirstOrDefault(o => o.NombreCategoria == cat);
+                        r.NombreCategoria = Categoria;
+                        _contextDB.Entry(r).State = EntityState.Modified; ;
+                        _contextDB.SaveChanges();
+                        return RedirectToAction("Menu");
+                    }
+                    else
+                    {
+                        ViewBag.Mensaje = "Esta categoria ya existe";
+                        return View();
+                    }
                 }
             }
 
-            var u = _contextDB.Categoria.FirstOrDefault(o => o.Id == IdCat);
-            string cat = u.NombreCategoria;
+            
             u.NombreCategoria = Categoria;
             _contextDB.Entry(u).State = EntityState.Modified; ;
             _contextDB.SaveChanges();
@@ -140,6 +166,47 @@ namespace Eats_Tech.Controllers
             ViewBag.NombreCategoria = Categoria;
             List<Menu> menu = _contextDB.Menu.ToList();
             return View(menu);
+        }
+        [HttpGet]
+        public IActionResult AgregarPlatillo()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult AgregarPlatillo(string NombrePlatillo, string Descripcion, double Precio, string Categoria)
+        {
+            List<Menu> menu = _contextDB.Menu.ToList();
+            foreach(var m in menu)
+            {
+                if(m.NombrePlatillo == NombrePlatillo)
+                {
+                    if (m.Activo == 0)
+                    {
+                        var r = _contextDB.Menu.FirstOrDefault(o => o.NombrePlatillo == NombrePlatillo);
+                        r.Activo = 1;
+                        NameCat = Categoria;
+                        _contextDB.Entry(r).State = EntityState.Modified; ;
+                        _contextDB.SaveChanges();
+                        return RedirectToAction("Platillo", NameCat);
+                    }
+                    else
+                    {
+                        ViewBag.Mensaje = "Esta categoria ya existe";
+                        return View();
+                    }
+                }
+            }
+
+            var insertarPlatillo = new Menu[]
+            {
+                new Menu(){NombrePlatillo = NombrePlatillo, Costo = Precio, Descripcion = Descripcion, RutaImagen = "", Categoria = Categoria, Activo = 1},
+            };
+
+            foreach (var u in insertarPlatillo)
+                _contextDB.Menu.Add(u);
+            _contextDB.SaveChanges();
+
+            return RedirectToAction("Platillo", NameCat);
         }
 
         [HttpGet]

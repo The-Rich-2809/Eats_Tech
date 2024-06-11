@@ -10,6 +10,7 @@
     <title>Detalles del Platillo</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
+
     <style>
         body, html {
             height: 100%;
@@ -168,7 +169,8 @@
                 </div>
             </form>
             <div class="details-right">
-                <img src="@ViewBag.Imagen" alt="Platillo 1"> <!-- Reemplaza 'platillo1.jpg' con la ruta de la imagen del platillo -->
+                <div class="carousel-item active" style="background: url(@ViewBag.Imagen); background-size: cover; background-position: center;">
+                </div>
             </div>
         </div>
     </div>

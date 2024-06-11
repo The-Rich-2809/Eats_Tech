@@ -144,15 +144,15 @@ namespace Eats_Tech.Controllers
 
             var insetarplatillo = new Menu[]
             {
-                new Menu() { NombrePlatillo = "Taco al Pastor", Descripcion = "Carne de cerdo marinada en una mezcla de chiles, achiote y especias, cocinada en un trompo vertical y servida con piña, cilantro, cebolla y salsa.", Costo = 20.50, Categoria = "Tacos", RutaImagen = "../Images/taco-pastor.jpg" },
-                new Menu() { NombrePlatillo = "Taco de Carnitas", Descripcion = "Carne de cerdo cocida lentamente en su propia grasa hasta que queda tierna, generalmente acompañada de cebolla, cilantro y salsa.", Costo = 18.75, Categoria = "Tacos", RutaImagen = "../Images/tacos-carnitas.jpg" },
-                new Menu() { NombrePlatillo = "Taco de Barbacoa", Descripcion = "Carne de res, cordero o cabra cocida al vapor o en horno enterrado, desmenuzada y servida con cebolla, cilantro y salsa.", Costo = 22.00, Categoria = "Tacos", RutaImagen = "../Images/tacos-de-barbacoa.jpg" },
+                new Menu() { NombrePlatillo = "Taco al Pastor", Descripcion = "Carne de cerdo marinada en una mezcla de chiles, achiote y especias, cocinada en un trompo vertical y servida con piña, cilantro, cebolla y salsa.", Costo = 20.50, Categoria = "Tacos", RutaImagen = "../Images/taco-pastor.jpg", Activo = 1 },
+                new Menu() { NombrePlatillo = "Taco de Carnitas", Descripcion = "Carne de cerdo cocida lentamente en su propia grasa hasta que queda tierna, generalmente acompañada de cebolla, cilantro y salsa.", Costo = 18.75, Categoria = "Tacos", RutaImagen = "../Images/tacos-carnitas.jpg", Activo = 1 },
+                new Menu() { NombrePlatillo = "Taco de Barbacoa", Descripcion = "Carne de res, cordero o cabra cocida al vapor o en horno enterrado, desmenuzada y servida con cebolla, cilantro y salsa.", Costo = 22.00, Categoria = "Tacos", RutaImagen = "../Images/tacos-de-barbacoa.jpg", Activo = 1 },
             };
             var insertarBebida = new Menu[]
             {
-                new Menu(){NombrePlatillo = "Coca Cola", Descripcion = "Una cocona bien elodia de 600 ml", Costo = 20, Categoria = "Bebidas", RutaImagen = "../Images/Cocacola.png"},
-                new Menu(){NombrePlatillo = "Caguama", Descripcion = "Un caguamon bien muerta",  Costo = 60, Categoria = "Bebidas", RutaImagen = "../Images/caguamon.jpg"},
-                new Menu(){NombrePlatillo = "Boing Mango", Descripcion = "Un boing de mango", Costo = 15, Categoria = "Bebidas", RutaImagen = "../Images/BoingMango.png"}
+                new Menu(){NombrePlatillo = "Coca Cola", Descripcion = "Una cocona bien elodia de 600 ml", Costo = 20, Categoria = "Bebidas", RutaImagen = "../Images/Cocacola.png", Activo = 1},
+                new Menu(){NombrePlatillo = "Caguama", Descripcion = "Un caguamon bien muerta",  Costo = 60, Categoria = "Bebidas", RutaImagen = "../Images/caguamon.jpg", Activo = 1},
+                new Menu(){NombrePlatillo = "Boing Mango", Descripcion = "Un boing de mango", Costo = 15, Categoria = "Bebidas", RutaImagen = "../Images/BoingMango.png", Activo = 1}
             };
 
             foreach(var u in insertarusuario)

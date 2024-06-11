@@ -1,34 +1,46 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\",
+  "WorkspaceRootPath": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\rich-huawei\\documents\\github\\eats_tech\\views\\admin\\menu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:views\\admin\\menu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\github\\eats_tech\\views\\pedido\\platillo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:views\\pedido\\platillo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\rich-huawei\\documents\\github\\eats_tech\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\rich-huawei\\documents\\github\\eats_tech\\views\\admin\\elimenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:views\\admin\\elimenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\rich-huawei\\documents\\github\\eats_tech\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\rich-huawei\\documents\\github\\eats_tech\\views\\admin\\platillo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\github\\eats_tech\\views\\admin\\platillo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:views\\admin\\platillo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\rich-huawei\\documents\\github\\eats_tech\\views\\admin\\agregarmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:views\\admin\\agregarmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\github\\eats_tech\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\rich-huawei\\documents\\github\\eats_tech\\views\\admin\\modmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\github\\eats_tech\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\github\\eats_tech\\models\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:models\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\github\\eats_tech\\views\\admin\\agregarplatillo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:views\\admin\\agregarplatillo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\github\\eats_tech\\views\\admin\\menu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:views\\admin\\menu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\github\\eats_tech\\views\\admin\\modmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:views\\admin\\modmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\github\\eats_tech\\views\\admin\\elimenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:views\\admin\\elimenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\ricar\\documents\\github\\eats_tech\\views\\admin\\agregarmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:views\\admin\\agregarmenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,92 +50,134 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Controllers\\AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Controllers\\AdminController.cs",
               "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AQIAALYAAAAAAAAAAAAAALkAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-10T05:29:03.646Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EliMenu.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Views\\Admin\\EliMenu.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\EliMenu.cshtml",
-              "ToolTip": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Views\\Admin\\EliMenu.cshtml",
-              "RelativeToolTip": "Views\\Admin\\EliMenu.cshtml",
+              "DocumentIndex": 0,
+              "Title": "Platillo.cshtml",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Views\\Pedido\\Platillo.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pedido\\Platillo.cshtml",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Views\\Pedido\\Platillo.cshtml",
+              "RelativeToolTip": "Views\\Pedido\\Platillo.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-10T07:19:27.082Z",
+              "WhenOpened": "2024-06-11T00:32:40.665Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Menu.cs",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Models\\Menu.cs",
+              "RelativeDocumentMoniker": "Models\\Menu.cs",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Models\\Menu.cs",
+              "RelativeToolTip": "Models\\Menu.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T17:32:00.406Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AgregarPlatillo.cshtml",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Views\\Admin\\AgregarPlatillo.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\AgregarPlatillo.cshtml",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Views\\Admin\\AgregarPlatillo.cshtml",
+              "RelativeToolTip": "Views\\Admin\\AgregarPlatillo.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAEMAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-10T17:16:28.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EliMenu.cshtml",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Views\\Admin\\EliMenu.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\EliMenu.cshtml",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Views\\Admin\\EliMenu.cshtml",
+              "RelativeToolTip": "Views\\Admin\\EliMenu.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-10T07:19:27.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Platillo.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Views\\Admin\\Platillo.cshtml",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Views\\Admin\\Platillo.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\Platillo.cshtml",
-              "ToolTip": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Views\\Admin\\Platillo.cshtml",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Views\\Admin\\Platillo.cshtml",
               "RelativeToolTip": "Views\\Admin\\Platillo.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-06-10T07:14:58.115Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ModMenu.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Views\\Admin\\ModMenu.cshtml",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Views\\Admin\\ModMenu.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\ModMenu.cshtml",
-              "ToolTip": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Views\\Admin\\ModMenu.cshtml",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Views\\Admin\\ModMenu.cshtml",
               "RelativeToolTip": "Views\\Admin\\ModMenu.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-10T06:45:49.216Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-10T06:45:49.216Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Controllers\\HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAAH4AAAAAAAAAAAAAAIYAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T06:39:58.646Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-10T06:39:58.646Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "Menu.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Views\\Admin\\Menu.cshtml",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Views\\Admin\\Menu.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\Menu.cshtml",
-              "ToolTip": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Views\\Admin\\Menu.cshtml",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Views\\Admin\\Menu.cshtml",
               "RelativeToolTip": "Views\\Admin\\Menu.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAACOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-10T06:34:11.463Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-10T06:34:11.463Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "AgregarMenu.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Views\\Admin\\AgregarMenu.cshtml",
+              "DocumentMoniker": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Views\\Admin\\AgregarMenu.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\AgregarMenu.cshtml",
-              "ToolTip": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Views\\Admin\\AgregarMenu.cshtml",
+              "ToolTip": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Views\\Admin\\AgregarMenu.cshtml",
               "RelativeToolTip": "Views\\Admin\\AgregarMenu.cshtml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-10T06:27:26.483Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-10T06:27:26.483Z"
             }
           ]
         }
