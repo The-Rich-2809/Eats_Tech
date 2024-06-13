@@ -1,6 +1,7 @@
 ﻿@{
     Layout = "_LayoutAdmin";
 }
+@model IEnumerable<Eats_Tech.Models.Usuario>;
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,38 +18,26 @@
                 <tr>
                     <th>Nombre</th>
                     <th>Correo Electrónico</th>
-                    <th>Fecha de Registro</th>
-                    <th><button class="btn btn-primary btn-sm">Modificar</button></th>
+                    <th>Tipo de usuario</th>
+                    <th><a type="submit" class="btn btn-primary btn-sm" href="@Url.Action("AgregarUsuarios", "Admin")">Agregar usuario</button></th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Juan Perez</td>
-                    <td>juan.perez@example.com</td>
-                    <td>2024-01-15</td>
-                    <td>
-                        <button class="btn btn-primary btn-sm">Modificar</button>
-                        <button class="btn btn-danger btn-sm">Eliminar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Maria Lopez</td>
-                    <td>maria.lopez@example.com</td>
-                    <td>2024-02-20</td>
-                    <td>
-                        <button class="btn btn-primary btn-sm">Modificar</button>
-                        <button class="btn btn-danger btn-sm">Eliminar</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Carlos Garcia</td>
-                    <td>carlos.garcia@example.com</td>
-                    <td>2024-03-10</td>
-                    <td>
-                        <button class="btn btn-primary btn-sm">Modificar</button>
-                        <button class="btn btn-danger btn-sm">Eliminar</button>
-                    </td>
-                </tr>
+                @foreach(var u in Model)
+                {
+                    if(u.TipoUsuario != "Mesa")
+                    {
+                        <tr>
+                            <td>@u.Nombre</td>
+                            <td>@u.Correo</td>
+                            <td>@u.TipoUsuario</td>
+                            <td>
+                                <a type="submit" href="@Url.Action("ModUsuarios", "Admin", new { Id = u.ID })" class="btn btn-primary btn-sm">Modificar</a>
+                                <a type="submit" href="@Url.Action("EliUsuarios", "Admin", new { Id = u.ID })" class="btn btn-danger btn-sm">Eliminar</a>
+                            </td>
+                        </tr>
+                    }
+                }
             </tbody>
         </table>
     </div>

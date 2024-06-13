@@ -49,6 +49,22 @@
       "PackagePath": "staticwebassets\\Images\\Orden.jpg"
     },
     {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\1_7_1366_2000.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\1_7_1366_2000.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\1_8_1366_2000.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\1_8_1366_2000.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Users\\1_WhatsApp Image 2024-06-07 at 11.59.49 AM (1).jpeg",
+      "PackagePath": "staticwebassets\\Images\\Users\\1_WhatsApp Image 2024-06-07 at 11.59.49 AM (1).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Users\\5_1366_2000.jpg",
+      "PackagePath": "staticwebassets\\Images\\Users\\5_1366_2000.jpg"
+    },
+    {
       "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\caguamon.jpg",
       "PackagePath": "staticwebassets\\Images\\caguamon.jpg"
     },

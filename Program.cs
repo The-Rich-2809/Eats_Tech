@@ -1,11 +1,15 @@
 using Microsoft.EntityFrameworkCore;
 using Eats_Tech.Models;
+using Eats_Tech.Providers;
+using Eats_Tech.Helpers;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<Eats_TechDB>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ConexionSql")));
+builder.Services.AddSingleton<PathProvider>();
+builder.Services.AddSingleton<HelperUploadFiles>();
 
 
 var app = builder.Build();

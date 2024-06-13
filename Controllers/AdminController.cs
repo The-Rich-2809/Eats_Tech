@@ -6,20 +6,25 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Threading;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
+using Eats_Tech.Providers;
+using Eats_Tech.Helpers;
 
 namespace Eats_Tech.Controllers
 {
     public class AdminController : Controller
     {
+        private HelperUploadFiles helperUpload;
         private readonly Eats_TechDB _contextDB;
         public static string CorreoS { get; set;}
         public static int IdCat { get; set;}
         public static int IdPlat { get; set; }
+        public static int IdU {  get; set; }
         public static string NameCat { get; set;}
 
-        public AdminController( Eats_TechDB contextDB)
+        public AdminController(HelperUploadFiles helperUpload,  Eats_TechDB contextDB)
         {
             _contextDB = contextDB;
+            this.helperUpload = helperUpload;
         }
         public void Cookies()
         {
@@ -33,12 +38,24 @@ namespace Eats_Tech.Controllers
                     if (miCookie == user.Correo)
                     {
                         ViewBag.Mesa = user.Nombre;
+                        CorreoS = user.Correo;
                     }
                 }
             }
         }
         public IActionResult Index()
         {
+            Cookies();
+            List<Usuario> user = _contextDB.Usuario.ToList();
+            foreach(var u in user)
+            {
+                if(u.Correo == CorreoS)
+                {
+                    ViewBag.ImagenPerfil = u.DireccionImagen;
+                    return View();
+                }
+                    
+            }
             return View();
         }
 
@@ -177,7 +194,7 @@ namespace Eats_Tech.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult AgregarPlatillo(string NombrePlatillo, string Descripcion, double Precio)
+        public async Task<IActionResult> AgregarPlatillo(IFormFile Imagen, string NombrePlatillo, string Descripcion, double Precio)
         {
             List<Menu> menu = _contextDB.Menu.ToList();
             foreach(var m in menu)
@@ -189,9 +206,20 @@ namespace Eats_Tech.Controllers
                 }
             }
 
+            string nombreImagen = "";
+            List<Categoria> categorias = _contextDB.Categoria.ToList();
+            foreach(var i in categorias)
+            {
+                if(i.NombreCategoria == NameCat)
+                {
+                    nombreImagen = Convert.ToString(i.Id) + "_" + Convert.ToString(menu.Count + 1) + "_" + Imagen.FileName;
+                    await this.helperUpload.UploadFilesAsync(Imagen, nombreImagen, Folders.Platillos);
+                }
+            }
+
             var insertarPlatillo = new Menu[]
             {
-                new Menu(){NombrePlatillo = NombrePlatillo, Costo = Precio, Descripcion = Descripcion, RutaImagen = "", Categoria = NameCat, Activo = 1},
+                new Menu(){NombrePlatillo = NombrePlatillo, Costo = Precio, Descripcion = Descripcion, RutaImagen = "../Images/Platillos/" + nombreImagen, Categoria = NameCat, Activo = 1},
             };
 
             foreach (var u in insertarPlatillo)
@@ -218,7 +246,7 @@ namespace Eats_Tech.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult ModPlatillo(string NombrePlatillo, string Descripcion, double Precio)
+        public async Task<IActionResult> ModPlatillo(IFormFile Imagen, string NombrePlatillo, string Descripcion, double Precio)
         {
             List<Menu> menu = _contextDB.Menu.ToList();
             foreach (var m in menu)
@@ -231,6 +259,22 @@ namespace Eats_Tech.Controllers
             }
 
             var u = _contextDB.Menu.FirstOrDefault(o => o.Id == IdPlat);
+            string nombreImagen = "";
+            if(Imagen != null)
+            {
+                List<Categoria> categorias = _contextDB.Categoria.ToList();
+                foreach (var i in categorias)
+                {
+                    if (i.NombreCategoria == NameCat)
+                    {
+                        nombreImagen = Convert.ToString(i.Id) + "_" + Convert.ToString(menu.Count + 1) + "_" + Imagen.FileName;
+                        await this.helperUpload.UploadFilesAsync(Imagen, nombreImagen, Folders.Platillos);
+                        u.RutaImagen = "../Images/Platillos/" + nombreImagen;
+                    }
+                }
+            }
+
+            
             u.NombrePlatillo = NombrePlatillo;
             u.Descripcion = Descripcion;
             u.Costo = Precio;
@@ -256,6 +300,102 @@ namespace Eats_Tech.Controllers
 
         [HttpGet]
         public IActionResult Usuarios()
+        {
+            List<Usuario> user = _contextDB.Usuario.ToList();
+            return View(user);
+        }
+        [HttpGet]
+        public IActionResult AgregarUsuarios()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> AgregarUsuarios(IFormFile Imagen, string Correo, string Contra1, string Contra2, string Nombre, string Categoria)
+        {
+            List<Usuario> user = _contextDB.Usuario.ToList();
+            foreach(var u in user)
+            {
+                if(u.Correo == Correo && u.Activo != 777)
+                {
+                    ViewBag.Mensaje = "Este correo ya esta registrado";
+                    return View();
+                }
+            }
+
+            if(Contra1 != Contra2)
+            {
+                ViewBag.Mensaje = "Las contraseñas no son iguales";
+                return View();
+            }
+
+            string nombreImagen = Convert.ToString(user.Count + 1) + "_" + Imagen.FileName;
+            await this.helperUpload.UploadFilesAsync(Imagen, nombreImagen, Folders.Users);
+            nombreImagen = "../Images/Users/" + nombreImagen;
+
+            var insertarusuario = new Usuario[]
+            {
+                new Usuario {Nombre = Nombre, Contrasena = Contra1, Correo = Correo, TipoUsuario = Categoria, Activo = 0, DireccionImagen = nombreImagen},
+            };
+
+            foreach (var u in insertarusuario)
+                _contextDB.Usuario.Add(u);
+            _contextDB.SaveChanges();
+
+            return RedirectToAction("Usuarios");
+        }
+        [HttpGet]
+        public IActionResult ModUsuarios(int Id)
+        {
+            IdU = Id;
+            var usuario = _contextDB.Usuario.FirstOrDefault(p => p.ID == Id);
+            return View(usuario);
+        }
+        [HttpPost]
+        public async Task<IActionResult> ModUsuarios(IFormFile Imagen, string Correo, string Contra1, string Contra2, string Nombre, string Categoria, int Id)
+        {
+            var usuario = _contextDB.Usuario.FirstOrDefault(p => p.ID == Id);
+
+            if(usuario.Correo != Correo)
+            {
+                List<Usuario> user = _contextDB.Usuario.ToList();
+                foreach (var u in user)
+                {
+                    if (u.Correo == Correo && u.Activo != 777)
+                    {
+                        ViewBag.Mensaje = "Este correo ya esta registrado";
+                        return View();
+                    }
+                }
+                usuario.Correo = Correo;
+            }
+
+            if(Contra1 != null || Contra2 != null)
+            {
+                if (Contra1 != Contra2)
+                {
+                    ViewBag.Mensaje = "Las contraseñas no son iguales";
+                    return View();
+                }
+                usuario.Contrasena = Contra1;
+            }
+
+            usuario.Nombre = Nombre;
+            usuario.TipoUsuario = Categoria;
+
+            if(Imagen != null)
+            {
+                string nombreImagen = Id + "_" + Imagen.FileName;
+                await this.helperUpload.UploadFilesAsync(Imagen, nombreImagen, Folders.Users);
+                nombreImagen = "../Images/Users/" + nombreImagen;
+                usuario.DireccionImagen = nombreImagen;
+            }
+            
+            _contextDB.Entry(usuario).State = EntityState.Modified; ;
+            _contextDB.SaveChanges();
+            return RedirectToAction("Usuarios");
+        }
+        [HttpGet]
+        public IActionResult EliUsuarios()
         {
             return View();
         }

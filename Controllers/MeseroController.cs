@@ -25,6 +25,7 @@ namespace Eats_Tech.Controllers
                     if (miCookie == user.Correo)
                     {
                         ViewBag.Mesa = user.Nombre;
+                        CorreoS = user.Correo;
                     }
                 }
             }
@@ -32,6 +33,16 @@ namespace Eats_Tech.Controllers
         public IActionResult Index()
         {
             Cookies();
+            List<Usuario> user = _contextDB.Usuario.ToList();
+            foreach (var u in user)
+            {
+                if (u.Correo == CorreoS)
+                {
+                    ViewBag.ImagenPerfil = u.DireccionImagen;
+                    return View();
+                }
+
+            }
             return View();
         }
         [HttpGet]

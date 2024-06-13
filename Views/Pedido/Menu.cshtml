@@ -100,9 +100,10 @@
             }
 
             .menu-item img {
-                max-width: 100%;
-                border-radius: 10px;
-                margin-bottom: 15px;
+                max-width: 220px;
+                margin-right: 10px;
+                vertical-align: middle;
+                border-radius: 5px;
             }
 
         .menu-item-title {
@@ -153,7 +154,7 @@
                         <div class="col-md-4">
                             <a href="@Url.Action("Platillo", "Pedido", new { Platillo = i.Id })">
                                 <div class="menu-item">
-                                    <img src="@i.RutaImagen" alt="@i.NombrePlatillo"> <!-- Reemplaza 'platillo1.jpg' con la ruta de la imagen del platillo -->
+                                    <img src="@i.RutaImagen" alt="@i.NombrePlatillo" class="platillo-img"> <!-- Reemplaza 'platillo1.jpg' con la ruta de la imagen del platillo -->
                                     <div class="menu-item-title">@i.NombrePlatillo</div>
                                     <p>@i.Descripcion</p>
                                 </div>
