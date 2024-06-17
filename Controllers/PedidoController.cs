@@ -69,12 +69,12 @@ namespace Eats_Tech.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Registro(string Nombre)
+        public IActionResult Registro(string Nombre, string Correo)
         {
             Cookies();
             var insetarCliente = new Cliente[]
             {
-                new Cliente {Nombre = Nombre, IdMesa = IdMesa, Status = "Empezando", PrecioFinal = 0, Hora = DateTime.Now}
+                new Cliente {Nombre = Nombre, Correo = Correo, IdMesa = IdMesa, Status = "Empezando", PrecioFinal = 0, Hora = DateTime.Now}
             };
             foreach(var item in insetarCliente)
                 _contextDB.Add(item);

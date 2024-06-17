@@ -131,6 +131,7 @@ namespace Eats_Tech.Controllers
             var insertarusuario = new Usuario[]
             {
                 new Usuario {Nombre = "Rich", Contrasena = "1234", Correo = "ricardo_138@outlook.com", TipoUsuario = "Admin", Activo = 0, DireccionImagen = "h"},
+                new Usuario {Nombre = "Carlos", Contrasena = "1234", Correo = "camacario01@gmail.com", TipoUsuario = "Admin", Activo = 0, DireccionImagen = "../Images/Users/maca.jpg"},
                 new Usuario {Nombre = "Ale", Contrasena = "1234", Correo = "cocinero@eatstech.com", TipoUsuario = "Cocina", Activo = 0, DireccionImagen = "h"},
                 new Usuario {Nombre = "Juan", Contrasena = "1234", Correo = "mesero@eatstech.com", TipoUsuario = "Mesero", Activo = 0, DireccionImagen = "h"},
                 new Usuario {Nombre = "Mesa 1", Contrasena = "1234", Correo = "mesa1@eatstech.com", TipoUsuario = "Mesa", Activo = 0, DireccionImagen = "h"},

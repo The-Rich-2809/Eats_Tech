@@ -35,9 +35,12 @@
                 width: 100%;
                 height: 100%;
                 background-color: rgba(0, 0, 0, 0.2); /* Filtro gris */
+                z-index: 1;
             }
 
         .container {
+            position: relative;
+            z-index: 2;
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
             padding: 20px;
@@ -88,18 +91,17 @@
     </style>
 </head>
 <body>
-
     <div class="bg">
         <div class="container">
             <h2 class="text-center">¡Bienvenido a la Taquería!</h2>
             <form method="post">
                 <div class="form-group">
                     <label for="email">Correo electrónico:</label>
-                    <input name="Correo" type="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico">
+                    <input name="Correo" type="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico" required>
                 </div>
                 <div class="form-group">
                     <label for="password">Contraseña:</label>
-                    <input name="Contrasena" type="password" class="form-control" id="password" placeholder="Ingrese su contraseña">
+                    <input name="Contrasena" type="password" class="form-control" id="password" placeholder="Ingrese su contraseña" required>
                 </div>
                 <button asp-action="Index" asp-controller="Home" type="submit" class="btn btn-login">Iniciar sesión</button>
             </form>
@@ -109,6 +111,6 @@
             }
         </div>
     </div>
-
 </body>
 </html>
+

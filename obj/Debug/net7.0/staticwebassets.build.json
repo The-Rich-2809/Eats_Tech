@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ijnd7EuAfUBgGfCraPZTyeIeM6sDXXzL0ZTCGPhCOHg=",
+  "Hash": "HwaeUiYmBjxnOU5ipc+r6N02hBZ+ockOAATamFMus8k=",
   "Source": "Eats_Tech",
   "BasePath": "_content/Eats_Tech",
   "Mode": "Default",
@@ -471,6 +471,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\Users\\5_1366_2000.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Users\\maca.jpg",
+      "SourceId": "Eats_Tech",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\",
+      "BasePath": "_content/Eats_Tech",
+      "RelativePath": "Images/Users/maca.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Users\\maca.jpg"
     },
     {
       "Identity": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\js\\site.js",
