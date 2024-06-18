@@ -1,6 +1,8 @@
 ﻿using Eats_Tech.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Net.Mail;
+using System.Net;
 
 namespace Eats_Tech.Controllers
 {
@@ -246,8 +248,8 @@ namespace Eats_Tech.Controllers
         }
         [HttpPost]
         public IActionResult OrdenesCobrar(int IdCliente)
-
         {
+            List<Menu> menu = _contextDB.Menu.ToList();
             List<Cliente> clientes = _contextDB.Cliente.ToList();
             List<Orden> orden = _contextDB.Orden.ToList();
 
@@ -261,6 +263,8 @@ namespace Eats_Tech.Controllers
                     _contextDB.SaveChanges();
                 }
             }
+
+            EnviarCorreo(IdCliente, orden, menu, clientes);
 
             var u = _contextDB.Cliente.FirstOrDefault(o => o.Id == IdCliente);
             u.Status = "Terminada";
@@ -324,7 +328,104 @@ namespace Eats_Tech.Controllers
                 Usuario = usuarios,
                 Cliente = clientes
             };
+
             return View(viewmodel);
+        }
+
+        public void EnviarCorreo(int IdCliente, List<Orden> ordenes, List<Menu> menu, List<Cliente> clientes)
+        {
+            var smtpClient = new SmtpClient("smtp.gmail.com")
+            {
+                Port = 587,
+                Credentials = new NetworkCredential("eatstech777@gmail.com", "vbufjpszqvzezthq"),
+                EnableSsl = true,
+            };
+
+            var Lista = "";
+            double Total = 0;
+            double SubTotal = 0;
+            string Nombre = "";
+            string Correo = "";
+
+            foreach (var i in clientes)
+            {
+                if (i.Id == IdCliente)
+                {
+                    Nombre = i.Nombre;
+                    Correo = i.Correo;
+                    break;
+                }
+            }
+
+            foreach (var i in ordenes) 
+            {
+                if(i.IdCliente == IdCliente)
+                {
+                    foreach(var o in menu)
+                    {
+                        if(i.IdMenu == o.Id)
+                        {
+                            SubTotal = o.Costo * i.Cantidad;
+                            Total += SubTotal;
+                            Lista += $@"
+                            <tbody>
+                                <tr>
+                                    <td>{o.NombrePlatillo}</td>
+                                    <td>{i.Cantidad}</td>
+                                    <td>${o.Costo}</td>
+                                    <td>${SubTotal}</td>
+                                </tr>
+                            </tbody>";
+                        }
+                    }
+                }
+            }
+
+            var mailMessage = new MailMessage
+            {
+                From = new MailAddress("eatstech777@gmail.com"),
+                Subject = "Confirmación de la compra",
+                Body = $@"
+                    <html lang=""es"">
+                    <head>
+                        <meta charset=""UTF-8"">
+                        <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+                        <title>Tabla de Platillos</title>
+                    </head>
+                    <body>
+
+                    <font face=""Arial"">
+                    <h2>Ticket</h2>
+
+                    <p><strong>Nombre del Cliente: </strong>{Nombre}</p>
+                    <p><strong>Fecha :</strong>{DateTime.Now}</p>
+
+                    <table border=""2"" width=""100%"" cellpadding=""8"" cellspacing=""0"">
+                        <thead>
+                            <tr>
+                                <th>Nombre platillo</th>
+                                <th>Cantidad</th>
+                                <th>P.U</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        {Lista}
+                        <tfoot>
+                            <tr>
+                                <td colspan=""3"" align=""right""><strong>Precio Final</strong></td>
+                                <td><strong>${Total}</strong></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    </font>
+
+                    </body>
+                    </html>",
+                IsBodyHtml = true,
+            };
+
+            mailMessage.To.Add(Correo);
+            smtpClient.Send(mailMessage);
         }
     }
 }

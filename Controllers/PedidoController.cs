@@ -76,6 +76,7 @@ namespace Eats_Tech.Controllers
             {
                 new Cliente {Nombre = Nombre, Correo = Correo, IdMesa = IdMesa, Status = "Empezando", PrecioFinal = 0, Hora = DateTime.Now}
             };
+
             foreach(var item in insetarCliente)
                 _contextDB.Add(item);
             _contextDB.SaveChanges();

@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\rich-huawei\\documents\\github\\eats_tech\\views\\pedido\\registro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:views\\pedido\\registro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\rich-huawei\\documents\\github\\eats_tech\\controllers\\meserocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:controllers\\meserocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\rich-huawei\\documents\\github\\eats_tech\\controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\rich-huawei\\documents\\github\\eats_tech\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\rich-huawei\\documents\\github\\eats_tech\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\rich-huawei\\documents\\github\\eats_tech\\models\\orden.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:models\\orden.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\rich-huawei\\documents\\github\\eats_tech\\views\\pedido\\registro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:views\\pedido\\registro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\rich-huawei\\documents\\github\\eats_tech\\views\\recepcionista\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:views\\recepcionista\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\rich-huawei\\documents\\github\\eats_tech\\views\\shared\\_layoutrecepcionista.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:views\\shared\\_layoutrecepcionista.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,18 +38,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Orden.cs",
+              "DocumentMoniker": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Models\\Orden.cs",
+              "RelativeDocumentMoniker": "Models\\Orden.cs",
+              "ToolTip": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Models\\Orden.cs",
+              "RelativeToolTip": "Models\\Orden.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T06:56:57.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Registro.cshtml",
-              "DocumentMoniker": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Views\\Pedido\\Registro.cshtml",
-              "RelativeDocumentMoniker": "Views\\Pedido\\Registro.cshtml",
-              "ToolTip": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Views\\Pedido\\Registro.cshtml",
-              "RelativeToolTip": "Views\\Pedido\\Registro.cshtml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-17T04:29:36.655Z",
+              "Title": "MeseroController.cs",
+              "DocumentMoniker": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Controllers\\MeseroController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MeseroController.cs",
+              "ToolTip": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Controllers\\MeseroController.cs",
+              "RelativeToolTip": "Controllers\\MeseroController.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T06:42:29.994Z",
               "EditorCaption": ""
             },
             {
@@ -45,19 +73,55 @@
               "ToolTip": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Controllers\\PedidoController.cs",
               "RelativeToolTip": "Controllers\\PedidoController.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T04:28:41.546Z",
+              "WhenOpened": "2024-06-18T06:37:38.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Registro.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Views\\Pedido\\Registro.cshtml",
+              "RelativeDocumentMoniker": "Views\\Pedido\\Registro.cshtml",
+              "ToolTip": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Views\\Pedido\\Registro.cshtml",
+              "RelativeToolTip": "Views\\Pedido\\Registro.cshtml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-18T06:34:39.792Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Cliente.cs",
-              "DocumentMoniker": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Models\\Cliente.cs",
-              "RelativeDocumentMoniker": "Models\\Cliente.cs",
-              "ToolTip": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Models\\Cliente.cs",
-              "RelativeToolTip": "Models\\Cliente.cs",
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T04:27:37.357Z",
+              "WhenOpened": "2024-06-18T06:24:50.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_LayoutRecepcionista.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Views\\Shared\\_LayoutRecepcionista.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LayoutRecepcionista.cshtml",
+              "ToolTip": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Views\\Shared\\_LayoutRecepcionista.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LayoutRecepcionista.cshtml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-18T06:09:42.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Views\\Recepcionista\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Recepcionista\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Views\\Recepcionista\\Index.cshtml",
+              "RelativeToolTip": "Views\\Recepcionista\\Index.cshtml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-18T06:08:07.863Z",
               "EditorCaption": ""
             }
           ]
