@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zRya6mMmnpSnnqFUI4RPSL22F5/CE/kmsbZXVwcFQ24=",
+  "Hash": "B8Po/4W5dhPZGEoELBHw+2+spt+9rsbiCIHa7h4X/MI=",
   "Source": "Eats_Tech",
   "BasePath": "_content/Eats_Tech",
   "Mode": "Default",
@@ -150,12 +150,12 @@
       "OriginalItemSpec": "wwwroot\\Images\\Bebidas\\bellini.jpg"
     },
     {
-      "Identity": "C:\\Github\\Kapicentro\\Eats_Tech\\wwwroot\\Images\\Bebidas\\caipirnha.jpg",
+      "Identity": "C:\\Github\\Kapicentro\\Eats_Tech\\wwwroot\\Images\\Bebidas\\caipirinha.jpg",
       "SourceId": "Eats_Tech",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Github\\Kapicentro\\Eats_Tech\\wwwroot\\",
       "BasePath": "_content/Eats_Tech",
-      "RelativePath": "Images/Bebidas/caipirnha.jpg",
+      "RelativePath": "Images/Bebidas/caipirinha.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -166,7 +166,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\Bebidas\\caipirnha.jpg"
+      "OriginalItemSpec": "wwwroot\\Images\\Bebidas\\caipirinha.jpg"
     },
     {
       "Identity": "C:\\Github\\Kapicentro\\Eats_Tech\\wwwroot\\Images\\Bebidas\\chai-latte.jpg",

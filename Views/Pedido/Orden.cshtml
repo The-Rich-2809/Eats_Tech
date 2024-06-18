@@ -159,69 +159,84 @@
     <!-- Fondo con Resumen -->
     <div class="bg">
         @{
-            double Total = 0;
-            <div class="content">
-                <h2 class="title">Resumen de tu Orden</h2>
+            if (Model.Orden.Count() > 0)
+            {
+                double Total = 0;
+                <div class="content">
+                    <h2 class="title">Resumen de tu Orden</h2>
 
-                <table class="summary-table">
-                    <thead>
-                        <tr>
-                            <th>Platillo</th>
-                            <th>Cantidad</th>
-                            <th>Precio</th>
-                            <th>Total</th>
-                            <th>Eliminar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var i in Model.Orden)
-                        {
-                            if (i.IdCliente == ViewBag.IdCliente && i.Status == "Por pedir")
+                    <table class="summary-table">
+                        <thead>
+                            <tr>
+                                <th>Platillo</th>
+                                <th>Cantidad</th>
+                                <th>Precio</th>
+                                <th>Total</th>
+                                <th>Eliminar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var i in Model.Orden)
                             {
-                                foreach (var j in Model.Menu)
+                                if (i.IdCliente == ViewBag.IdCliente && i.Status == "Por pedir")
                                 {
-                                    if (j.Id == i.IdMenu)
+                                    foreach (var j in Model.Menu)
                                     {
-                                        Total += i.Costo;
-                                        <tr data-product-menu-id="@j.Id" data-orden-id="@i.Id">
-                                            <td>
-                                                <img src="@j.RutaImagen" alt="Platillo 1" class="platillo-img">
-                                                <span class="platillo-name">@j.NombrePlatillo</span>
-                                            </td>
-                                            <td>
-                                                <div class="input-group quantity mx-auto" style="width: 100px;">
-                                                    <input type="number"
-                                                           class="form-control form-control-sm bg-secondary border-0 text-center numeric"
-                                                           value="@i.Cantidad" data-product-inter-id="@i.Id">
-                                                </div>
-                                            </td>
-                                            <td>$@j.Costo</td>
-                                            <td>$@i.Costo</td>
-                                            <td>
-                                                <form asp-controller="Pedido" asp-action="BorrarPedido" method="get">
-                                                    <input type="hidden" name="idord" value="@i.Id" />
-                                                    <button class="btn btn-danger" type="submit">Borrar</button>
-                                                </form>
-                                            </td>
-                                        </tr>
-                                        break;
+                                        if (j.Id == i.IdMenu)
+                                        {
+                                            Total += i.Costo;
+                                            <tr data-product-menu-id="@j.Id" data-orden-id="@i.Id">
+                                                <td>
+                                                    <img src="@j.RutaImagen" alt="Platillo 1" class="platillo-img">
+                                                    <span class="platillo-name">@j.NombrePlatillo</span>
+                                                </td>
+                                                <td>
+                                                    <div class="input-group quantity mx-auto" style="width: 100px;">
+                                                        <input type="number"
+                                                               class="form-control form-control-sm bg-secondary border-0 text-center numeric"
+                                                               value="@i.Cantidad" data-product-inter-id="@i.Id">
+                                                    </div>
+                                                </td>
+                                                <td>$@j.Costo</td>
+                                                <td>$@i.Costo</td>
+                                                <td>
+                                                    <form asp-controller="Pedido" asp-action="BorrarPedido" method="get">
+                                                        <input type="hidden" name="idord" value="@i.Id" />
+                                                        <button class="btn btn-danger" type="submit">Borrar</button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                            break;
+                                        }
                                     }
                                 }
                             }
-                        }
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
 
-                <div class="total">Total: $@Total</div>
-                @if (Total != 0)
-                {
-                    <form method="post">
-                        <input type="hidden" name="Total" value="@Total" />
-                        <button type="button" class="finalize-btn" data-toggle="modal" data-target="#confirmationModal">Finalizar orden</button>
-                    </form>
-                }
+                    <div class="total">Total: $@Total</div>
+                    @if (Total != 0)
+                    {
+                        <form method="post">
+                            <input type="hidden" name="Total" value="@Total" />
+                            <button type="button" class="finalize-btn" data-toggle="modal" data-target="#confirmationModal">Finalizar orden</button>
+                        </form>
+                    }
 
-            </div>
+                </div>
+            }
+            else
+            {
+                <div class="d-flex justify-content-center">
+                    <div class="card" style="width: 200%;">
+                        <div class="card-body">
+                            <div class="alert alert-info text-center">
+                                <p>No hay productos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
         }
     </div>
 
