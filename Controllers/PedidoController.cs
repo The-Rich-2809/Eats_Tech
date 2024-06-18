@@ -298,5 +298,12 @@ namespace Eats_Tech.Controllers
             return RedirectToAction("Index");
         }
 
+        public IActionResult BorrarPedido(int idord)
+        {
+            var prodcarrito = _contextDB.Orden.FirstOrDefault(p => p.Id == idord);
+            _contextDB.Orden.Remove(prodcarrito);
+            _contextDB.SaveChanges();
+            return RedirectToAction(nameof(Orden));
+        }
     }
 }

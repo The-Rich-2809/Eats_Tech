@@ -35,7 +35,7 @@
         .bg {
             position: relative;
             min-height: 100vh;
-            background-image: url('../Images/Orden.jpg'); /* Reemplaza 'tu-imagen.jpg' con la ruta de tu imagen */
+            background-image: url('../Images/Orden.jpg');
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -52,13 +52,13 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-color: rgba(0, 0, 0, 0.5); /* Cambia el 0.5 por el nivel de opacidad que prefieras */
+                background-color: rgba(0, 0, 0, 0.5);
                 z-index: 1;
             }
 
         .content {
             position: relative;
-            z-index: 2; /* Asegura que el contenido esté por encima del filtro */
+            z-index: 2;
             background: rgba(255, 255, 255, 0.8);
             padding: 30px;
             border-radius: 10px;
@@ -88,7 +88,7 @@
         }
 
         .title {
-            font-family: 'Leckerli One', cursive; /* Tipografía estilo taquería */
+            font-family: 'Leckerli One', cursive;
             font-size: 48px;
             color: white;
             margin-bottom: 20px;
@@ -132,6 +132,7 @@
             }
     </style>
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-custom">
@@ -169,6 +170,7 @@
                             <th>Cantidad</th>
                             <th>Precio</th>
                             <th>Total</th>
+                            <th>Eliminar</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -181,14 +183,26 @@
                                     if (j.Id == i.IdMenu)
                                     {
                                         Total += i.Costo;
-                                        <tr>
+                                        <tr data-product-menu-id="@j.Id" data-orden-id="@i.Id">
                                             <td>
-                                                <img src="@j.RutaImagen" alt="Platillo 1" class="platillo-img"> <!-- Reemplaza 'platillo1.jpg' con la ruta de la imagen del platillo -->
+                                                <img src="@j.RutaImagen" alt="Platillo 1" class="platillo-img">
                                                 <span class="platillo-name">@j.NombrePlatillo</span>
                                             </td>
-                                            <td>@i.Cantidad</td>
+                                            <td>
+                                                <div class="input-group quantity mx-auto" style="width: 100px;">
+                                                    <input type="number"
+                                                           class="form-control form-control-sm bg-secondary border-0 text-center numeric"
+                                                           value="@i.Cantidad" data-product-inter-id="@i.Id">
+                                                </div>
+                                            </td>
                                             <td>$@j.Costo</td>
                                             <td>$@i.Costo</td>
+                                            <td>
+                                                <form asp-controller="Pedido" asp-action="BorrarPedido" method="get">
+                                                    <input type="hidden" name="idord" value="@i.Id" />
+                                                    <button class="btn btn-danger" type="submit">Borrar</button>
+                                                </form>
+                                            </td>
                                         </tr>
                                         break;
                                     }
@@ -199,11 +213,11 @@
                 </table>
 
                 <div class="total">Total: $@Total</div>
-                @if(Total != 0)
+                @if (Total != 0)
                 {
                     <form method="post">
                         <input type="hidden" name="Total" value="@Total" />
-                        <button asp-action="Orden" asp-controller="Pedido" type="submit" class="finalize-btn">Finalizar orden</button>
+                        <button type="button" class="finalize-btn" data-toggle="modal" data-target="#confirmationModal">Finalizar orden</button>
                     </form>
                 }
 
@@ -211,17 +225,76 @@
         }
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <!-- Modal -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Confirmación</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Por favor, seleccione una opción:
+                    <select id="modalSelect" class="form-control">
+                        <option value="option1">Opción 1</option>
+                        <option value="option2">Opción 2</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="submitForm()">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function submitForm() {
+            var selectedOption = document.getElementById("modalSelect").value;
+            // Aquí puedes agregar lógica para manejar la opción seleccionada si es necesario
+            document.getElementById("selectedOption").value = selectedOption;
+            document.querySelector("form").submit();
+        }
+
+        $(document).ready(function () {
+            function updateTotals() {
+                var subtotal = 0;
+                $('.numeric').each(function () {
+                    var cantidad = parseFloat($(this).val());
+                    var precio = parseFloat($(this).closest('tr').find('td:eq(2)').text().replace('$', ''));
+                    var total = cantidad * precio;
+                    subtotal += total;
+                    $(this).closest('tr').find('td:eq(3)').text('$' + total.toFixed(2));
+                });
+                $('.total').text('Total: $' + subtotal.toFixed(2));
+            }
+
+            $('.numeric').on("change", function () {
+                var valor = $(this).val();
+                var idprodInter = $(this).closest('tr').data('product-menu-id');
+                var carritoId = $(this).closest('tr').data('orden-id');
+                $.ajax({
+                    type: 'GET',
+                    url: '/api/Values/CambioCantidad',
+                    data: { valor: valor, idprodInter: idprodInter, carritoId: carritoId },
+                    success: function (response) {
+                        updateTotals();
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+                });
+            });
+
+            updateTotals();
+        });
+    </script>
 </body>
 </html>
 
-
-
-
-
-
-
-
-
+</html>
