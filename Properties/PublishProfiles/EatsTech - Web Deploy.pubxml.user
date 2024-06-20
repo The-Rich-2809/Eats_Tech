@@ -6,12 +6,7 @@ edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 
 <Project>
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <History>True|2024-06-17T00:44:19.1563279Z||;True|2024-06-16T18:25:41.2309502-06:00||;True|2024-06-15T02:54:53.1599743-06:00||;</History>
+    <History>True|2024-06-20T09:05:37.6559739Z||;True|2024-06-20T03:04:33.6904277-06:00||;True|2024-06-20T03:00:44.2548325-06:00||;</History>
     <LastFailureDetails />
   </PropertyGroup>
-  <ItemGroup>
-    <DestinationConnectionStrings Include="ConexionSql">
-      <Value>Server=tcp:eatstech.database.windows.net,1433%3bInitial Catalog=Eats_Tech%3bPersist Security Info=False%3bUser ID=eatstech%3bPassword=TheRich2809%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
-    </DestinationConnectionStrings>
-  </ItemGroup>
 </Project>

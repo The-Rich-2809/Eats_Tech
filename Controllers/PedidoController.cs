@@ -43,6 +43,7 @@ namespace Eats_Tech.Controllers
                 if (cliente.IdMesa == IdM && cliente.Status != "Terminada")
                 {
                     IdCliente = cliente.Id;
+                    ViewBag.NombreCliente = cliente.Nombre;
                     break;
                 }
             }
@@ -304,6 +305,13 @@ namespace Eats_Tech.Controllers
             _contextDB.Orden.Remove(prodcarrito);
             _contextDB.SaveChanges();
             return RedirectToAction(nameof(Orden));
+        }
+
+        [HttpGet]
+        public IActionResult GetData()
+        {
+            var data = DateTime.Now.ToString("T");
+            return RedirectToAction("Comiendo");
         }
     }
 }

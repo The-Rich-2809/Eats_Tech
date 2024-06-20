@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "ContainingType": "Eats_Tech.Controllers.ValuesController",
+    "Method": "CambioCantidad",
+    "RelativePath": "api/Values/CambioCantidad",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idprodInter",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "valor",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "carritoId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

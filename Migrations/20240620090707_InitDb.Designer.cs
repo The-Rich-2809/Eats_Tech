@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Eats_Tech.Migrations
 {
     [DbContext(typeof(Eats_TechDB))]
-    [Migration("20240526033447_InitDb")]
+    [Migration("20240620090707_InitDb")]
     partial class InitDb
     {
         /// <inheritdoc />
@@ -33,6 +33,9 @@ namespace Eats_Tech.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("Activo")
+                        .HasColumnType("int");
+
                     b.Property<string>("NombreCategoria")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -49,6 +52,10 @@ namespace Eats_Tech.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Correo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("Hora")
                         .HasColumnType("datetime2");
@@ -86,6 +93,9 @@ namespace Eats_Tech.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("Activo")
+                        .HasColumnType("int");
+
                     b.Property<string>("Categoria")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -108,6 +118,35 @@ namespace Eats_Tech.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Menu");
+                });
+
+            modelBuilder.Entity("Eats_Tech.Models.Orden", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Cantidad")
+                        .HasColumnType("int");
+
+                    b.Property<double>("Costo")
+                        .HasColumnType("float");
+
+                    b.Property<int>("IdCliente")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdMenu")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Orden");
                 });
 
             modelBuilder.Entity("Eats_Tech.Models.Usuario", b =>

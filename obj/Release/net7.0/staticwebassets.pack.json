@@ -5,6 +5,70 @@
       "PackagePath": "staticwebassets\\Eats_Tech.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\aperol-spritz.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\aperol-spritz.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\bellini.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\bellini.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\caipirinha.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\caipirinha.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\chai-latte.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\chai-latte.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\cosmopolitan.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\cosmopolitan.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\irish-coffee.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\irish-coffee.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\lassi.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\lassi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\limoncello.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\limoncello.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\margarita.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\margarita.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\mate.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\mate.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\mojito.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\mojito.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\pina-colada.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\pina-colada.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\pisco-sour.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\pisco-sour.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\sake.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\sake.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\sangria.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\sangria.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\tequila-sunrise.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\tequila-sunrise.jpg"
+    },
+    {
       "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\BoingMango.png",
       "PackagePath": "staticwebassets\\Images\\BoingMango.png"
     },
@@ -55,6 +119,70 @@
     {
       "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\1_8_1366_2000.jpg",
       "PackagePath": "staticwebassets\\Images\\Platillos\\1_8_1366_2000.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\Shakshuka.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\Shakshuka.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\biryani.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\biryani.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\bratwurst.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\bratwurst.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\ceviche.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\ceviche.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\churrasco.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\churrasco.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\croissant.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\croissant.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\falafel.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\falafel.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\kebab.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\kebab.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\kimchi.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\kimchi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\pad-thai.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\pad-thai.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\paella.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\paella.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\pho.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\pho.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\pizza-margarita.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\pizza-margarita.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\poutine.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\poutine.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\ratatouille.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\ratatouille.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\sushi.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\sushi.jpg"
     },
     {
       "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Users\\1_WhatsApp Image 2024-06-07 at 11.59.49 AM (1).jpeg",

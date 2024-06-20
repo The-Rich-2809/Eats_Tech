@@ -131,18 +131,9 @@
                 background-color: #c0392b;
             }
     </style>
-    <script type="text/javascript">
-        // Función para recargar la página cada 5 minutos
-        function autoRefresh() {
-            setTimeout(function () {
-                location.reload();
-            }, 5000); // 300000 milisegundos = 5 minutos
-        }
-    </script>
 </head>
 <body>
     <!-- Navbar -->
-
     <!-- Fondo con Resumen -->
     <div class="bg">
         @{
@@ -215,6 +206,12 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Script para recargar la página cada 5 segundos
+        setInterval(function () {
+            location.reload();
+        }, 15000); // 5000 milisegundos = 5 segundos
+    </script>
 </body>
 </html>
 

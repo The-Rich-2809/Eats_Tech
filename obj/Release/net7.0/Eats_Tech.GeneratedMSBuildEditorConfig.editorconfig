@@ -158,6 +158,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvXFJlZ2lzdHJvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Recepcionista/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXBjaW9uaXN0YVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -172,6 +176,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Shared/_LayoutMesero.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRNZXNlcm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Shared/_LayoutRecepcionista.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRSZWNlcGNpb25pc3RhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Shared/_ValidationScriptsPartial.cshtml]

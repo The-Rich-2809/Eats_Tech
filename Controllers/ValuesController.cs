@@ -22,7 +22,7 @@ namespace Eats_Tech.Controllers
             var inter = _contextDB.Menu.FirstOrDefault(i => i.Id == idprodInter);
 
             carrito.Cantidad = valor;
-            carrito.Costo = carrito.Cantidad * carrito.Costo;
+            carrito.Costo = carrito.Cantidad * inter.Costo;
 
             _contextDB.Orden.Update(carrito);
             _contextDB.SaveChanges();

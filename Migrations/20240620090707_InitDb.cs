@@ -17,7 +17,8 @@ namespace Eats_Tech.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    NombreCategoria = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    NombreCategoria = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Activo = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -31,6 +32,7 @@ namespace Eats_Tech.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Correo = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     IdMesa = table.Column<int>(type: "int", nullable: false),
                     PrecioFinal = table.Column<double>(type: "float", nullable: false),
                     Propina = table.Column<double>(type: "float", nullable: false),
@@ -53,11 +55,29 @@ namespace Eats_Tech.Migrations
                     Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Costo = table.Column<double>(type: "float", nullable: false),
                     Categoria = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    RutaImagen = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    RutaImagen = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Activo = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Menu", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Orden",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    IdMenu = table.Column<int>(type: "int", nullable: false),
+                    Cantidad = table.Column<int>(type: "int", nullable: false),
+                    Costo = table.Column<double>(type: "float", nullable: false),
+                    IdCliente = table.Column<int>(type: "int", nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Orden", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -90,6 +110,9 @@ namespace Eats_Tech.Migrations
 
             migrationBuilder.DropTable(
                 name: "Menu");
+
+            migrationBuilder.DropTable(
+                name: "Orden");
 
             migrationBuilder.DropTable(
                 name: "Usuario");

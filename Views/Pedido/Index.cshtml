@@ -62,7 +62,7 @@
             padding: 15px 25px;
             font-size: 24px;
             color: white;
-            background-color: #e74c3c;
+            background-color: #3498db; /* Cambiado a color azul */
             border: none;
             border-radius: 10px;
             cursor: pointer;
@@ -72,6 +72,27 @@
         }
 
             .btn-custom:hover {
+                background-color: #2980b9; /* Azul oscuro al pasar el mouse */
+                transform: scale(1.05);
+            }
+
+        .link-custom {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px; /* Tamaño de fuente más pequeño */
+            color: white;
+            background-color: #e74c3c;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            font-family: 'Leckerli One', cursive; /* Tipografía estilo taquería */
+            text-decoration: none;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+            .link-custom:hover {
                 background-color: #c0392b;
                 transform: scale(1.05);
             }
@@ -85,9 +106,7 @@
                 <div class="title">Eats Tech</div>
                 <button asp-action="Registro" asp-controller="Pedido" class="btn btn-custom">Haz clic aquí</button>
             </form>
-        </div>
-        <div class="content">
-             <a href="@Url.Action("CerrarSesion", "Home")">Cerrar sesion</a>
+            <a href="@Url.Action("CerrarSesion", "Home")" class="link-custom">Cerrar sesión</a>
         </div>
     </div>
 

@@ -148,11 +148,10 @@
                 }
             </ul>
             <form>
+                <a class="navbar-brand">@ViewBag.NombreCliente</a>
+                <a class="navbar-brand">@ViewBag.Mesa</a>
                 <button asp-action="Orden" asp-controller="Pedido" class="btn btn-danger">Finalizar orden</button>
             </form>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <a class="navbar-brand">@ViewBag.Mesa</a>
         </div>
     </nav>
 
