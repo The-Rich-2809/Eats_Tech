@@ -6,6 +6,7 @@
         public IEnumerable<Usuario> Usuario { get; set; }
         public IEnumerable<Menu> Menu { get; set; }
         public IEnumerable<Orden> Orden { get; set; }
+        public IEnumerable<Comentario> Comentario { get; set; }
 
     }
 }

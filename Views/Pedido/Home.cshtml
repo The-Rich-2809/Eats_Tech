@@ -1,6 +1,7 @@
 ﻿@{
     Layout = "_LayoutSimple";
 }
+@model IEnumerable<Eats_Tech.Models.Menu>;
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,8 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenido a la Taquería</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <style>
         body, html {
@@ -20,7 +19,7 @@
 
         .bg {
             position: relative;
-            background-image: url('../Images/FondoH.jpg'); /* Reemplaza 'fondo-taqueria.jpg' con la ruta de tu imagen */
+            background-image: url('../Images/FondoH.jpg');
             background-position: center;
             background-size: cover;
             height: 100%;
@@ -28,6 +27,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
+            padding-top: 50px; /* Añadir espacio arriba */
         }
 
             .bg::before {
@@ -37,7 +37,7 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-color: rgba(0, 0, 0, 0.2); /* Filtro gris */
+                background-color: rgba(0, 0, 0, 0.2);
             }
 
         .navbar-custom {
@@ -51,6 +51,33 @@
                 font-family: 'Leckerli One', cursive;
             }
 
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 600px; /* Altura fija para todas las imágenes del carrusel */
+            object-fit: cover; /* Asegura que la imagen cubra completamente el contenedor */
+        }
+
+        .carousel-inner {
+            background-color: black; /* Fondo fijo para el carrusel */
+        }
+
+        .card-title {
+            font-size: 1.5em;
+            font-family: 'Leckerli One', cursive;
+        }
+
+        .card-text {
+            font-size: 1.2em;
+        }
+
+        .card {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -81,11 +108,71 @@
         </div>
     </nav>
 
+    <!-- Carrusel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="../Images/1.jpg" alt="Primera imagen">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Deliciosos Tacos</h5>
+                    <p>Prueba nuestros mejores tacos.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="../Images/2.jpg" alt="Segunda imagen">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Enchiladas</h5>
+                    <p>Enchiladas con auténtico sabor mexicano.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="../Images/3.jpg" alt="Tercera imagen">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Postres</h5>
+                    <p>Deliciosos postres para endulzar tu día.</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+    </div>
+
+    <!-- Fondo y Tarjetas de Platillos Más Pedidos -->
     <div class="bg">
         <div class="container">
-            <div style="color: white" class="content">
+            <div style="color: white; margin-bottom: 30px;" class="content">
                 <h1>Bienvenido a la Taquería</h1>
                 <p>Disfruta de la mejor comida mexicana en nuestro restaurante.</p>
+            </div>
+            <div class="row">
+                @foreach (var i in Model)
+                {
+                    if (i.Id == ViewBag.R1 || i.Id == ViewBag.R2 || i.Id == ViewBag.R3)
+                        {
+                        <div class="col-md-4">
+                            <a href="@Url.Action("Platillo", "Pedido", new { Platillo = i.Id })">
+                                <div class="card">
+                                    <img src="@i.RutaImagen" alt="@i.NombrePlatillo" class="card-img-top">
+                                    <div class="card-body">
+                                        <h5 class="card-title">@i.NombrePlatillo</h5>
+                                        <p class="card-text">@i.Descripcion</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    }
+                }
             </div>
         </div>
     </div>

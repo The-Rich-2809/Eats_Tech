@@ -9,9 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resumen de Orden</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
         body, html {
             height: 100%;
@@ -139,6 +138,31 @@
             margin-top: 20px;
             color: black;
         }
+
+        .star-rating {
+            direction: rtl;
+            display: inline-block;
+            padding: 20px;
+        }
+
+            .star-rating input[type=radio] {
+                display: none;
+            }
+
+            .star-rating label {
+                color: #bbb;
+                font-size: 30px;
+                padding: 0;
+                cursor: pointer;
+                -webkit-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+            }
+
+                .star-rating label:hover,
+                .star-rating label:hover ~ label,
+                .star-rating input[type=radio]:checked ~ label {
+                    color: #f2b600;
+                }
     </style>
 </head>
 <body>
@@ -147,21 +171,22 @@
     <div class="bg">
         @{
             double Total = 0;
-            <div class="content">
-                @if (ViewBag.Mensaje != "Terminada")
+            string Recargar = "";
+                <div class="content">
+                    @if (ViewBag.Mensaje != "Terminada" && ViewBag.Mensaje != "Por Terminar")
                 {
-                    <h2>@ViewBag.Mensaje</h2>
-                    <table class="summary-table">
-                        <thead>
-                            <tr>
-                                <th>Platillo</th>
-                                <th>Cantidad</th>
-                                <th>Precio</th>
-                                <th>Total</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var i in Model.Orden)
+                        <h2>@ViewBag.Mensaje</h2>
+                        <table class="summary-table">
+                            <thead>
+                                <tr>
+                                    <th>Platillo</th>
+                                    <th>Cantidad</th>
+                                    <th>Precio</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var i in Model.Orden)
                             {
                                 if (i.IdCliente == ViewBag.IdCliente)
                                 {
@@ -170,25 +195,26 @@
                                         if (j.Id == i.IdMenu)
                                         {
                                             Total += i.Costo;
-                                            <tr>
-                                                <td>
-                                                    <img src="@j.RutaImagen" alt="@j.NombrePlatillo" class="platillo-img">
-                                                    <span class="platillo-name">@j.NombrePlatillo</span>
-                                                </td>
-                                                <td>@i.Cantidad</td>
-                                                <td>$@j.Costo</td>
-                                                <td>$@i.Costo</td>
-                                            </tr>
+                                                <tr>
+                                                    <td>
+                                                        <img src="@j.RutaImagen" alt="@j.NombrePlatillo" class="platillo-img">
+                                                        <span class="platillo-name">@j.NombrePlatillo</span>
+                                                    </td>
+                                                    <td>@i.Cantidad</td>
+                                                    <td>$@j.Costo</td>
+                                                    <td>$@i.Costo</td>
+                                                </tr>
                                             break;
                                         }
                                     }
                                 }
                             }
-                        </tbody>
-                    </table>
-                    <div class="total">Total: $@Total</div>
-                    @if (ViewBag.Status == "Comiendo")
-                    {
+                            </tbody>
+                        </table>
+                        <div class="total">Total: $@Total</div>
+                        @if (ViewBag.Status == "Comiendo")
+                        {
+                        Recargar = "Si";
                         <form method="post">
                             <select name="MetodoPago" class="form-select mb-3">
                                 <option selected>Selecciona un metodo de pago</option>
@@ -200,18 +226,33 @@
                         <form method="post">
                             <button asp-action="LlamarMesero" asp-controller="Pedido" type="submit" class="finalize-btn">Llamar al mesero</button>
                         </form>
-                    }
+                        }
                 }
-                else
+                else if (ViewBag.Mensaje == "Por Terminar")
                 {
-                    <h2 class="thank-you-msg">Gracias por comer con nosotros @ViewBag.Nombre, vuelve pronto :v</h2>
-                    <h2 class="thank-you-msg">En el correo que proporcionaste al principio puedes encontrar tu ticket.</h2>
-                    <h3class ="thank-you-msg">Porfavor ayudanos a calificar el servicio y dejando un comentario sobre el servicio</h3class>
-                    <form method="get">
-                        <button asp-action="Terminar" asp-controller="Pedido" type="submit" class="finalize-btn">Regresar al inicio</button>
-                    </form>
+                    Recargar = "Si";
+                        <h2 class="thank-you-msg">Gracias por comer con nosotros @ViewBag.Nombre, vuelve pronto :v</h2>
+                        <h2 class="thank-you-msg">En el correo que proporcionaste al principio puedes encontrar tu ticket.</h2>
+                        <h3 class="thank-you-msg">Por favor, ayúdanos a calificar el servicio y dejando un comentario sobre el servicio</h3>
+
+                        <form method="post" action="TuAccionDeCalificacion">
+                            <div class="star-rating">
+                                <input type="radio" id="5-stars" name="rating" value="5" />
+                                <label for="5-stars" class="fa fa-star"></label>
+                                <input type="radio" id="4-stars" name="rating" value="4" />
+                                <label for="4-stars" class="fa fa-star"></label>
+                                <input type="radio" id="3-stars" name="rating" value="3" />
+                                <label for="3-stars" class="fa fa-star"></label>
+                                <input type="radio" id="2-stars" name="rating" value="2" />
+                                <label for="2-stars" class="fa fa-star"></label>
+                                <input type="radio" id="1-star" name="rating" value="1" />
+                                <label for="1-star" class="fa fa-star"></label>
+                            </div>
+                            <textarea name="comentario" rows="4" cols="50" placeholder="Deja tu comentario aquí..."></textarea>
+                            <button asp-action="Comentario" asp-controller="Pedido" type="submit" class="finalize-btn">Enviar comentario</button>
+                        </form>
                 }
-            </div>
+                </div>
         }
     </div>
 
@@ -220,10 +261,18 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
         // Script para recargar la página cada 15 segundos
+
+        function checkAndReload() {
+            if ("@Recargar" !== "Si") {
+                location.reload();
+            }
+        }
+
+        // Establece el intervalo para verificar el valor y recargar si es igual a 0
         setInterval(function () {
-            location.reload();
-        }, 15000);
+            checkAndReload();
+        }, 5000);
+
     </script>
 </body>
 </html>
-

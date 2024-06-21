@@ -280,7 +280,7 @@ namespace Eats_Tech.Controllers
                 if (orden1.IdCliente == IdCliente)
                 {
                     var c = _contextDB.Orden.FirstOrDefault(o => o.IdCliente == IdCliente && o.Id == orden1.Id);
-                    c.Status = "Terminada";
+                    c.Status = "Por Terminar";
                     _contextDB.Entry(c).State = EntityState.Modified; ;
                     _contextDB.SaveChanges();
                 }
@@ -289,7 +289,7 @@ namespace Eats_Tech.Controllers
             EnviarCorreo(IdCliente, orden, menu, clientes);
 
             var u = _contextDB.Cliente.FirstOrDefault(o => o.Id == IdCliente);
-            u.Status = "Terminada";
+            u.Status = "Por Terminar";
             _contextDB.Entry(u).State = EntityState.Modified; ;
             _contextDB.SaveChanges();
             return RedirectToAction("OrdenesTerminar");
@@ -439,6 +439,7 @@ namespace Eats_Tech.Controllers
                             </tr>
                         </tfoot>
                     </table>
+                       <h2>Gracias por comer con nosotros :v</h2>
                     </font>
 
                     </body>

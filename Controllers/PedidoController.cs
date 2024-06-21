@@ -92,7 +92,7 @@ namespace Eats_Tech.Controllers
             Cookies();
             var insetarCliente = new Cliente[]
             {
-                new Cliente {Nombre = Nombre, Correo = Correo, IdMesa = IdMesa, Status = "Empezando", PrecioFinal = 0, Hora = DateTime.Now}
+                new Cliente {Nombre = Nombre, Correo = Correo, IdMesa = IdMesa, Status = "Empezando", PrecioFinal = 0, Hora = DateTime.Now, Comentarios = ""}
             };
 
             foreach(var item in insetarCliente)
@@ -104,7 +104,22 @@ namespace Eats_Tech.Controllers
         public IActionResult Home()
         {
             Cookies();
-            return View();
+            List<Menu> menu = _contextDB.Menu.ToList();
+
+            Random random = new Random();
+            ViewBag.R1 = random.Next(1, menu.Count);
+
+            do
+            {
+                ViewBag.R2 = random.Next(1, menu.Count);
+            } while(ViewBag.R1 == ViewBag.R2);
+
+            do
+            {
+                ViewBag.R3 = random.Next(1, menu.Count);
+            } while (ViewBag.R1 == ViewBag.R3 || ViewBag.R2 == ViewBag.R3);
+
+            return View(menu);
         }
         [HttpGet]
         public IActionResult Menu(string Categoria)
@@ -265,10 +280,10 @@ namespace Eats_Tech.Controllers
                 if(cliente.Id == IdCliente)
                 {
                     if(cliente.Status == "Por recibir")
-                        ViewBag.Mensaje = "Gracias por comer con nosotros, en un momento estara listo su comida";
+                        ViewBag.Mensaje = "Gracias por comer con nosotros, en un tiempo aproxiamdo de 15 minutos estara lista su comida";
 
                     if (cliente.Status == "Por enviar")
-                        ViewBag.Mensaje = "Gracias por su tiempo de espera, un mesero vendra a entregarle su comida";
+                        ViewBag.Mensaje = "Gracias por su tiempo de espera, en un momento uno de nuestros meseros vendra a entregarle su comida";
 
                     if (cliente.Status == "Comiendo")
                     {
@@ -296,9 +311,9 @@ namespace Eats_Tech.Controllers
                         }
                     }
 
-                    if(cliente.Status == "Terminada")
+                    if(cliente.Status == "Por Terminar")
                     {
-                        ViewBag.Mensaje = "Terminada";
+                        ViewBag.Mensaje = "Por Terminar";
                         ViewBag.Nombre = cliente.Nombre;
                     }
                     break;
@@ -339,9 +354,32 @@ namespace Eats_Tech.Controllers
             _contextDB.SaveChanges();
             return RedirectToAction("Comiendo");
         }
-        [HttpGet]
-        public IActionResult Terminar()
+        [HttpPost]
+        public IActionResult Comentario(int rating, string comentario)
         {
+            var u = _contextDB.Cliente.FirstOrDefault(o => o.Id == IdCliente);
+            u.Comentarios = comentario;
+            u.Status = "Terminada";
+            u.Calificacion = rating;
+            u.DateTimeComentario = DateTime.Now;
+            ViewBag.Comentario = u.Comentarios;
+            _contextDB.Entry(u).State = EntityState.Modified; ;
+            _contextDB.SaveChanges();
+
+            List<Cliente> clientes = _contextDB.Cliente.ToList();
+            List<Orden> orden = _contextDB.Orden.ToList();
+
+            foreach (Orden orden1 in orden)
+            {
+                if (orden1.IdCliente == IdCliente)
+                {
+                    var c = _contextDB.Orden.FirstOrDefault(o => o.IdCliente == IdCliente && o.Id == orden1.Id);
+                    c.Status = "Terminada";
+                    _contextDB.Entry(c).State = EntityState.Modified; ;
+                    _contextDB.SaveChanges();
+                }
+            }
+
             return RedirectToAction("Index");
         }
 

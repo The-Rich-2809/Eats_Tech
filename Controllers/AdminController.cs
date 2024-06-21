@@ -555,6 +555,19 @@ namespace Eats_Tech.Controllers
             };
             return View(viewmodel);
         }
+        [HttpGet]
+        public IActionResult Comentarios()
+        {
+            List<Cliente> clientes = _contextDB.Cliente.ToList();
+            List<Usuario> usuario = _contextDB.Usuario.ToList();
+
+            var viewmodel = new Tablas
+            {
+                Usuario = usuario,
+                Cliente = clientes
+            };
+            return View(viewmodel);
+        }
 
     }
 }

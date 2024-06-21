@@ -17,5 +17,8 @@ namespace Eats_Tech.Models
         public DateTime Hora { get; set; }
         public string Status { get; set; }
         public int IdMesero { get; set; }
+        public int Calificacion { get; set; }
+        public string Comentarios { get; set; }
+        public DateTime DateTimeComentario { get; set; }
     }
 }
