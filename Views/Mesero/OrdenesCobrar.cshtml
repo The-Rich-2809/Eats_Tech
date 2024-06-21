@@ -32,7 +32,7 @@
             <h1 class="mb-4">Ordenes por Cobrar</h1>
             @foreach (var c in Model.Cliente)
             {
-                if (c.Status == "Cobrar")
+                if (c.Status == "Cobrar" && c.IdMesero == ViewBag.Mesero)
                 {
                     foreach (var u in Model.Usuario)
                     {

@@ -25,7 +25,7 @@
             <tbody>
                 @foreach(var u in Model)
                 {
-                    if(u.TipoUsuario != "Mesa")
+                    if(u.TipoUsuario != "Mesa" && u.Activo != 777)
                     {
                         <tr>
                             <td>@u.Nombre</td>

@@ -16,8 +16,12 @@ namespace Eats_Tech.Controllers
         public static int IdM {  get; set; }
         public static int IdPlatillo {  get; set; }
         public static int IdCliente { get; set; }
+        public static double Total { get; set; }
+        public static int IdMesero { get; set; }
+        public static string NombreMesa { get; set; }
         public void Cookies()
         {
+            List<Orden> listaOrden = _contextDB.Orden.ToList();
             var miCookie = HttpContext.Request.Cookies["Cookie_EatsTech"];
 
             if (miCookie != null)
@@ -29,6 +33,7 @@ namespace Eats_Tech.Controllers
                     {
                         IdM = user.ID;
                         IdMesa = user.ID;
+                        NombreMesa = user.Nombre;
                         ViewBag.Mesa = user.Nombre;
                         ViewBag.Nombre = user.Nombre;
                         ViewBag.Nivel = user.TipoUsuario;
@@ -44,11 +49,23 @@ namespace Eats_Tech.Controllers
                 {
                     IdCliente = cliente.Id;
                     ViewBag.NombreCliente = cliente.Nombre;
+
+                    Total = 0;
+                    foreach(var orden in listaOrden)
+                    {
+                        if(orden.IdCliente == IdCliente)
+                        {
+                            Total += orden.Costo;
+                        }
+                    }
+                    ViewBag.Total = Total;
                     break;
                 }
             }
             List<Categoria> categorias  = _contextDB.Categoria.ToList();
             ViewBag.Categorias = categorias;
+
+
         }
         public IActionResult Index()
         {
@@ -216,6 +233,21 @@ namespace Eats_Tech.Controllers
             _contextDB.SaveChanges();
             return RedirectToAction("Comiendo");
         }
+        [HttpPost]
+        public IActionResult LlamarMesero()
+        {
+            Cookies();
+            var insertarLlamada = new LlamarMeseroModel[]
+            {
+                new LlamarMeseroModel{ IdMesa = IdMesa, IdMesero = IdMesero, Activo = 1, Nombre = NombreMesa}
+            };
+
+            foreach (var u in insertarLlamada)
+                _contextDB.LlamarMesero.Add(u);
+            _contextDB.SaveChanges();
+
+            return RedirectToAction("Comiendo");
+        }
         [HttpGet]
         public IActionResult Comiendo()
         {
@@ -240,14 +272,28 @@ namespace Eats_Tech.Controllers
 
                     if (cliente.Status == "Comiendo")
                     {
-                        ViewBag.Mensaje = "Esperando que sea de su agrado sus alimentos, cuando gusten pueden pedir su cuenta";
-                        ViewBag.Status = "Comiendo";
+                        foreach(var i in usuarios)
+                        {
+                            if(cliente.IdMesero == i.ID)
+                            {
+                                IdMesa = cliente.IdMesa;
+                                IdMesero = cliente.IdMesero;
+                                ViewBag.Mensaje = "Esperando que sea de su agrado sus alimentos, cuando gusten pueden pedir su cuenta. \r Tu mesero acargo es " + i.Nombre;
+                                ViewBag.Status = "Comiendo";
+                            }
+                        }
                     }
 
                     if (cliente.Status == "Cobrar")
                     {
-                        ViewBag.Mensaje = "En un momento un mesero vendra para hacer el cobro";
-                        ViewBag.Status = "Cobrar";
+                        foreach (var i in usuarios)
+                        {
+                            if (cliente.IdMesero == i.ID)
+                            {
+                                ViewBag.Mensaje = "En un momento tu mesero " + i.Nombre + " vendra para hacer el cobro";
+                                ViewBag.Status = "Cobrar";
+                            }
+                        }
                     }
 
                     if(cliente.Status == "Terminada")

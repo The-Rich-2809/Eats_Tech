@@ -10,6 +10,7 @@ namespace Eats_Tech.Controllers
     {
         private readonly Eats_TechDB _contextDB;
         public static string CorreoS { get; set; }
+        public static int IdMesero { get; set; }
 
         public MeseroController(Eats_TechDB contextDB)
         {
@@ -28,6 +29,8 @@ namespace Eats_Tech.Controllers
                     {
                         ViewBag.Mesa = user.Nombre;
                         CorreoS = user.Correo;
+                        IdMesero = user.ID;
+                        ViewBag.Mesero = IdMesero;
                     }
                 }
             }
@@ -109,6 +112,8 @@ namespace Eats_Tech.Controllers
         [HttpPost]
         public IActionResult OrdenesEnviar(int IdCliente)
         {
+            Cookies();
+            List<Usuario> Usuarios = _contextDB.Usuario.ToList();
             List<Cliente> clientes = _contextDB.Cliente.ToList();
             List<Orden> orden = _contextDB.Orden.ToList();
 
@@ -124,6 +129,7 @@ namespace Eats_Tech.Controllers
             }
 
             var u = _contextDB.Cliente.FirstOrDefault(o => o.Id == IdCliente);
+            u.IdMesero = IdMesero;
             u.Status = "Comiendo";
             _contextDB.Entry(u).State = EntityState.Modified; ;
             _contextDB.SaveChanges();
@@ -188,6 +194,22 @@ namespace Eats_Tech.Controllers
             return View(viewmodel);
         }
         [HttpGet]
+        public IActionResult Llamada()
+        {
+            Cookies();
+            List<LlamarMeseroModel> llamar = _contextDB.LlamarMesero.ToList();
+            return View(llamar);
+        }
+        [HttpGet]
+        public IActionResult LlamadaPost(int IdLlamada)
+        {
+            var u = _contextDB.LlamarMesero.FirstOrDefault(o => o.Id == IdLlamada);
+            u.Activo = 0;
+            _contextDB.Entry(u).State = EntityState.Modified; ;
+            _contextDB.SaveChanges();
+            return RedirectToAction("Llamada");
+        }
+        [HttpGet]
         public IActionResult OrdenesCobrar()
         {
             Cookies();
@@ -208,7 +230,7 @@ namespace Eats_Tech.Controllers
                 {
                     foreach (var c in clientes)
                     {
-                        if (c.Id == o.IdCliente)
+                        if (c.Id == o.IdCliente && c.IdMesero == IdMesero)
                         {
                             foreach (var u in usuarios)
                             {

@@ -16,5 +16,6 @@ namespace Eats_Tech.Models
         public int MetodoPago { get; set; }
         public DateTime Hora { get; set; }
         public string Status { get; set; }
+        public int IdMesero { get; set; }
     }
 }

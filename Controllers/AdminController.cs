@@ -395,9 +395,20 @@ namespace Eats_Tech.Controllers
             return RedirectToAction("Usuarios");
         }
         [HttpGet]
+        public IActionResult EliUsuarios(int Id)
+        {
+            var Cat = _contextDB.Usuario.FirstOrDefault(c => c.ID == Id);
+            IdPlat = Id;
+            return View(Cat);
+        }
+        [HttpPost]
         public IActionResult EliUsuarios()
         {
-            return View();
+            var u = _contextDB.Usuario.FirstOrDefault(o => o.ID == IdPlat);
+            u.Activo = 777;
+            _contextDB.Entry(u).State = EntityState.Modified; ;
+            _contextDB.SaveChanges();
+            return RedirectToAction("Usuarios");
         }
 
         [HttpGet]

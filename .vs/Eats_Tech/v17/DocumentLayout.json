@@ -1,58 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Github\\Kapicentro\\Eats_Tech\\",
+  "WorkspaceRootPath": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\github\\kapicentro\\eats_tech\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\rich-huawei\\documents\\github\\eats_tech\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\github\\kapicentro\\eats_tech\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\rich-huawei\\documents\\github\\eats_tech\\views\\admin\\usuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:views\\admin\\usuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\github\\kapicentro\\eats_tech\\views\\pedido\\comiendo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:views\\pedido\\comiendo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\rich-huawei\\documents\\github\\eats_tech\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\github\\kapicentro\\eats_tech\\controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:controllers\\pedidocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\rich-huawei\\documents\\github\\eats_tech\\views\\admin\\eliusuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:views\\admin\\eliusuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\github\\kapicentro\\eats_tech\\views\\pedido\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:views\\pedido\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\github\\kapicentro\\eats_tech\\models\\orden.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:models\\orden.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\github\\kapicentro\\eats_tech\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\github\\kapicentro\\eats_tech\\views\\pedido\\platillo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:views\\pedido\\platillo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\github\\kapicentro\\eats_tech\\views\\pedido\\orden.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:views\\pedido\\orden.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\github\\kapicentro\\eats_tech\\wwwroot\\css\\carousel.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:wwwroot\\css\\carousel.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\github\\kapicentro\\eats_tech\\views\\shared\\_layoutsimple.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:views\\shared\\_layoutsimple.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\github\\kapicentro\\eats_tech\\views\\pedido\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:views\\pedido\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\github\\kapicentro\\eats_tech\\views\\pedido\\menu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:views\\pedido\\menu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|c:\\users\\rich-huawei\\documents\\github\\eats_tech\\views\\admin\\eliplatillo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{ADCC348A-0A1B-4874-ACF6-C50D58C7DA70}|Eats_Tech.csproj|solutionrelative:views\\admin\\eliplatillo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,155 +30,67 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Cliente.cs",
-              "DocumentMoniker": "C:\\Github\\Kapicentro\\Eats_Tech\\Models\\Cliente.cs",
-              "RelativeDocumentMoniker": "Models\\Cliente.cs",
-              "ToolTip": "C:\\Github\\Kapicentro\\Eats_Tech\\Models\\Cliente.cs",
-              "RelativeToolTip": "Models\\Cliente.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T09:12:28.996Z",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-21T11:31:06.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EliPlatillo.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Views\\Admin\\EliPlatillo.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\EliPlatillo.cshtml",
+              "ToolTip": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Views\\Admin\\EliPlatillo.cshtml",
+              "RelativeToolTip": "Views\\Admin\\EliPlatillo.cshtml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-21T11:23:24.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EliUsuarios.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Views\\Admin\\EliUsuarios.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\EliUsuarios.cshtml",
+              "ToolTip": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Views\\Admin\\EliUsuarios.cshtml",
+              "RelativeToolTip": "Views\\Admin\\EliUsuarios.cshtml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-21T11:23:21.523Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Comiendo.cshtml",
-              "DocumentMoniker": "C:\\Github\\Kapicentro\\Eats_Tech\\Views\\Pedido\\Comiendo.cshtml",
-              "RelativeDocumentMoniker": "Views\\Pedido\\Comiendo.cshtml",
-              "ToolTip": "C:\\Github\\Kapicentro\\Eats_Tech\\Views\\Pedido\\Comiendo.cshtml",
-              "RelativeToolTip": "Views\\Pedido\\Comiendo.cshtml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-20T06:17:20.283Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Home.cshtml",
-              "DocumentMoniker": "C:\\Github\\Kapicentro\\Eats_Tech\\Views\\Pedido\\Home.cshtml",
-              "RelativeDocumentMoniker": "Views\\Pedido\\Home.cshtml",
-              "ToolTip": "C:\\Github\\Kapicentro\\Eats_Tech\\Views\\Pedido\\Home.cshtml",
-              "RelativeToolTip": "Views\\Pedido\\Home.cshtml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-20T06:17:14.521Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PedidoController.cs",
-              "DocumentMoniker": "C:\\Github\\Kapicentro\\Eats_Tech\\Controllers\\PedidoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PedidoController.cs",
-              "ToolTip": "C:\\Github\\Kapicentro\\Eats_Tech\\Controllers\\PedidoController.cs",
-              "RelativeToolTip": "Controllers\\PedidoController.cs",
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T05:59:43.052Z",
+              "WhenOpened": "2024-06-21T11:22:18.388Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ValuesController.cs",
-              "DocumentMoniker": "C:\\Github\\Kapicentro\\Eats_Tech\\Controllers\\ValuesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ValuesController.cs",
-              "ToolTip": "C:\\Github\\Kapicentro\\Eats_Tech\\Controllers\\ValuesController.cs",
-              "RelativeToolTip": "Controllers\\ValuesController.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T05:59:43.063Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Menu.cshtml",
-              "DocumentMoniker": "C:\\Github\\Kapicentro\\Eats_Tech\\Views\\Pedido\\Menu.cshtml",
-              "RelativeDocumentMoniker": "Views\\Pedido\\Menu.cshtml",
-              "ToolTip": "C:\\Github\\Kapicentro\\Eats_Tech\\Views\\Pedido\\Menu.cshtml",
-              "RelativeToolTip": "Views\\Pedido\\Menu.cshtml",
+              "DocumentIndex": 1,
+              "Title": "Usuarios.cshtml",
+              "DocumentMoniker": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Views\\Admin\\Usuarios.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Usuarios.cshtml",
+              "ToolTip": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Views\\Admin\\Usuarios.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Usuarios.cshtml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-20T06:10:23.091Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Platillo.cshtml",
-              "DocumentMoniker": "C:\\Github\\Kapicentro\\Eats_Tech\\Views\\Pedido\\Platillo.cshtml",
-              "RelativeDocumentMoniker": "Views\\Pedido\\Platillo.cshtml",
-              "ToolTip": "C:\\Github\\Kapicentro\\Eats_Tech\\Views\\Pedido\\Platillo.cshtml",
-              "RelativeToolTip": "Views\\Pedido\\Platillo.cshtml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-20T06:10:19.467Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Github\\Kapicentro\\Eats_Tech\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Github\\Kapicentro\\Eats_Tech\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAAKMAAAAAAAAAAAAuwLYAAADiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T06:30:19.317Z",
+              "WhenOpened": "2024-06-21T11:22:07.177Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Orden.cs",
-              "DocumentMoniker": "C:\\Github\\Kapicentro\\Eats_Tech\\Models\\Orden.cs",
-              "RelativeDocumentMoniker": "Models\\Orden.cs",
-              "ToolTip": "C:\\Github\\Kapicentro\\Eats_Tech\\Models\\Orden.cs",
-              "RelativeToolTip": "Models\\Orden.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T08:24:55.296Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Orden.cshtml",
-              "DocumentMoniker": "C:\\Github\\Kapicentro\\Eats_Tech\\Views\\Pedido\\Orden.cshtml",
-              "RelativeDocumentMoniker": "Views\\Pedido\\Orden.cshtml",
-              "ToolTip": "C:\\Github\\Kapicentro\\Eats_Tech\\Views\\Pedido\\Orden.cshtml",
-              "RelativeToolTip": "Views\\Pedido\\Orden.cshtml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-20T05:58:08.521Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Carousel.css",
-              "DocumentMoniker": "C:\\Github\\Kapicentro\\Eats_Tech\\wwwroot\\css\\Carousel.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\Carousel.css",
-              "ToolTip": "C:\\Github\\Kapicentro\\Eats_Tech\\wwwroot\\css\\Carousel.css",
-              "RelativeToolTip": "wwwroot\\css\\Carousel.css",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-06-20T06:58:08.721Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "_LayoutSimple.cshtml",
-              "DocumentMoniker": "C:\\Github\\Kapicentro\\Eats_Tech\\Views\\Shared\\_LayoutSimple.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_LayoutSimple.cshtml",
-              "ToolTip": "C:\\Github\\Kapicentro\\Eats_Tech\\Views\\Shared\\_LayoutSimple.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_LayoutSimple.cshtml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-20T07:06:21.216Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Github\\Kapicentro\\Eats_Tech\\Views\\Pedido\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Pedido\\Index.cshtml",
-              "ToolTip": "C:\\Github\\Kapicentro\\Eats_Tech\\Views\\Pedido\\Index.cshtml",
-              "RelativeToolTip": "Views\\Pedido\\Index.cshtml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-20T05:59:14.681Z"
             }
           ]
         }
