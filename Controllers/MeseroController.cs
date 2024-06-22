@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Net.Mail;
 using System.Net;
+using RestSharp;
 
 namespace Eats_Tech.Controllers
 {
@@ -368,6 +369,7 @@ namespace Eats_Tech.Controllers
             double SubTotal = 0;
             string Nombre = "";
             string Correo = "";
+            string Telefono = "";
 
             foreach (var i in clientes)
             {
@@ -375,6 +377,7 @@ namespace Eats_Tech.Controllers
                 {
                     Nombre = i.Nombre;
                     Correo = i.Correo;
+                    Telefono = i.Telefono;
                     break;
                 }
             }
@@ -439,7 +442,7 @@ namespace Eats_Tech.Controllers
                             </tr>
                         </tfoot>
                     </table>
-                       <h2>Gracias por comer con nosotros :v</h2>
+                       <h2>Gracias por comer con nosotros</h2>
                     </font>
 
                     </body>
@@ -447,8 +450,27 @@ namespace Eats_Tech.Controllers
                 IsBodyHtml = true,
             };
 
+            EnviarWhatsApp(Telefono);
             mailMessage.To.Add(Correo);
             smtpClient.Send(mailMessage);
+        }
+
+        public async void EnviarWhatsApp(string Telefono)
+        {
+            var url = "https://api.ultramsg.com/instance88537/messages/chat";
+            var client = new RestClient(url);
+
+            string mensaje = "¡Hola, gracias por tu preferencia!\r\n¡No te pierdas nuestras promociones entre semana en la taquería!\r\n\r\nLunes 🌮: Compra dos tacos al pastor y recibe un taco de lengua ¡GRATIS!\r\n\r\nMartes 🍰: Con cada orden de tacos, obtén un postre de churros con salsa de chocolate a mitad de precio.\r\n\r\nMiércoles 🍹: Refréscate con nuestra promoción de 2x1 en margaritas de sabores.\r\n\r\nJueves 🌯: Por cada burrito de carne asada, llévate un taco de guisado de pollo de cortesía.\r\n\r\nViernes 🍻: Disfruta del fin de semana con nuestra oferta de cerveza nacional al 50% de descuento.\r\n\r\n¡Esperamos verte esta semana para que disfrutes de estas increíbles promociones!";
+
+            var request = new RestRequest(url, Method.Post);
+            request.AddHeader("content-type", "application/x-www-form-urlencoded");
+            request.AddParameter("token", "elicij1y4960rc6c");
+            request.AddParameter("to", Telefono);
+            request.AddParameter("body", mensaje);
+
+            RestResponse response = await client.ExecuteAsync(request);
+            var output = response.Content;
+            Console.WriteLine(output);
         }
     }
 }

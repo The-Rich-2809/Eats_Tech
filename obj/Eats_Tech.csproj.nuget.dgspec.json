@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Eats_Tech.csproj": {}
+    "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Eats_Tech.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Eats_Tech.csproj": {
+    "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Eats_Tech.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Eats_Tech.csproj",
+        "projectUniqueName": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Eats_Tech.csproj",
         "projectName": "Eats_Tech",
-        "projectPath": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Eats_Tech.csproj",
-        "packagesPath": "C:\\Users\\ricar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\obj\\",
+        "projectPath": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Eats_Tech.csproj",
+        "packagesPath": "C:\\Users\\Rich-Huawei\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ricar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Rich-Huawei\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -54,6 +55,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.19, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[111.3.0, )"
             }
           },
           "imports": [
@@ -70,19 +75,19 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.18, 7.0.18]"
+              "version": "[7.0.20, 7.0.20]"
             },
             {
               "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[7.0.18, 7.0.18]"
+              "version": "[7.0.20, 7.0.20]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.18, 7.0.18]"
+              "version": "[7.0.20, 7.0.20]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[7.0.18, 7.0.18]"
+              "version": "[7.0.20, 7.0.20]"
             }
           ],
           "frameworkReferences": {
@@ -93,7 +98,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

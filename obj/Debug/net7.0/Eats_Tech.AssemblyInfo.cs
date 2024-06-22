@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Eats_Tech")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+24550558cf0b9f7c1e7ed7798cf8e2ec217801e4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+351028b743ec6766bd7d4e5c1b26efde236bec3d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Eats_Tech")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Eats_Tech")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

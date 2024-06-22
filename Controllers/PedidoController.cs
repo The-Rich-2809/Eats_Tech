@@ -87,12 +87,12 @@ namespace Eats_Tech.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Registro(string Nombre, string Correo)
+        public IActionResult Registro(string Nombre, string Correo, string Telefono)
         {
             Cookies();
             var insetarCliente = new Cliente[]
             {
-                new Cliente {Nombre = Nombre, Correo = Correo, IdMesa = IdMesa, Status = "Empezando", PrecioFinal = 0, Hora = DateTime.Now, Comentarios = ""}
+                new Cliente {Nombre = Nombre, Correo = Correo, IdMesa = IdMesa, Status = "Empezando", PrecioFinal = 0, Hora = DateTime.Now, Comentarios = "", Telefono = Telefono}
             };
 
             foreach(var item in insetarCliente)

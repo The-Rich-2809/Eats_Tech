@@ -640,6 +640,19 @@
           "lib/netstandard2.0/Mono.TextTemplating.dll": {}
         }
       },
+      "RestSharp/111.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/RestSharp.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.CodeDom/4.4.0": {
         "type": "package",
         "compile": {
@@ -2022,6 +2035,31 @@
         "mono.texttemplating.nuspec"
       ]
     },
+    "RestSharp/111.3.0": {
+      "sha512": "+cHtmb3I5efys4scOCo+pWRgJNkwyEI8p39d4VMTbCXpPwsDeGP6OJH+1m4xtYUAZttMp2s4yxagy3usl2X13g==",
+      "type": "package",
+      "path": "restsharp/111.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net471/RestSharp.dll",
+        "lib/net471/RestSharp.xml",
+        "lib/net48/RestSharp.dll",
+        "lib/net48/RestSharp.xml",
+        "lib/net6.0/RestSharp.dll",
+        "lib/net6.0/RestSharp.xml",
+        "lib/net7.0/RestSharp.dll",
+        "lib/net7.0/RestSharp.xml",
+        "lib/net8.0/RestSharp.dll",
+        "lib/net8.0/RestSharp.xml",
+        "lib/netstandard2.0/RestSharp.dll",
+        "lib/netstandard2.0/RestSharp.xml",
+        "restsharp.111.3.0.nupkg.sha512",
+        "restsharp.nuspec",
+        "restsharp.png"
+      ]
+    },
     "System.CodeDom/4.4.0": {
       "sha512": "2sCCb7doXEwtYAbqzbF/8UAeDRMNmPaQbU2q50Psg1J9KzumyVVCgKQY8s53WIPTufNT0DpSe9QRvVjOzfDWBA==",
       "type": "package",
@@ -2963,23 +3001,24 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.19",
-      "Microsoft.EntityFrameworkCore.Tools >= 7.0.19"
+      "Microsoft.EntityFrameworkCore.Tools >= 7.0.19",
+      "RestSharp >= 111.3.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ricar\\.nuget\\packages\\": {}
+    "C:\\Users\\Rich-Huawei\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Eats_Tech.csproj",
+      "projectUniqueName": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Eats_Tech.csproj",
       "projectName": "Eats_Tech",
-      "projectPath": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\Eats_Tech.csproj",
-      "packagesPath": "C:\\Users\\ricar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ricar\\Documents\\GitHub\\Eats_Tech\\obj\\",
+      "projectPath": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\Eats_Tech.csproj",
+      "packagesPath": "C:\\Users\\Rich-Huawei\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ricar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Rich-Huawei\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2987,6 +3026,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3019,6 +3059,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[7.0.19, )"
+          },
+          "RestSharp": {
+            "target": "Package",
+            "version": "[111.3.0, )"
           }
         },
         "imports": [
@@ -3035,19 +3079,19 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[7.0.18, 7.0.18]"
+            "version": "[7.0.20, 7.0.20]"
           },
           {
             "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[7.0.18, 7.0.18]"
+            "version": "[7.0.20, 7.0.20]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[7.0.18, 7.0.18]"
+            "version": "[7.0.20, 7.0.20]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[7.0.18, 7.0.18]"
+            "version": "[7.0.20, 7.0.20]"
           }
         ],
         "frameworkReferences": {
@@ -3058,7 +3102,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

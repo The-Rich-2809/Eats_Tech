@@ -29,16 +29,14 @@
         int IdCliente = 0;
         string[] Nombre = new string[3];
         <div class="container mt-5">
-            <h1 class="mb-4">Ordenes por Preparar</h1>
+            <h1 class="mb-4">Ordenes</h1>
             @foreach(var c in Model.Cliente)
             {
-                if (c.Status == "Por recibir")
-                {
-                    foreach(var u in Model.Usuario)
+                foreach(var u in Model.Usuario)
                     {
                         if (u.ID == c.IdMesa)
                         {
-                            <h3 class="mb-4">Nombre del Cliente: @c.Nombre, Mesa: @u.Nombre Total: $@c.PrecioFinal </h3>
+                            <h3 class="mb-4">Nombre del Cliente: @c.Nombre, @u.Nombre, Total: $@c.PrecioFinal </h3>
                             break;
                         }
                     }
@@ -69,7 +67,6 @@
                             }
                         </tbody>
                     </table>
-                }
             }
         </div>
     }

@@ -50,6 +50,8 @@ namespace Eats_Tech.Controllers
                             return RedirectToAction("Index", "Cocina");
                         if (user.TipoUsuario == "Mesero")
                             return RedirectToAction("Index", "Mesero");
+                        if (user.TipoUsuario == "Recepcion")
+                            return RedirectToAction("Index", "Recepcion");
                     }
                 }
             }
@@ -133,8 +135,29 @@ namespace Eats_Tech.Controllers
                 new Usuario {Nombre = "Rich", Contrasena = "1234", Correo = "ricardo_138@outlook.com", TipoUsuario = "Admin", Activo = 0, DireccionImagen = "h"},
                 new Usuario {Nombre = "Carlos", Contrasena = "1234", Correo = "camacario01@gmail.com", TipoUsuario = "Admin", Activo = 0, DireccionImagen = "../Images/Users/maca.jpg"},
                 new Usuario {Nombre = "Ale", Contrasena = "1234", Correo = "cocinero@eatstech.com", TipoUsuario = "Cocina", Activo = 0, DireccionImagen = "h"},
+                new Usuario {Nombre = "Virginia", Contrasena = "1234", Correo = "cocinero1@eatstech.com", TipoUsuario = "Cocina", Activo = 0, DireccionImagen = "h"},
+                new Usuario {Nombre = "Sandra", Contrasena = "1234", Correo = "cocinero2@eatstech.com", TipoUsuario = "Cocina", Activo = 0, DireccionImagen = "h"},
                 new Usuario {Nombre = "Juan", Contrasena = "1234", Correo = "mesero@eatstech.com", TipoUsuario = "Mesero", Activo = 0, DireccionImagen = "h"},
+                new Usuario {Nombre = "Erik", Contrasena = "1234", Correo = "mesero1@eatstech.com", TipoUsuario = "Mesero", Activo = 0, DireccionImagen = "h"},
+                new Usuario {Nombre = "Alan", Contrasena = "1234", Correo = "mesero2@eatstech.com", TipoUsuario = "Mesero", Activo = 0, DireccionImagen = "h"},
+                new Usuario {Nombre = "Jose", Contrasena = "1234", Correo = "mesero3@eatstech.com", TipoUsuario = "Mesero", Activo = 0, DireccionImagen = "h"},
                 new Usuario {Nombre = "Mesa 1", Contrasena = "1234", Correo = "mesa1@eatstech.com", TipoUsuario = "Mesa", Activo = 0, DireccionImagen = "h"},
+                new Usuario {Nombre = "Mesa 2", Contrasena = "1234", Correo = "mesa2@eatstech.com", TipoUsuario = "Mesa", Activo = 0, DireccionImagen = "h"},
+                new Usuario {Nombre = "Mesa 3", Contrasena = "1234", Correo = "mesa3@eatstech.com", TipoUsuario = "Mesa", Activo = 0, DireccionImagen = "h"},
+                new Usuario {Nombre = "Mesa 4", Contrasena = "1234", Correo = "mesa4@eatstech.com", TipoUsuario = "Mesa", Activo = 0, DireccionImagen = "h"},
+                new Usuario {Nombre = "Mesa 5", Contrasena = "1234", Correo = "mesa5@eatstech.com", TipoUsuario = "Mesa", Activo = 0, DireccionImagen = "h"},
+                new Usuario {Nombre = "Mesa 6", Contrasena = "1234", Correo = "mesa6@eatstech.com", TipoUsuario = "Mesa", Activo = 0, DireccionImagen = "h"},
+                new Usuario {Nombre = "Mesa 7", Contrasena = "1234", Correo = "mesa7@eatstech.com", TipoUsuario = "Mesa", Activo = 0, DireccionImagen = "h"},
+                new Usuario {Nombre = "Mesa 8", Contrasena = "1234", Correo = "mesa8@eatstech.com", TipoUsuario = "Mesa", Activo = 0, DireccionImagen = "h"},
+                new Usuario {Nombre = "Mesa 9", Contrasena = "1234", Correo = "mesa9@eatstech.com", TipoUsuario = "Mesa", Activo = 0, DireccionImagen = "h"},
+                new Usuario {Nombre = "Mesa 10", Contrasena = "1234", Correo = "mesa10@eatstech.com", TipoUsuario = "Mesa", Activo = 0, DireccionImagen = "h"},
+                new Usuario {Nombre = "Mesa 11", Contrasena = "1234", Correo = "mesa11@eatstech.com", TipoUsuario = "Mesa", Activo = 0, DireccionImagen = "h"},
+                new Usuario {Nombre = "Mesa 12", Contrasena = "1234", Correo = "mesa12@eatstech.com", TipoUsuario = "Mesa", Activo = 0, DireccionImagen = "h"},
+                new Usuario {Nombre = "Mesa 13", Contrasena = "1234", Correo = "mesa13@eatstech.com", TipoUsuario = "Mesa", Activo = 0, DireccionImagen = "h"},
+                new Usuario {Nombre = "Mesa 14", Contrasena = "1234", Correo = "mesa14@eatstech.com", TipoUsuario = "Mesa", Activo = 0, DireccionImagen = "h"},
+                new Usuario {Nombre = "Mesa 15", Contrasena = "1234", Correo = "mesa15@eatstech.com", TipoUsuario = "Mesa", Activo = 0, DireccionImagen = "h"},
+                new Usuario {Nombre = "Mesa 16", Contrasena = "1234", Correo = "mesa16@eatstech.com", TipoUsuario = "Mesa", Activo = 0, DireccionImagen = "h"},
+                new Usuario {Nombre = "Mesa 17", Contrasena = "1234", Correo = "mesa17@eatstech.com", TipoUsuario = "Mesa", Activo = 0, DireccionImagen = "h"},
                 new Usuario {Nombre = "Karen Macho", Contrasena = "1234", Correo = "recepcion1@eatstech.com", TipoUsuario = "Recepcion", Activo = 0, DireccionImagen = "h"}
             };
 

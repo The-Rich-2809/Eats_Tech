@@ -328,9 +328,19 @@ namespace Eats_Tech.Controllers
                 return View();
             }
 
-            string nombreImagen = Convert.ToString(user.Count + 1) + "_" + Imagen.FileName;
-            await this.helperUpload.UploadFilesAsync(Imagen, nombreImagen, Folders.Users);
-            nombreImagen = "../Images/Users/" + nombreImagen;
+            string nombreImagen = "";
+
+            if (Imagen != null)
+            {
+                nombreImagen = Convert.ToString(user.Count + 1) + "_" + Imagen.FileName;
+                await this.helperUpload.UploadFilesAsync(Imagen, nombreImagen, Folders.Users);
+                nombreImagen = "../Images/Users/" + nombreImagen;
+            }
+            else
+            {
+                nombreImagen = "h";
+            }
+            
 
             var insertarusuario = new Usuario[]
             {
@@ -513,38 +523,34 @@ namespace Eats_Tech.Controllers
 
             foreach (var o in orden)
             {
-                if (o.Status == "Preparando")
+                foreach (var c in clientes)
                 {
-                    foreach (var c in clientes)
+                    if (c.Id == o.IdCliente)
                     {
-                        if (c.Id == o.IdCliente)
+                        foreach (var u in usuarios)
                         {
-                            foreach (var u in usuarios)
+                            if (u.ID == c.IdMesa)
                             {
-                                if (u.ID == c.IdMesa)
+                                foreach (var m in menu)
                                 {
-                                    foreach (var m in menu)
+                                    if (m.Id == o.IdMenu)
                                     {
-                                        if (m.Id == o.IdMenu)
-                                        {
-                                            ordenes[i, 0] = Convert.ToString(o.IdCliente);
-                                            ordenes[i, 1] = m.RutaImagen;
-                                            ordenes[i, 2] = m.NombrePlatillo;
-                                            ordenes[i, 3] = Convert.ToString(o.Cantidad);
-                                            ordenes[i, 4] = o.Status;
-                                            ordenes[i, 5] = Convert.ToString(o.Costo);
-                                            ViewBag.Ordenes = ordenes;
-                                            i++;
-                                            break;
-                                        }
+                                        ordenes[i, 0] = Convert.ToString(o.IdCliente);
+                                        ordenes[i, 1] = m.RutaImagen;
+                                        ordenes[i, 2] = m.NombrePlatillo;
+                                        ordenes[i, 3] = Convert.ToString(o.Cantidad);
+                                        ordenes[i, 4] = o.Status;
+                                        ordenes[i, 5] = Convert.ToString(o.Costo);
+                                        ViewBag.Ordenes = ordenes;
+                                        i++;
+                                        break;
                                     }
-                                    break;
                                 }
+                                break;
                             }
-                            break;
                         }
+                        break;
                     }
-
                 }
             }
 
