@@ -1,7 +1,7 @@
 ﻿@{
     Layout = "_LayoutSimple";
 }
-@model IEnumerable<Eats_Tech.Models.Menu>;
+@model Eats_Tech.Models.Tablas
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -30,27 +30,27 @@
             padding-top: 50px; /* Añadir espacio arriba */
         }
 
-            .bg::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(169, 169, 169, 0.5); /* Filtro gris */
-                mix-blend-mode: multiply; /* Multiplica el filtro gris con el fondo */
-            }
+        .bg::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(169, 169, 169, 0.5); /* Filtro gris */
+            mix-blend-mode: multiply; /* Multiplica el filtro gris con el fondo */
+        }
 
         .navbar-custom {
             background-color: #e74c3c;
             border-bottom: 1px solid #c0392b;
         }
 
-            .navbar-custom .navbar-brand,
-            .navbar-custom .nav-link {
-                color: white;
-                font-family: 'Leckerli One', cursive;
-            }
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav-link {
+            color: white;
+            font-family: 'Leckerli One', cursive;
+        }
 
         .carousel-caption {
             background-color: rgba(0, 0, 0, 0.5);
@@ -74,7 +74,7 @@
 
         .card-text {
             font-size: 1.2em;
-        }
+        }   
 
         .card {
             cursor: pointer;
@@ -104,7 +104,9 @@
                 <a class="navbar-brand">@ViewBag.NombreCliente</a>
                 <a class="navbar-brand">$@ViewBag.Total</a>
                 <a class="navbar-brand">@ViewBag.Mesa</a>
-                <button asp-action="Orden" asp-controller="Pedido" class="btn btn-danger">Finalizar orden</button>
+                @if(@ViewBag.Total != 0){
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#orderSummaryModal">Finalizar orden</button>
+                }
             </form>
         </div>
     </nav>
@@ -157,7 +159,7 @@
                 <p>Disfruta de la mejor comida mexicana en nuestro restaurante.</p>
             </div>
             <div class="row">
-                @foreach (var i in Model)
+                @foreach (var i in Model.Menu)
                 {
                     if (i.Id == ViewBag.R1 || i.Id == ViewBag.R2 || i.Id == ViewBag.R3)
                     {
@@ -178,8 +180,81 @@
         </div>
     </div>
 
+    <!-- Modal de Resumen de Orden -->
+    <div class="modal fade" id="orderSummaryModal" tabindex="-1" role="dialog" aria-labelledby="orderSummaryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderSummaryModalLabel">Resumen de tu Orden</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    @if (Model.Orden != null && Model.Orden.Count() > 0)
+                    {
+                        double Total = 0;
+                        <div>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Platillo</th>
+                                        <th>Cantidad</th>
+                                        <th>Precio</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var i in Model.Orden)
+                                    {
+                                        foreach (var j in Model.Menu)
+                                        {
+                                            if (j.Id == i.IdMenu)
+                                            {
+                                                Total += i.Costo;
+                                                <tr>
+                                                    <td>@j.NombrePlatillo</td>
+                                                    <td>@i.Cantidad</td>
+                                                    <td>$@j.Costo</td>
+                                                    <td>$@i.Costo</td>
+                                                </tr>
+                                                break;
+                                            }
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                            <div class="total text-right">
+                                <strong>Total: $@Total</strong>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="alert alert-info text-center">
+                            <p>No hay productos en tu orden.</p>
+                        </div>
+                    }
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" onclick="submitOrderForm()">Confirmar Orden</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form id="finalizeOrderForm" asp-action="Orden" asp-controller="Pedido" method="post" style="display: none;">
+        <input type="hidden" name="Total" value="@ViewBag.Total" />
+    </form>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function submitOrderForm() {
+            document.getElementById('finalizeOrderForm').submit();
+        }
+    </script>
 </body>
 </html>

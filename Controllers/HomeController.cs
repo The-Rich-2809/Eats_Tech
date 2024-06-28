@@ -35,7 +35,7 @@ namespace Eats_Tech.Controllers
                         foreach (var item in listaClientes)
                         {
                             if (item.IdMesa == user.ID && item.Status == "Empezando")
-                                return RedirectToAction("Orden", "Pedido");
+                                return RedirectToAction("Home", "Pedido");
                             if (item.IdMesa == user.ID && (item.Status != "Empezando" && item.Status != "Terminada") )
                                 return RedirectToAction("Comiendo", "Pedido");
                         }
