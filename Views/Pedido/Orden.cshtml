@@ -2,6 +2,7 @@
 @{
     Layout = "_LayoutSimple";
 }
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,7 +12,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
     <style>
         body, html {
             height: 100%;
@@ -23,52 +24,41 @@
             background-color: #e74c3c;
         }
 
-            .navbar-custom .navbar-brand,
-            .navbar-custom .nav-link,
-            .navbar-custom .btn {
-                color: white;
-                font-family: 'Leckerli One', cursive;
-            }
-
-            .navbar-custom .btn {
-                margin-left: 10px;
-            }
-
-        .bg {
-            position: relative;
-            min-height: 100vh;
-            background-image: url('../Images/Orden.jpg');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav-link,
+        .navbar-custom .btn {
+            color: white;
+            font-family: 'Leckerli One', cursive;
         }
 
-            .bg::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.5);
-                z-index: 1;
-            }
+        .navbar-custom .btn {
+            margin-left: 10px;
+        }
 
-        .content {
+        .content-wrapper {
+            display: flex;
+            height: calc(100vh - 56px); /* 56px es la altura aproximada del navbar */
+        }
+
+        .products-content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .sidebar {
+            width: 550px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            overflow-y: auto;
+            z-index: 1000;
             position: relative;
-            z-index: 2;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 80%;
-            max-width: 600px;
-            text-align: center;
-            margin-bottom: 30px;
+        }
+
+        .sidebar h2 {
+            font-family: 'Leckerli One', cursive;
+            color: #e74c3c;
         }
 
         .platillo-img {
@@ -84,38 +74,28 @@
             color: #333;
         }
 
-        .logo {
-            max-width: 150px;
-            margin-bottom: 20px;
-        }
-
-        .title {
-            font-family: 'Leckerli One', cursive;
-            font-size: 48px;
-            color: white;
-            margin-bottom: 20px;
-        }
-
         .summary-table {
             width: 100%;
             margin-bottom: 20px;
         }
 
-            .summary-table th,
-            .summary-table td {
-                padding: 10px;
-                text-align: left;
-                border-bottom: 1px solid #ddd;
-            }
+        .summary-table th,
+        .summary-table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
 
-            .summary-table th {
-                background-color: #f8f8f8;
-            }
+        .summary-table th {
+            background-color: #f8f8f8;
+        }
 
         .total {
             font-size: 24px;
             font-weight: bold;
             color: #e74c3c;
+            text-align: center;
+            margin-top: 20px;
         }
 
         .finalize-btn {
@@ -127,11 +107,36 @@
             border: none;
             border-radius: 5px;
             transition: background-color 0.3s;
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            text-align: center;
         }
 
-            .finalize-btn:hover {
-                background-color: #c0392b;
-            }
+        .finalize-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .input-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .decrement-btn, .increment-btn {
+            border-radius: 0;
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .decrement-btn:hover, .increment-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .numeric {
+            max-width: 50px;
+            margin: 0 5px;
+        }
     </style>
 </head>
 
@@ -149,7 +154,7 @@
                     if (i.Activo == 1)
                     {
                         <li class="nav-item">
-                            <a class="nav-link" href="@Url.Action("Menu", "Pedido", new { Categoria = i.NombreCategoria })">@i.NombreCategoria</a>
+                            <a class="nav-link" href="@Url.Action("Orden", "Pedido", new { Categoria = i.NombreCategoria })">@i.NombreCategoria</a>
                         </li>
                     }
                 }
@@ -159,154 +164,126 @@
         </div>
     </nav>
 
-    <!-- Fondo con Resumen -->
-    <div class="bg">
-        @{
-            if (Model.Orden.Count() > 0)
-            {
-                double Total = 0;
-                <div class="content">
-                    <h2 class="title">Resumen de tu Orden</h2>
+    <!-- Contenedor principal con dos secciones: contenido de productos y sidebar -->
+    <div class="content-wrapper">
+        <!-- Contenido de productos -->
+        <div class="products-content">
+            <!-- Tu contenido de productos aquí -->
+            <h2>Nuestro Menú</h2>
+            <div class="row">
+                @foreach (var item in Model.Menu)
+                {
+                    if (item.Categoria == ViewBag.Categoria)
+                    {
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <a href="@Url.Action("Platillo", "Pedido", new { Platillo = item.Id })">
+                                    <img src="@item.RutaImagen" class="card-img-top" alt="@item.NombrePlatillo">
+                                    <div class="card-body">
+                                        <h5 class="card-title">@item.NombrePlatillo</h5>
+                                        <p class="card-text">@item.Descripcion</p>
+                                        <p class="card-text"><strong>$@item.Costo</strong></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    }
+                    else {
+                        
+                    }
+                }
+            </div>
+        </div>
 
-                    <table class="summary-table">
-                        <thead>
-                            <tr>
-                                <th>Platillo</th>
-                                <th>Cantidad</th>
-                                <th>Precio</th>
-                                <th>Total</th>
-                                <th>Eliminar</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var i in Model.Orden)
-                            {
-                                if (i.IdCliente == ViewBag.IdCliente && i.Status == "Por pedir")
+        <!-- Sidebar con Resumen -->
+        <div class="sidebar">
+            @{
+                if (Model.Orden.Count() > 0)
+                {
+                    double Total = 0;
+                    <div>
+                        <h2>Resumen de tu Orden</h2>
+
+                        <table class="summary-table">
+                            <thead>
+                                <tr>
+                                    <th>Platillo</th>
+                                    <th>Cantidad</th>
+                                    <th>Precio</th>
+                                    <th>Total</th>
+                                    <th>Eliminar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var i in Model.Orden)
                                 {
-                                    foreach (var j in Model.Menu)
+                                    if (i.IdCliente == ViewBag.IdCliente && i.Status == "Por pedir")
                                     {
-                                        if (j.Id == i.IdMenu)
+                                        foreach (var j in Model.Menu)
                                         {
-                                            Total += i.Costo;
-                                            <tr data-product-menu-id="@j.Id" data-orden-id="@i.Id">
-                                                <td>
-                                                    <img src="@j.RutaImagen" alt="Platillo 1" class="platillo-img">
-                                                    <span class="platillo-name">@j.NombrePlatillo</span>
-                                                </td>
-                                                <td>
-                                                    <div class="input-group quantity mx-auto" style="width: 150px;">
-                                                        <div class="input-group-prepend">
-                                                            <button class="btn btn-outline-secondary decrement-btn" type="button">-</button>
+                                            if (j.Id == i.IdMenu)
+                                            {
+                                                Total += i.Costo;
+                                                <tr data-product-menu-id="@j.Id" data-orden-id="@i.Id">
+                                                    <td>
+                                                        <img src="@j.RutaImagen" alt="Platillo 1" class="platillo-img">
+                                                        <span class="platillo-name">@j.NombrePlatillo</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group quantity mx-auto" style="width: 120px;">
+                                                            <div class="input-group-prepend">
+                                                                <button class="btn btn-outline-secondary decrement-btn" type="button">-</button>
+                                                            </div>
+                                                            <input type="text"
+                                                                   class="form-control form-control-sm text-center numeric"
+                                                                   value="@i.Cantidad" data-product-inter-id="@i.Id" readonly>
+                                                            <div class="input-group-append">
+                                                                <button class="btn btn-outline-secondary increment-btn" type="button">+</button>
+                                                            </div>
                                                         </div>
-                                                        <input type="number" max="50" min="1"
-                                                            class="form-control form-control-sm bg-secondary border-0 text-center numeric"
-                                                            value="@i.Cantidad" data-product-inter-id="@i.Id" readonly>
-                                                        <div class="input-group-append">
-                                                            <button class="btn btn-outline-secondary increment-btn" type="button">+</button>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td>$@j.Costo</td>
-                                                <td>$@i.Costo</td>
-                                                <td>
-                                                    <form asp-controller="Pedido" asp-action="BorrarPedido" method="get">
-                                                        <input type="hidden" name="idord" value="@i.Id" />
-                                                        <button class="btn btn-danger" type="submit">Borrar</button>
-                                                    </form>
-                                                </td>
-                                            </tr>
-                                            break;
+                                                    </td>
+                                                    <td>$@j.Costo</td>
+                                                    <td>$@i.Costo</td>
+                                                    <td>
+                                                        <form asp-controller="Pedido" asp-action="BorrarPedido" method="get">
+                                                            <input type="hidden" name="idord" value="@i.Id" />
+                                                            <button class="btn btn-danger" type="submit">Borrar</button>
+                                                        </form>
+                                                    </td>
+                                                </tr>
+                                                break;
+                                            }
                                         }
                                     }
                                 }
-                            }
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
 
-                    <div class="total">Total: $@Total</div>
-                    @if (Total != 0)
-                    {
-                        <form asp-action="Orden" asp-controller="Pedido" method="post">
-                            <input type="hidden" name="Total" value="@Total" />
-                            <button type="submit" class="finalize-btn" >Finalizar orden</button>
-                        </form>
-                        // data-toggle="modal" data-target="#confirmationModal"
-                    }
+                        <div class="total">Total: $@Total</div>
+                        @if (Total != 0)
+                        {
+                            <form asp-action="Orden" asp-controller="Pedido" method="post">
+                                <input type="hidden" name="Total" value="@Total" />
+                                <button type="submit" class="finalize-btn" >Finalizar orden</button>
+                            </form>
+                        }
 
-                </div>
-            }
-            else
-            {
-                <div class="d-flex justify-content-center">
-                    <div class="card" style="width: 200%;">
-                        <div class="card-body">
-                            <div class="alert alert-info text-center">
-                                <p>No hay productos.</p>
-                            </div>
-                        </div>
                     </div>
-                </div>
+                }
+                else
+                {
+                    <div class="alert alert-info text-center">
+                        <p>No hay productos.</p>
+                    </div>
+                }
             }
-        }
-    </div>
-
-    <!-- Modal -->
-    @* <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Confirmación</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    Por favor, seleccione una opción:
-                    <select id="modalSelect" class="form-control">
-                        <option value="option1">Opción 1</option>
-                        <option value="option2">Opción 2</option>
-                    </select>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary" onclick="submitForm()">Confirmar</button>
-                </div>
-            </div>
         </div>
-    </div> *@
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        // Selecciona todos los inputs con la clase 'numeric'
-        document.querySelectorAll('.numeric').forEach(function (input) {
-            // Elimina el readonly cuando el input está enfocado para permitir el uso de las flechas
-            input.addEventListener('focus', function () {
-                input.removeAttribute('readonly');
-            });
-
-            // Vuelve a agregar el readonly cuando el input pierde el enfoque
-            input.addEventListener('blur', function () {
-                input.setAttribute('readonly', true);
-            });
-
-            // Maneja los eventos de teclado para permitir solo las flechas
-            input.addEventListener('keydown', function (event) {
-                if (event.key !== 'ArrowUp' && event.key !== 'ArrowDown') {
-                    event.preventDefault();
-                }
-            });
-        });
-    </script>
-    <script type="text/javascript">
-        function submitForm() {
-            var selectedOption = document.getElementById("modalSelect").value;
-            // Aquí puedes agregar lógica para manejar la opción seleccionada si es necesario
-            document.getElementById("selectedOption").value = selectedOption;
-            document.querySelector("form").submit();
-        }
-
         $(document).ready(function () {
             function updateTotals() {
                 var subtotal = 0;
@@ -322,7 +299,7 @@
 
             $('.numeric').on("change", function () {
                 var valor = $(this).val();
-                var idprodInter = $(this).data('product-inter-id');
+                var idprodInter = $(this).closest('tr').data('product-menu-id');
                 var carritoId = $(this).closest('tr').data('orden-id');
                 $.ajax({
                     type: 'GET',
@@ -357,6 +334,4 @@
         });
     </script>
 </body>
-</html>
-
 </html>

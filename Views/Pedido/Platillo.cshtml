@@ -1,6 +1,7 @@
 ﻿@{
     Layout = "_LayoutSimple";
 }
+@model Eats_Tech.Models.Tablas
 
 <!DOCTYPE html>
 <html lang="es">
@@ -11,7 +12,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
 
     <style>
         body, html {
@@ -24,22 +25,20 @@
             background-color: #e74c3c;
         }
 
-            .navbar-custom .navbar-brand,
-            .navbar-custom .nav-link,
-            .navbar-custom .btn {
-                color: white;
-                font-family: 'Leckerli One', cursive;
-            }
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav-link,
+        .navbar-custom .btn {
+            color: white;
+            font-family: 'Leckerli One', cursive;
+        }
 
-            .navbar-custom .btn {
-                margin-left: 10px;
-            }
+        .navbar-custom .btn {
+            margin-left: 10px;
+        }
 
         .details-container {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            height: calc(100vh - 56px); /* Ajusta el tamaño según la altura del navbar */
             background-image: url('../Images/Menu.jpg'); /* Reemplaza 'tu-imagen.jpg' con la ruta de tu imagen */
             background-position: center;
             background-repeat: no-repeat;
@@ -47,16 +46,16 @@
             position: relative;
         }
 
-            .details-container::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.5); /* Cambia el 0.5 por el nivel de opacidad que prefieras */
-                z-index: 1;
-            }
+        .details-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Cambia el 0.5 por el nivel de opacidad que prefieras */
+            z-index: 1;
+        }
 
         .details-content {
             z-index: 2;
@@ -65,27 +64,28 @@
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: auto;
         }
 
         .details-left {
             margin-right: 30px;
         }
 
-            .details-left h2 {
-                font-family: 'Leckerli One', cursive; /* Tipografía estilo taquería */
-                font-size: 36px;
-                color: #e74c3c;
-            }
+        .details-left h2 {
+            font-family: 'Leckerli One', cursive;
+            font-size: 36px;
+            color: #e74c3c;
+        }
 
-            .details-left p {
-                font-size: 18px;
-            }
+        .details-left p {
+            font-size: 18px;
+        }
 
-            .details-left .price {
-                font-size: 24px;
-                color: #e74c3c;
-                margin-top: 20px;
-            }
+        .details-left .price {
+            font-size: 24px;
+            color: #e74c3c;
+            margin-top: 20px;
+        }
 
         .details-right img {
             width: 400px;
@@ -101,14 +101,14 @@
             margin-top: 20px;
         }
 
-            .quantity input {
-                width: 60px;
-                text-align: center;
-                font-size: 18px;
-                margin: 0 10px;
-                border-radius: 5px;
-                border: 1px solid #ccc;
-            }
+        .quantity input {
+            width: 60px;
+            text-align: center;
+            font-size: 18px;
+            margin: 0 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
 
         .btn-custom {
             padding: 10px 20px;
@@ -119,15 +119,122 @@
             border-radius: 10px;
             cursor: pointer;
             transition: background-color 0.3s, transform 0.3s;
-            font-family: 'Leckerli One', cursive; /* Tipografía estilo taquería */
+            font-family: 'Leckerli One', cursive;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             margin-top: 20px;
         }
 
-            .btn-custom:hover {
-                background-color: #c0392b;
-                transform: scale(1.05);
-            }
+        .btn-custom:hover {
+            background-color: #c0392b;
+            transform: scale(1.05);
+        }
+
+        .content-wrapper {
+            display: flex;
+            height: calc(100vh - 56px); /* 56px es la altura aproximada del navbar */
+            z-index: 2;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .details-content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .sidebar {
+            width: 500px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            overflow-y: auto;
+            z-index: 1000;
+            position: relative;
+        }
+
+        .sidebar h2 {
+            font-family: 'Leckerli One', cursive;
+            color: #e74c3c;
+            text-align: center;
+        }
+
+        .platillo-img {
+            max-width: 50px;
+            margin-right: 10px;
+            vertical-align: middle;
+            border-radius: 5px;
+        }
+
+        .platillo-name {
+            font-family: 'Leckerli One', cursive;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .summary-table {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .summary-table th,
+        .summary-table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .summary-table th {
+            background-color: #f8f8f8;
+        }
+
+        .total {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e74c3c;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .finalize-btn {
+            background-color: #e74c3c;
+            color: white;
+            font-family: 'Leckerli One', cursive;
+            font-size: 24px;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .finalize-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .input-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .decrement-btn, .increment-btn {
+            border-radius: 0;
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .decrement-btn:hover, .increment-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .numeric {
+            max-width: 50px;
+            margin: 0 5px 5px 0;
+        }
     </style>
 </head>
 <body>
@@ -153,36 +260,172 @@
                 <a class="navbar-brand">@ViewBag.NombreCliente</a>
                 <a class="navbar-brand">$@ViewBag.Total</a>
                 <a class="navbar-brand">@ViewBag.Mesa</a>
-                <button asp-action="Orden" asp-controller="Pedido" class="btn btn-danger">Finalizar orden</button>
             </form>
         </div>
     </nav>
 
-    <!-- Detalles del Platillo -->
-    <div class="details-container">
+    <!-- Contenedor principal con dos secciones: contenido de detalles del platillo y sidebar -->
+    <div class="content-wrapper">
+        <!-- Detalles del Platillo -->
         <div class="details-content">
-            <form method="post">
-                <div class="details-left">
-                    <h2>@ViewBag.Nombre</h2> <!-- Reemplaza 'Platillo 1' con el nombre del platillo -->
-                    <p>@ViewBag.Descripcion</p> <!-- Reemplaza con la descripción del platillo -->
-                    <div class="price">$@ViewBag.Costo</div> <!-- Reemplaza con el precio del platillo -->
-                    <div class="quantity">
-                        <label for="quantity">Cantidad:</label>
-                        <input type="number" id="quantity" name="Cantidad" value="1" min="1">
+            <div class="details-container">
+                <div class="details-content">
+                    <form method="post">
+                        <div class="details-left">
+                            <h2>@ViewBag.Nombre</h2>
+                            <p>@ViewBag.Descripcion</p>
+                            <div class="price">$@ViewBag.Costo</div>
+                            <div class="quantity">
+                                <label for="quantity">Cantidad:</label>
+                                <input type="number" id="quantity" name="Cantidad" value="1" min="1">
+                            </div>
+                            <button type="submit" asp-action="Platillo" asp-controller="Pedido" class="btn btn-custom">Agregar al pedido</button>
+                            <input type="hidden" name="Cate" value="@ViewBag.Categoria">
+                        </div>
+                    </form>
+                    <div class="details-right">
+                        <img src="@ViewBag.Imagen" alt="@ViewBag.Nombre">
                     </div>
-                    <button type="submit" asp-action="Platillo" asp-controller="Pedido" class="btn btn-custom">Agregar al pedido</button>
                 </div>
-            </form>
-            <div class="details-right">
-                <img src="@ViewBag.Imagen" alt="Platillo 1"> <!-- Reemplaza 'platillo1.jpg' con la ruta de la imagen del platillo -->
             </div>
+        </div>
+
+        <!-- Sidebar con Resumen -->
+        <div class="sidebar">
+            @{
+                if (Model.Orden.Count() > 0)
+                {
+                    double Total = 0;
+                    <div>
+                        <h2>Resumen de tu Orden</h2>
+
+                        <table class="summary-table">
+                            <thead>
+                                <tr>
+                                    <th>Platillo</th>
+                                    <th>Cantidad</th>
+                                    <th>Precio</th>
+                                    <th>Total</th>
+                                    <th>Eliminar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var i in Model.Orden)
+                                {
+                                    if (i.IdCliente == ViewBag.IdCliente && i.Status == "Por pedir")
+                                    {
+                                        foreach (var j in Model.Menu)
+                                        {
+                                            if (j.Id == i.IdMenu)
+                                            {
+                                                Total += i.Costo;
+                                                <tr data-product-menu-id="@j.Id" data-orden-id="@i.Id">
+                                                    <td>
+                                                        <img src="@j.RutaImagen" alt="Platillo 1" class="platillo-img">
+                                                        <span class="platillo-name">@j.NombrePlatillo</span>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group quantity mx-auto" style="width: 120px;">
+                                                            <div class="input-group-prepend">
+                                                                <button class="btn btn-outline-secondary decrement-btn" type="button">-</button>
+                                                            </div>
+                                                            <input type="text"
+                                                                class="form-control form-control-sm text-center numeric"
+                                                                value="@i.Cantidad" data-product-inter-id="@i.Id" readonly>
+                                                            <div class="input-group-append">
+                                                                <button class="btn btn-outline-secondary increment-btn" type="button">+</button>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>$@j.Costo</td>
+                                                    <td>$@i.Costo</td>
+                                                    <td>
+                                                        <form asp-controller="Pedido" asp-action="BorrarPedidoPlatillo" method="get">
+                                                            <input type="hidden" name="idord" value="@i.Id" />]
+                                                            <button class="btn btn-danger" type="submit">Borrar</button>
+                                                        </form>
+                                                    </td>
+                                                </tr>
+                                                break;
+                                            }
+                                        }
+                                    }
+                                }
+                            </tbody>
+                        </table>
+
+                        <div class="total">Total: $@Total</div>
+                        @if (Total != 0)
+                        {
+                            <form asp-action="Orden" asp-controller="Pedido" method="post">
+                                <input type="hidden" name="Total" value="@Total" />
+                                <button type="submit" class="finalize-btn">Finalizar orden</button>
+                            </form>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <div class="alert alert-info text-center">
+                        <p>No hay productos.</p>
+                    </div>
+                }
+            }
         </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            function updateTotals() {
+                var subtotal = 0;
+                $('.numeric').each(function () {
+                    var cantidad = parseFloat($(this).val());
+                    var precio = parseFloat($(this).closest('tr').find('td:eq(2)').text().replace('$', ''));
+                    var total = cantidad * precio;
+                    subtotal += total;
+                    $(this).closest('tr').find('td:eq(3)').text('$' + total.toFixed(2));
+                });
+                $('.total').text('Total: $' + subtotal.toFixed(2));
+            }
+
+            $('.numeric').on("change", function () {
+                var valor = $(this).val();
+                var idprodInter = $(this).closest('tr').data('product-menu-id');
+                var carritoId = $(this).closest('tr').data('orden-id');
+                $.ajax({
+                    type: 'GET',
+                    url: '/api/Values/CambioCantidad',
+                    data: { valor: valor, idprodInter: idprodInter, carritoId: carritoId },
+                    success: function (response) {
+                        updateTotals();
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+                });
+            });
+
+            $('.increment-btn').on('click', function () {
+                var input = $(this).closest('.quantity').find('.numeric');
+                var currentValue = parseInt(input.val());
+                if (currentValue < 50) {
+                    input.val(currentValue + 1).change();
+                }
+            });
+
+            $('.decrement-btn').on('click', function () {
+                var input = $(this).closest('.quantity').find('.numeric');
+                var currentValue = parseInt(input.val());
+                if (currentValue > 1) {
+                    input.val(currentValue - 1).change();
+                }
+            });
+
+            updateTotals();
+        });
+    </script>
 </body>
 </html>
-
-

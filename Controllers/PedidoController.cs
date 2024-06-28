@@ -104,7 +104,12 @@ namespace Eats_Tech.Controllers
         public IActionResult Home()
         {
             Cookies();
+
+            ViewBag.IdCliente = IdCliente;
+            List<Usuario> usuarios = _contextDB.Usuario.ToList();
+            List<Cliente> clientes = _contextDB.Cliente.ToList();
             List<Menu> menu = _contextDB.Menu.ToList();
+            List<Orden> orden = _contextDB.Orden.ToList();
 
             Random random = new Random();
             ViewBag.R1 = random.Next(1, menu.Count);
@@ -119,15 +124,35 @@ namespace Eats_Tech.Controllers
                 ViewBag.R3 = random.Next(1, menu.Count);
             } while (ViewBag.R1 == ViewBag.R3 || ViewBag.R2 == ViewBag.R3);
 
-            return View(menu);
+            var viewmodel = new Tablas
+            {
+                Orden = orden,
+                Menu = menu,
+                Usuario = usuarios,
+                Cliente = clientes
+            };
+            return View(viewmodel);
         }
         [HttpGet]
         public IActionResult Menu(string Categoria)
         {
             Cookies();
-            List<Menu> menu = _contextDB.Menu.ToList();
+            ViewBag.IdCliente = IdCliente;
             ViewBag.Categoria = Categoria;
-            return View(menu);
+            List<Usuario> usuarios = _contextDB.Usuario.ToList();
+            List<Cliente> clientes = _contextDB.Cliente.ToList();
+            List<Menu> menu = _contextDB.Menu.ToList();
+            List<Orden> orden = _contextDB.Orden.ToList();
+
+
+            var viewmodel = new Tablas
+            {
+                Orden = orden,
+                Menu = menu,
+                Usuario = usuarios,
+                Cliente = clientes
+            };
+            return View(viewmodel);
         }
         [HttpGet]
         public IActionResult Platillo(int Platillo)
@@ -143,13 +168,28 @@ namespace Eats_Tech.Controllers
                     ViewBag.Descripcion = item.Descripcion;
                     ViewBag.Costo = item.Costo;
                     ViewBag.Imagen = item.RutaImagen;
+                    ViewBag.Categoria = item.Categoria;
                     break;
                 }
             }
-            return View();
+            ViewBag.IdCliente = IdCliente;
+            List<Usuario> usuarios = _contextDB.Usuario.ToList();
+            List<Cliente> clientes = _contextDB.Cliente.ToList();
+            List<Menu> menu2 = _contextDB.Menu.ToList();
+            List<Orden> orden = _contextDB.Orden.ToList();
+
+
+            var viewmodel = new Tablas
+            {
+                Orden = orden,
+                Menu = menu2,
+                Usuario = usuarios,
+                Cliente = clientes
+            };
+            return View(viewmodel);
         }
         [HttpPost]
-        public IActionResult Platillo(string Cantidad)
+        public IActionResult Platillo(string Cantidad, string Cate)
         {
             Cookies();
             int Can = Convert.ToInt32(Cantidad);
@@ -169,7 +209,7 @@ namespace Eats_Tech.Controllers
                     u.Costo = u.Cantidad * costo;
                     _contextDB.Entry(u).State = EntityState.Modified; ;
                     _contextDB.SaveChanges();
-                    return RedirectToAction("Orden");
+                    return RedirectToAction(nameof(Menu), new {Categoria = Cate});
                 }
             }
 
@@ -189,15 +229,16 @@ namespace Eats_Tech.Controllers
                     _contextDB.SaveChanges();
                 }
             }
-            return RedirectToAction("Orden");
+            return RedirectToAction(nameof(Menu), new {Categoria = Cate});
         }
 
         [HttpGet]
-        public IActionResult Orden()
+        public IActionResult Orden(string Categoria)
         {
             Cookies();
 
             ViewBag.IdCliente = IdCliente;
+            ViewBag.Categoria = Categoria;
             List<Usuario> usuarios = _contextDB.Usuario.ToList();
             List<Cliente> clientes = _contextDB.Cliente.ToList();
             List<Menu> menu = _contextDB.Menu.ToList();
@@ -383,12 +424,20 @@ namespace Eats_Tech.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult BorrarPedido(int idord)
+        public IActionResult BorrarPedido(int idord, string Cate)
         {
             var prodcarrito = _contextDB.Orden.FirstOrDefault(p => p.Id == idord);
             _contextDB.Orden.Remove(prodcarrito);
             _contextDB.SaveChanges();
-            return RedirectToAction(nameof(Orden));
+            return RedirectToAction(nameof(Menu), new {Categoria = Cate});
+        }
+
+        public IActionResult BorrarPedidoPlatillo(int idord)
+        {
+            var prodcarrito = _contextDB.Orden.FirstOrDefault(p => p.Id == idord);
+            _contextDB.Orden.Remove(prodcarrito);
+            _contextDB.SaveChanges();
+            return RedirectToAction(nameof(Platillo), new {Platillo = IdPlatillo});
         }
 
         [HttpGet]
