@@ -75,7 +75,7 @@ namespace Eats_Tech.Controllers
             {
                 if(cliente.IdMesa == IdM && cliente.Status == "Empezando")
                 {
-                    return RedirectToAction("Orden", "Pedido");
+                    return RedirectToAction("Home", "Pedido");
                 }
             }
 
