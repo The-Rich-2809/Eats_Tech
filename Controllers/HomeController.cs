@@ -2,7 +2,6 @@ using Eats_Tech.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
-using System.Runtime.Intrinsics.Arm;
 
 namespace Eats_Tech.Controllers
 {
@@ -39,7 +38,6 @@ namespace Eats_Tech.Controllers
                                 return RedirectToAction("Orden", "Pedido");
                             if (item.IdMesa == user.ID && (item.Status != "Empezando" && item.Status != "Terminada") )
                                 return RedirectToAction("Comiendo", "Pedido");
-
                         }
 
                         if (user.TipoUsuario == "Admin")
@@ -170,53 +168,53 @@ namespace Eats_Tech.Controllers
 
             var insetarplatillo = new Menu[]
             {
-                new Menu() { NombrePlatillo = "Taco al Pastor", Descripcion = "Carne de cerdo marinada en una mezcla de chiles, achiote y especias, cocinada en un trompo vertical y servida con piña, cilantro, cebolla y salsa.", Costo = 20.50, Categoria = "Entradas", RutaImagen = "../Images/taco-pastor.jpg", Activo = 1 },
-                new Menu() { NombrePlatillo = "Taco de Carnitas", Descripcion = "Carne de cerdo cocida lentamente en su propia grasa hasta que queda tierna, generalmente acompañada de cebolla, cilantro y salsa.", Costo = 18.75, Categoria = "Entradas", RutaImagen = "../Images/tacos-carnitas.jpg", Activo = 1 },
-                new Menu() { NombrePlatillo = "Gringa de Pastor", Descripcion = "Tortilla de harina rellena de carne de cerdo al pastor, queso derretido, piña, cebolla y cilantro, servida con salsa.", Costo = 25.00, Categoria = "Entradas", RutaImagen = "../Images/Platillos/gringa-pastor.jpg", Activo = 1 },
+                new Menu() { NombrePlatillo = "Taco al Pastor", Descripcion = "Carne de cerdo marinada en una mezcla de chiles, achiote y especias, cocinada en un trompo vertical y servida con piï¿½a, cilantro, cebolla y salsa.", Costo = 20.50, Categoria = "Entradas", RutaImagen = "../Images/taco-pastor.jpg", Activo = 1 },
+                new Menu() { NombrePlatillo = "Taco de Carnitas", Descripcion = "Carne de cerdo cocida lentamente en su propia grasa hasta que queda tierna, generalmente acompaï¿½ada de cebolla, cilantro y salsa.", Costo = 18.75, Categoria = "Entradas", RutaImagen = "../Images/tacos-carnitas.jpg", Activo = 1 },
+                new Menu() { NombrePlatillo = "Gringa de Pastor", Descripcion = "Tortilla de harina rellena de carne de cerdo al pastor, queso derretido, piï¿½a, cebolla y cilantro, servida con salsa.", Costo = 25.00, Categoria = "Entradas", RutaImagen = "../Images/Platillos/gringa-pastor.jpg", Activo = 1 },
                 new Menu() { NombrePlatillo = "Alambre de Res", Descripcion = "Platillo mexicano hecho con carne de res, pimientos, cebolla, tocino y queso, todo salteado y servido con tortillas.", Costo = 22.00, Categoria = "Entradas", RutaImagen = "../Images/Platillos/alambre-res.jpg", Activo = 1 },
                 new Menu() { NombrePlatillo = "Barbacoa", Descripcion = "Carne de res cocida lentamente al vapor con hojas de maguey y una mezcla de especias, servida con tortillas, cebolla, cilantro y salsa.", Costo = 20.00, Categoria = "Entradas", RutaImagen = "../Images/Platillos/barbacoa.jpg", Activo = 1 },
                 new Menu() { NombrePlatillo = "Torta de Pastor", Descripcion = "Pan bolillo relleno de carne de cerdo al pastor, aguacate, frijoles refritos, cebolla, cilantro y salsa.", Costo = 18.00, Categoria = "Entradas", RutaImagen = "../Images/Platillos/torta-pastor.jpg", Activo = 1 },
-                new Menu() { NombrePlatillo = "Taco de Pastor", Descripcion = "Taco de tortilla de maíz relleno de carne de cerdo al pastor, piña, cebolla, cilantro y salsa.", Costo = 15.00, Categoria = "Entradas", RutaImagen = "../Images/Platillos/taco-pastor.jpg", Activo = 1 },
+                new Menu() { NombrePlatillo = "Taco de Pastor", Descripcion = "Taco de tortilla de maï¿½z relleno de carne de cerdo al pastor, piï¿½a, cebolla, cilantro y salsa.", Costo = 15.00, Categoria = "Entradas", RutaImagen = "../Images/Platillos/taco-pastor.jpg", Activo = 1 },
                 new Menu() { NombrePlatillo = "Burrito de Cecina", Descripcion = "Tortilla de harina rellena de cecina, arroz, frijoles, guacamole, cebolla, cilantro y salsa.", Costo = 20.00, Categoria = "Entradas", RutaImagen = "../Images/Platillos/burrito-cecina.jpg", Activo = 1 },
-                new Menu() { NombrePlatillo = "Taco de Pollo", Descripcion = "Taco de tortilla de maíz relleno de pollo desmenuzado, cebolla, cilantro y salsa.", Costo = 12.00, Categoria = "Entradas", RutaImagen = "../Images/Platillos/taco-pollo.jpg", Activo = 1 },
-                new Menu() { NombrePlatillo = "Tiramisú", Descripcion = "Postre italiano hecho con capas de bizcocho empapadas en café, mascarpone, y cacao en polvo.", Costo = 8.00, Categoria = "Postres", RutaImagen = "../Images/Platillos/tiramisu.jpg", Activo = 1 },
+                new Menu() { NombrePlatillo = "Taco de Pollo", Descripcion = "Taco de tortilla de maï¿½z relleno de pollo desmenuzado, cebolla, cilantro y salsa.", Costo = 12.00, Categoria = "Entradas", RutaImagen = "../Images/Platillos/taco-pollo.jpg", Activo = 1 },
+                new Menu() { NombrePlatillo = "Tiramisï¿½", Descripcion = "Postre italiano hecho con capas de bizcocho empapadas en cafï¿½, mascarpone, y cacao en polvo.", Costo = 8.00, Categoria = "Postres", RutaImagen = "../Images/Platillos/tiramisu.jpg", Activo = 1 },
                 new Menu() { NombrePlatillo = "Cheesecake", Descripcion = "Tarta de queso con una base de galleta, rellena de una mezcla cremosa de queso, y cubierta con frutas o mermelada.", Costo = 7.50, Categoria = "Postres", RutaImagen = "../Images/Platillos/cheesecake.jpg", Activo = 1 },
-                new Menu() { NombrePlatillo = "Churros", Descripcion = "Masa frita espolvoreada con azúcar y canela, a menudo servida con chocolate caliente para mojar.", Costo = 5.00, Categoria = "Postres", RutaImagen = "../Images/Platillos/churros.jpg", Activo = 1 },
-                new Menu() { NombrePlatillo = "Crème Brûlée", Descripcion = "Postre francés de crema de vainilla con una capa superior de azúcar caramelizado.", Costo = 9.00, Categoria = "Postres", RutaImagen = "../Images/Platillos/creeme-brulee.jpg", Activo = 1 },
+                new Menu() { NombrePlatillo = "Churros", Descripcion = "Masa frita espolvoreada con azï¿½car y canela, a menudo servida con chocolate caliente para mojar.", Costo = 5.00, Categoria = "Postres", RutaImagen = "../Images/Platillos/churros.jpg", Activo = 1 },
+                new Menu() { NombrePlatillo = "Crï¿½me Brï¿½lï¿½e", Descripcion = "Postre francï¿½s de crema de vainilla con una capa superior de azï¿½car caramelizado.", Costo = 9.00, Categoria = "Postres", RutaImagen = "../Images/Platillos/creeme-brulee.jpg", Activo = 1 },
                 new Menu() { NombrePlatillo = "Brownie", Descripcion = "Denso pastel de chocolate, a menudo servido con nueces y una bola de helado.", Costo = 6.00, Categoria = "Postres", RutaImagen = "../Images/Platillos/brownie.jpg", Activo = 1 }
 
 
                 //new Menu() { NombrePlatillo = "Chow Mein", Descripcion = "Fideos de huevo salteados con pollo o cerdo y verduras como zanahorias, pimientos y cebolla, en salsa de soja.", Costo = 9.50, Categoria = "Comida", RutaImagen = "../Images/chow-mein.jpg", Activo = 1 },
-                //new Menu() { NombrePlatillo = "Haggis", Descripcion = "Plato escocés hecho de vísceras de oveja, avena, cebolla y especias, cocido en el estómago de la oveja.", Costo = 12.00, Categoria = "Comida", RutaImagen = "../Images/haggis.jpg", Activo = 1 },
-                //new Menu() { NombrePlatillo = "Lomo Saltado", Descripcion = "Salteado de carne de res con papas fritas, cebolla, tomate y ají, sazonado con salsa de soja y cilantro.", Costo = 10.50, Categoria = "Comida", RutaImagen = "../Images/lomo-saltado.jpg", Activo = 1 },
-                //new Menu() { NombrePlatillo = "Baklava", Descripcion = "Dulce hecho de capas de pasta filo rellenas de nueces y bañadas en miel.", Costo = 4.50, Categoria = "Comida", RutaImagen = "../Images/baklava.jpg", Activo = 1 },
-                //new Menu() { NombrePlatillo = "Jambalaya", Descripcion = "Arroz con camarones, pollo, salchicha andouille, pimientos, cebolla, apio y tomate, sazonado con especias cajún.", Costo = 13.00, Categoria = "Comida", RutaImagen = "../Images/jambalaya.jpg", Activo = 1 },
+                //new Menu() { NombrePlatillo = "Haggis", Descripcion = "Plato escocï¿½s hecho de vï¿½sceras de oveja, avena, cebolla y especias, cocido en el estï¿½mago de la oveja.", Costo = 12.00, Categoria = "Comida", RutaImagen = "../Images/haggis.jpg", Activo = 1 },
+                //new Menu() { NombrePlatillo = "Lomo Saltado", Descripcion = "Salteado de carne de res con papas fritas, cebolla, tomate y ajï¿½, sazonado con salsa de soja y cilantro.", Costo = 10.50, Categoria = "Comida", RutaImagen = "../Images/lomo-saltado.jpg", Activo = 1 },
+                //new Menu() { NombrePlatillo = "Baklava", Descripcion = "Dulce hecho de capas de pasta filo rellenas de nueces y baï¿½adas en miel.", Costo = 4.50, Categoria = "Comida", RutaImagen = "../Images/baklava.jpg", Activo = 1 },
+                //new Menu() { NombrePlatillo = "Jambalaya", Descripcion = "Arroz con camarones, pollo, salchicha andouille, pimientos, cebolla, apio y tomate, sazonado con especias cajï¿½n.", Costo = 13.00, Categoria = "Comida", RutaImagen = "../Images/jambalaya.jpg", Activo = 1 },
                 //new Menu() { NombrePlatillo = "Sauerbraten", Descripcion = "Carne de res marinada en vinagre y vino tinto con cebolla, zanahorias y especias, cocida a fuego lento.", Costo = 16.00, Categoria = "Comida", RutaImagen = "../Images/sauerbraten.jpg", Activo = 1 },
                 //new Menu() { NombrePlatillo = "Moussaka", Descripcion = "Plato griego de berenjena, carne de cordero o res, tomate, cebolla y bechamel, gratinado con queso.", Costo = 11.50, Categoria = "Comida", RutaImagen = "../Images/moussaka.jpg", Activo = 1 },
                 //new Menu() { NombrePlatillo = "Bobotie", Descripcion = "Plato sudafricano de carne molida con cebolla, especias y frutas secas, cubierto con una mezcla de pan, leche y huevo.", Costo = 9.00, Categoria = "Comida", RutaImagen = "../Images/bobotie.jpg", Activo = 1 }
             };
             var insertarBebida = new Menu[]
             {
-                new Menu() { NombrePlatillo = "Mojito", Descripcion = "Coctel cubano hecho con ron blanco, azúcar, lima, menta y agua con gas.", Costo = 8.00, Categoria = "Bebidas", RutaImagen = "../Images/Bebidas/mojito.jpg", Activo = 1 },
-                new Menu() { NombrePlatillo = "Caipirinha", Descripcion = "Coctel brasileño hecho con cachaça, azúcar y lima.", Costo = 7.50, Categoria = "Bebidas", RutaImagen = "../Images/Bebidas/caipirinha.jpg", Activo = 1 },
-                new Menu() { NombrePlatillo = "Sake", Descripcion = "Bebida alcohólica japonesa hecha de arroz fermentado.", Costo = 5.00, Categoria = "Bebidas", RutaImagen = "../Images/Bebidas/sake.jpg", Activo = 1 },
+                new Menu() { NombrePlatillo = "Mojito", Descripcion = "Coctel cubano hecho con ron blanco, azï¿½car, lima, menta y agua con gas.", Costo = 8.00, Categoria = "Bebidas", RutaImagen = "../Images/Bebidas/mojito.jpg", Activo = 1 },
+                new Menu() { NombrePlatillo = "Caipirinha", Descripcion = "Coctel brasileï¿½o hecho con cachaï¿½a, azï¿½car y lima.", Costo = 7.50, Categoria = "Bebidas", RutaImagen = "../Images/Bebidas/caipirinha.jpg", Activo = 1 },
+                new Menu() { NombrePlatillo = "Sake", Descripcion = "Bebida alcohï¿½lica japonesa hecha de arroz fermentado.", Costo = 5.00, Categoria = "Bebidas", RutaImagen = "../Images/Bebidas/sake.jpg", Activo = 1 },
                 new Menu() { NombrePlatillo = "Tequila Sunrise", Descripcion = "Coctel mexicano hecho con tequila, jugo de naranja y granadina.", Costo = 7.00, Categoria = "Bebidas", RutaImagen = "../Images/Bebidas/tequila-sunrise.jpg", Activo = 1 },
-                new Menu() { NombrePlatillo = "Piña Colada", Descripcion = "Coctel puertorriqueño hecho con ron, crema de coco y jugo de piña.", Costo = 9.00, Categoria = "Bebidas", RutaImagen = "../Images/Bebidas/pina-colada.jpg", Activo = 1 },
+                new Menu() { NombrePlatillo = "Piï¿½a Colada", Descripcion = "Coctel puertorriqueï¿½o hecho con ron, crema de coco y jugo de piï¿½a.", Costo = 9.00, Categoria = "Bebidas", RutaImagen = "../Images/Bebidas/pina-colada.jpg", Activo = 1 },
                 new Menu() { NombrePlatillo = "Margarita", Descripcion = "Coctel mexicano hecho con tequila, jugo de lima y Cointreau o triple sec.", Costo = 8.50, Categoria = "Bebidas", RutaImagen = "../Images/Bebidas/margarita.jpg", Activo = 1 },
-                new Menu() { NombrePlatillo = "Irish Coffee", Descripcion = "Café caliente mezclado con whisky irlandés, azúcar y cubierto con crema.", Costo = 6.00, Categoria = "Bebidas", RutaImagen = "../Images/Bebidas/irish-coffee.jpg", Activo = 1 },
-                new Menu() { NombrePlatillo = "Chai Latte", Descripcion = "Bebida india hecha con té negro, especias, leche y azúcar.", Costo = 4.50, Categoria = "Bebidas", RutaImagen = "../Images/Bebidas/chai-latte.jpg", Activo = 1 },
+                new Menu() { NombrePlatillo = "Irish Coffee", Descripcion = "Cafï¿½ caliente mezclado con whisky irlandï¿½s, azï¿½car y cubierto con crema.", Costo = 6.00, Categoria = "Bebidas", RutaImagen = "../Images/Bebidas/irish-coffee.jpg", Activo = 1 },
+                new Menu() { NombrePlatillo = "Chai Latte", Descripcion = "Bebida india hecha con tï¿½ negro, especias, leche y azï¿½car.", Costo = 4.50, Categoria = "Bebidas", RutaImagen = "../Images/Bebidas/chai-latte.jpg", Activo = 1 },
                 new Menu() { NombrePlatillo = "Lassi", Descripcion = "Bebida india hecha con yogur, agua, especias y a veces frutas como mango.", Costo = 4.00, Categoria = "Bebidas", RutaImagen = "../Images/Bebidas/lassi.jpg", Activo = 1 },
-                new Menu() { NombrePlatillo = "Mate", Descripcion = "Infusión tradicional sudamericana hecha de hojas de yerba mate.", Costo = 3.00, Categoria = "Bebidas", RutaImagen = "../Images/Bebidas/mate.jpg", Activo = 1 },
-                new Menu() { NombrePlatillo = "Sangría", Descripcion = "Bebida española hecha con vino tinto, frutas troceadas, azúcar y un toque de brandy.", Costo = 6.50, Categoria = "Bebidas", RutaImagen = "../Images/Bebidas/sangria.jpg", Activo = 1 },
-                new Menu() { NombrePlatillo = "Limoncello", Descripcion = "Licor italiano de limón servido frío como digestivo.", Costo = 5.50, Categoria = "Bebidas", RutaImagen = "../Images/Bebidas/limoncello.jpg", Activo = 1 },
-                new Menu() { NombrePlatillo = "Pisco Sour", Descripcion = "Coctel peruano hecho con pisco, jugo de limón, jarabe de goma, clara de huevo y amargo de angostura.", Costo = 8.00, Categoria = "Bebidas", RutaImagen = "../Images/Bebidas/pisco-sour.jpg", Activo = 1 },
+                new Menu() { NombrePlatillo = "Mate", Descripcion = "Infusiï¿½n tradicional sudamericana hecha de hojas de yerba mate.", Costo = 3.00, Categoria = "Bebidas", RutaImagen = "../Images/Bebidas/mate.jpg", Activo = 1 },
+                new Menu() { NombrePlatillo = "Sangrï¿½a", Descripcion = "Bebida espaï¿½ola hecha con vino tinto, frutas troceadas, azï¿½car y un toque de brandy.", Costo = 6.50, Categoria = "Bebidas", RutaImagen = "../Images/Bebidas/sangria.jpg", Activo = 1 },
+                new Menu() { NombrePlatillo = "Limoncello", Descripcion = "Licor italiano de limï¿½n servido frï¿½o como digestivo.", Costo = 5.50, Categoria = "Bebidas", RutaImagen = "../Images/Bebidas/limoncello.jpg", Activo = 1 },
+                new Menu() { NombrePlatillo = "Pisco Sour", Descripcion = "Coctel peruano hecho con pisco, jugo de limï¿½n, jarabe de goma, clara de huevo y amargo de angostura.", Costo = 8.00, Categoria = "Bebidas", RutaImagen = "../Images/Bebidas/pisco-sour.jpg", Activo = 1 },
                 new Menu() { NombrePlatillo = "Aperol Spritz", Descripcion = "Coctel italiano hecho con Aperol, prosecco y agua con gas.", Costo = 7.50, Categoria = "Bebidas", RutaImagen = "../Images/Bebidas/aperol-spritz.jpg", Activo = 1 },
-                new Menu() { NombrePlatillo = "Cosmopolitan", Descripcion = "Coctel hecho con vodka, Cointreau, jugo de arándano y jugo de lima.", Costo = 9.00, Categoria = "Bebidas", RutaImagen = "../Images/Bebidas/cosmopolitan.jpg", Activo = 1 },
-                new Menu() { NombrePlatillo = "Bellini", Descripcion = "Coctel italiano hecho con prosecco y puré de durazno.", Costo = 7.50, Categoria = "Bebidas", RutaImagen = "../Images/Bebidas/bellini.jpg", Activo = 1 }
+                new Menu() { NombrePlatillo = "Cosmopolitan", Descripcion = "Coctel hecho con vodka, Cointreau, jugo de arï¿½ndano y jugo de lima.", Costo = 9.00, Categoria = "Bebidas", RutaImagen = "../Images/Bebidas/cosmopolitan.jpg", Activo = 1 },
+                new Menu() { NombrePlatillo = "Bellini", Descripcion = "Coctel italiano hecho con prosecco y purï¿½ de durazno.", Costo = 7.50, Categoria = "Bebidas", RutaImagen = "../Images/Bebidas/bellini.jpg", Activo = 1 }
 
-                //new Menu() { NombrePlatillo = "Mai Tai", Descripcion = "Coctel hawaiano hecho con ron blanco y oscuro, jugo de lima, curaçao de naranja y jarabe de orgeat.", Costo = 8.00, Categoria = "Bebidas", RutaImagen = "../Images/mai-tai.jpg", Activo = 1 },
-                //new Menu() { NombrePlatillo = "Hot Toddy", Descripcion = "Bebida caliente hecha con whisky, miel, limón y agua caliente.", Costo = 5.00, Categoria = "Bebidas", RutaImagen = "../Images/hot-toddy.jpg", Activo = 1 },
-                //new Menu() { NombrePlatillo = "Mimosa", Descripcion = "Coctel hecho con partes iguales de champán y jugo de naranja.", Costo = 6.00, Categoria = "Bebidas", RutaImagen = "../Images/mimosa.jpg", Activo = 1 },
+                //new Menu() { NombrePlatillo = "Mai Tai", Descripcion = "Coctel hawaiano hecho con ron blanco y oscuro, jugo de lima, curaï¿½ao de naranja y jarabe de orgeat.", Costo = 8.00, Categoria = "Bebidas", RutaImagen = "../Images/mai-tai.jpg", Activo = 1 },
+                //new Menu() { NombrePlatillo = "Hot Toddy", Descripcion = "Bebida caliente hecha con whisky, miel, limï¿½n y agua caliente.", Costo = 5.00, Categoria = "Bebidas", RutaImagen = "../Images/hot-toddy.jpg", Activo = 1 },
+                //new Menu() { NombrePlatillo = "Mimosa", Descripcion = "Coctel hecho con partes iguales de champï¿½n y jugo de naranja.", Costo = 6.00, Categoria = "Bebidas", RutaImagen = "../Images/mimosa.jpg", Activo = 1 },
                 //new Menu() { NombrePlatillo = "Horchata", Descripcion = "Bebida tradicional mexicana hecha de arroz, leche, vainilla y canela.", Costo = 3.50, Categoria = "Bebidas", RutaImagen = "../Images/horchata.jpg", Activo = 1 }
             };
 

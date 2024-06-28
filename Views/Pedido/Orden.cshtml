@@ -194,10 +194,16 @@
                                                     <span class="platillo-name">@j.NombrePlatillo</span>
                                                 </td>
                                                 <td>
-                                                    <div class="input-group quantity mx-auto" style="width: 100px;">
+                                                    <div class="input-group quantity mx-auto" style="width: 150px;">
+                                                        <div class="input-group-prepend">
+                                                            <button class="btn btn-outline-secondary decrement-btn" type="button">-</button>
+                                                        </div>
                                                         <input type="number" max="50" min="1"
-                                                               class="form-control form-control-sm bg-secondary border-0 text-center numeric"
-                                                               value="@i.Cantidad" data-product-inter-id="@i.Id" readonly>
+                                                            class="form-control form-control-sm bg-secondary border-0 text-center numeric"
+                                                            value="@i.Cantidad" data-product-inter-id="@i.Id" readonly>
+                                                        <div class="input-group-append">
+                                                            <button class="btn btn-outline-secondary increment-btn" type="button">+</button>
+                                                        </div>
                                                     </div>
                                                 </td>
                                                 <td>$@j.Costo</td>
@@ -316,7 +322,7 @@
 
             $('.numeric').on("change", function () {
                 var valor = $(this).val();
-                var idprodInter = $(this).closest('tr').data('product-menu-id');
+                var idprodInter = $(this).data('product-inter-id');
                 var carritoId = $(this).closest('tr').data('orden-id');
                 $.ajax({
                     type: 'GET',
@@ -329,6 +335,22 @@
                         console.log(error);
                     }
                 });
+            });
+
+            $('.increment-btn').on('click', function () {
+                var input = $(this).closest('.quantity').find('.numeric');
+                var currentValue = parseInt(input.val());
+                if (currentValue < 50) {
+                    input.val(currentValue + 1).change();
+                }
+            });
+
+            $('.decrement-btn').on('click', function () {
+                var input = $(this).closest('.quantity').find('.numeric');
+                var currentValue = parseInt(input.val());
+                if (currentValue > 1) {
+                    input.val(currentValue - 1).change();
+                }
             });
 
             updateTotals();
