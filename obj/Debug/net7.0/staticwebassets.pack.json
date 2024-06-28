@@ -1,0 +1,549 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Eats_Tech.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Eats_Tech.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\1.jpg",
+      "PackagePath": "staticwebassets\\Images\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\2.jpg",
+      "PackagePath": "staticwebassets\\Images\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\3.jpg",
+      "PackagePath": "staticwebassets\\Images\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\aperol-spritz.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\aperol-spritz.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\bellini.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\bellini.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\caipirinha.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\caipirinha.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\chai-latte.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\chai-latte.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\cosmopolitan.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\cosmopolitan.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\irish-coffee.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\irish-coffee.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\lassi.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\lassi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\limoncello.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\limoncello.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\margarita.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\margarita.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\mate.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\mate.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\mojito.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\mojito.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\pina-colada.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\pina-colada.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\pisco-sour.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\pisco-sour.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\sake.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\sake.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\sangria.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\sangria.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Bebidas\\tequila-sunrise.jpg",
+      "PackagePath": "staticwebassets\\Images\\Bebidas\\tequila-sunrise.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\BoingMango.png",
+      "PackagePath": "staticwebassets\\Images\\BoingMango.png"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Cocacola.png",
+      "PackagePath": "staticwebassets\\Images\\Cocacola.png"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Comiendo.jpg",
+      "PackagePath": "staticwebassets\\Images\\Comiendo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Fondo.jpg",
+      "PackagePath": "staticwebassets\\Images\\Fondo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Fondo1.jpg",
+      "PackagePath": "staticwebassets\\Images\\Fondo1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Fondo2.jpg",
+      "PackagePath": "staticwebassets\\Images\\Fondo2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\FondoH.jpg",
+      "PackagePath": "staticwebassets\\Images\\FondoH.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\FondoI.jpg",
+      "PackagePath": "staticwebassets\\Images\\FondoI.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\LogoTaco.jpg",
+      "PackagePath": "staticwebassets\\Images\\LogoTaco.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Mantel.jpg",
+      "PackagePath": "staticwebassets\\Images\\Mantel.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Menu.jpg",
+      "PackagePath": "staticwebassets\\Images\\Menu.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Orden.jpg",
+      "PackagePath": "staticwebassets\\Images\\Orden.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\1_7_1366_2000.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\1_7_1366_2000.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\1_8_1366_2000.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\1_8_1366_2000.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\Shakshuka.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\Shakshuka.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\alambre-res.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\alambre-res.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\barbacoa.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\barbacoa.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\biryani.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\biryani.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\bratwurst.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\bratwurst.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\brownie.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\brownie.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\burrito-cecina.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\burrito-cecina.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\ceviche.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\ceviche.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\cheesecake.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\cheesecake.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\churrasco.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\churrasco.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\churros.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\churros.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\creeme-brulee.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\creeme-brulee.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\croissant.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\croissant.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\falafel.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\falafel.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\gringa-pastor.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\gringa-pastor.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\kebab.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\kebab.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\kimchi.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\kimchi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\pad-thai.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\pad-thai.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\paella.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\paella.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\pho.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\pho.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\pizza-margarita.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\pizza-margarita.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\poutine.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\poutine.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\ratatouille.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\ratatouille.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\sushi.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\sushi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\taco-pastor.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\taco-pastor.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\taco-pollo.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\taco-pollo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\tiramisu.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\tiramisu.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Platillos\\torta-pastor.jpg",
+      "PackagePath": "staticwebassets\\Images\\Platillos\\torta-pastor.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Users\\1_WhatsApp Image 2024-06-07 at 11.59.49 AM (1).jpeg",
+      "PackagePath": "staticwebassets\\Images\\Users\\1_WhatsApp Image 2024-06-07 at 11.59.49 AM (1).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Users\\5_1366_2000.jpg",
+      "PackagePath": "staticwebassets\\Images\\Users\\5_1366_2000.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Users\\7_maca.jpg",
+      "PackagePath": "staticwebassets\\Images\\Users\\7_maca.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Users\\8_maca.jpg",
+      "PackagePath": "staticwebassets\\Images\\Users\\8_maca.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\Users\\maca.jpg",
+      "PackagePath": "staticwebassets\\Images\\Users\\maca.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\caguamon.jpg",
+      "PackagePath": "staticwebassets\\Images\\caguamon.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\taco-pastor.jpg",
+      "PackagePath": "staticwebassets\\Images\\taco-pastor.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\tacos-carnitas.jpg",
+      "PackagePath": "staticwebassets\\Images\\tacos-carnitas.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\Images\\tacos-de-barbacoa.jpg",
+      "PackagePath": "staticwebassets\\Images\\tacos-de-barbacoa.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\css\\Carousel.css",
+      "PackagePath": "staticwebassets\\css\\Carousel.css"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Rich-Huawei\\Documents\\GitHub\\Eats_Tech\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Eats_Tech.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Eats_Tech.props",
+      "PackagePath": "build\\Eats_Tech.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Eats_Tech.props",
+      "PackagePath": "buildMultiTargeting\\Eats_Tech.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Eats_Tech.props",
+      "PackagePath": "buildTransitive\\Eats_Tech.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

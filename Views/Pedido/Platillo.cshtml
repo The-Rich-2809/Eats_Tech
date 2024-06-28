@@ -258,7 +258,6 @@
             </ul>
             <form>
                 <a class="navbar-brand">@ViewBag.NombreCliente</a>
-                <a class="navbar-brand">$@ViewBag.Total</a>
                 <a class="navbar-brand">@ViewBag.Mesa</a>
             </form>
         </div>
@@ -341,7 +340,7 @@
                                                     <td>$@i.Costo</td>
                                                     <td>
                                                         <form asp-controller="Pedido" asp-action="BorrarPedidoPlatillo" method="get">
-                                                            <input type="hidden" name="idord" value="@i.Id" />]
+                                                            <input type="hidden" name="idord" value="@i.Id" />
                                                             <button class="btn btn-danger" type="submit">Borrar</button>
                                                         </form>
                                                     </td>
