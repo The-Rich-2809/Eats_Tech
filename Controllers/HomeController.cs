@@ -49,7 +49,7 @@ namespace Eats_Tech.Controllers
                         if (user.TipoUsuario == "Mesero")
                             return RedirectToAction("Index", "Mesero");
                         if (user.TipoUsuario == "Recepcion")
-                            return RedirectToAction("Index", "Recepcion");
+                            return RedirectToAction("Index", "Recepcionista");
                     }
                 }
             }
