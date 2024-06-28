@@ -9,219 +9,223 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Eats_Tech
 build_property.RootNamespace = Eats_Tech
-build_property.ProjectDir = C:\Users\Rich-Huawei\Documents\GitHub\Eats_Tech\
+build_property.ProjectDir = c:\Github\Kapicentro\Eats_Tech\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Rich-Huawei\Documents\GitHub\Eats_Tech
+build_property.MSBuildProjectDirectory = c:\Github\Kapicentro\Eats_Tech
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Admin/AgregarMenu.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Admin/AgregarMenu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWdyZWdhck1lbnUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Admin/AgregarMesas.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Admin/AgregarMesas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWdyZWdhck1lc2FzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Admin/AgregarPlatillo.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Admin/AgregarPlatillo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWdyZWdhclBsYXRpbGxvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Admin/AgregarUsuarios.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Admin/AgregarUsuarios.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWdyZWdhclVzdWFyaW9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Admin/Clientes.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Admin/Clientes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ2xpZW50ZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Admin/Comentarios.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Admin/Comentarios.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ29tZW50YXJpb3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Admin/EliMenu.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Admin/EliMenu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWxpTWVudS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Admin/EliMesas.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Admin/EliMesas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWxpTWVzYXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Admin/EliPlatillo.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Admin/EliPlatillo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWxpUGxhdGlsbG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Admin/EliUsuarios.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Admin/EliUsuarios.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWxpVXN1YXJpb3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Admin/Index.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Admin/Menu.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Admin/Menu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWVudS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Admin/Mesas.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Admin/Mesas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWVzYXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Admin/ModMenu.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Admin/ModMenu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTW9kTWVudS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Admin/ModMesas.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Admin/ModMesas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTW9kTWVzYXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Admin/ModPlatillo.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Admin/ModPlatillo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTW9kUGxhdGlsbG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Admin/ModUsuarios.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Admin/ModUsuarios.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTW9kVXN1YXJpb3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Admin/Ordenes.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Admin/Ordenes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cT3JkZW5lcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Admin/Platillo.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Admin/Platillo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUGxhdGlsbG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Admin/Usuarios.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Admin/SalesReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2FsZXNSZXBvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Github/Kapicentro/Eats_Tech/Views/Admin/Usuarios.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXN1YXJpb3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Cocina/Index.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Cocina/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29jaW5hXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Cocina/OrdenesCocinadas.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Cocina/OrdenesCocinadas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29jaW5hXE9yZGVuZXNDb2NpbmFkYXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Cocina/OrdenesCocinar.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Cocina/OrdenesCocinar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29jaW5hXE9yZGVuZXNDb2NpbmFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Home/Index.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Home/Privacy.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Mesero/Index.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Mesero/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzZXJvXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Mesero/Llamada.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Mesero/Llamada.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzZXJvXExsYW1hZGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Mesero/OrdenesCobrar.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Mesero/OrdenesCobrar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzZXJvXE9yZGVuZXNDb2JyYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Mesero/OrdenesEntregadas.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Mesero/OrdenesEntregadas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzZXJvXE9yZGVuZXNFbnRyZWdhZGFzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Mesero/OrdenesEnviar.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Mesero/OrdenesEnviar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzZXJvXE9yZGVuZXNFbnZpYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Mesero/OrdenesTerminar.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Mesero/OrdenesTerminar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzZXJvXE9yZGVuZXNUZXJtaW5hci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Pedido/Comiendo.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Pedido/Comiendo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvXENvbWllbmRvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Pedido/Home.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Pedido/Home.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvXEhvbWUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Pedido/Index.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Pedido/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Pedido/Menu.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Pedido/Menu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvXE1lbnUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Pedido/Orden.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Pedido/Orden.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvXE9yZGVuLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Pedido/Platillo.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Pedido/Platillo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvXFBsYXRpbGxvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Pedido/Registro.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Pedido/Registro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvXFJlZ2lzdHJvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Recepcionista/Index.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Recepcionista/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXBjaW9uaXN0YVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Recepcionista/MesasDisponibles.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Recepcionista/MesasDisponibles.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXBjaW9uaXN0YVxNZXNhc0Rpc3BvbmlibGVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Recepcionista/Registro.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Recepcionista/Registro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXBjaW9uaXN0YVxSZWdpc3Ryby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Shared/Error.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Shared/_LayoutAdmin.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Shared/_LayoutAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Shared/_LayoutCocina.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Shared/_LayoutCocina.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRDb2NpbmEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Shared/_LayoutMesero.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Shared/_LayoutMesero.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRNZXNlcm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Shared/_LayoutRecepcionista.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Shared/_LayoutRecepcionista.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRSZWNlcGNpb25pc3RhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Shared/_ValidationScriptsPartial.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/_ViewImports.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/_ViewStart.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Shared/_Layout.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-y8lei9ypjd
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Shared/_LayoutPedido.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Shared/_LayoutPedido.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRQZWRpZG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-nwog4uclul
 
-[C:/Users/Rich-Huawei/Documents/GitHub/Eats_Tech/Views/Shared/_LayoutSimple.cshtml]
+[c:/Github/Kapicentro/Eats_Tech/Views/Shared/_LayoutSimple.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRTaW1wbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-x9iu2d52t3

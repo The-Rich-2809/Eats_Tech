@@ -1,0 +1,101 @@
+@{
+    ViewBag.Title = "Reporte de Ventas";
+    if (ViewBag.Nivel == "Admin")
+    {
+        Layout = "_LayoutAdmin2";
+    }
+}
+
+<h1 class="text-center text-black">Reporte de Ventas</h1>
+
+<div class="d-flex justify-content-center">
+    <div class="row w-100">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="text-center text-black">Ventas del Mes</h2>
+                    <div id="monthlySalesChart" class="chart-container"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="text-center text-black">Ventas del Día por Horas</h2>
+                    <div id="dailySalesChart" class="chart-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawCharts);
+
+        function drawCharts() {
+            const monthlySalesData = JSON.parse('@Html.Raw(ViewBag.MonthlySalesData)');
+            const dailySalesData = JSON.parse('@Html.Raw(ViewBag.DailySalesData)');
+
+            console.log('Monthly Sales Data:', monthlySalesData);
+            console.log('Daily Sales Data:', dailySalesData);
+
+            // Draw Monthly Sales Chart
+            var monthlyData = new google.visualization.DataTable();
+            monthlyData.addColumn('date', 'Fecha');
+            monthlyData.addColumn('number', 'Ventas Totales');
+            monthlySalesData.forEach(item => {
+                monthlyData.addRow([new Date(item.Date), item.TotalSales]);
+            });
+
+            var monthlyOptions = {
+                title: 'Ventas del Mes',
+                curveType: 'function',
+                legend: { position: 'bottom' },
+                hAxis: { format: 'dd/MM/yyyy' }
+            };
+
+            var monthlyChart = new google.visualization.LineChart(document.getElementById('monthlySalesChart'));
+            monthlyChart.draw(monthlyData, monthlyOptions);
+
+            // Draw Daily Sales Chart
+            var dailyData = new google.visualization.DataTable();
+            dailyData.addColumn('string', 'Hora');
+            dailyData.addColumn('number', 'Ventas Totales');
+            dailySalesData.forEach(item => {
+                dailyData.addRow([item.Hour + ":00", item.TotalSales]);
+            });
+
+            var dailyOptions = {
+                title: 'Ventas del Día por Horas',
+                pieHole: 0.4,
+                legend: { position: 'bottom' }
+            };
+
+            var dailyChart = new google.visualization.PieChart(document.getElementById('dailySalesChart'));
+            dailyChart.draw(dailyData, dailyOptions);
+        }
+    </script>
+}
+
+<style>
+    .text-black {
+        color: black !important;
+    }
+    .chart-container {
+        width: 100%;
+        height: 400px;
+    }
+    .chart-title {
+        text-align: center;
+        margin-top: 20px;
+        font-family: 'Poppins', sans-serif;
+    }
+    .chart-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+</style>

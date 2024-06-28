@@ -13,7 +13,5 @@ namespace Eats_Tech.Models
         public double Costo { get; set; }
         public int IdCliente { get; set; }
         public string Status { get; set; }
-
-
     }
 }

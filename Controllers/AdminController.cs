@@ -1,11 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Eats_Tech.Models;
-
-using Eats_Tech.Models;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-using System.Threading;
+using System;
+using System.Linq;
+using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Hosting;
+using System.Threading.Tasks;
 using Eats_Tech.Providers;
 using Eats_Tech.Helpers;
 
@@ -15,17 +14,18 @@ namespace Eats_Tech.Controllers
     {
         private HelperUploadFiles helperUpload;
         private readonly Eats_TechDB _contextDB;
-        public static string CorreoS { get; set;}
-        public static int IdCat { get; set;}
+        public static string CorreoS { get; set; }
+        public static int IdCat { get; set; }
         public static int IdPlat { get; set; }
-        public static int IdU {  get; set; }
-        public static string NameCat { get; set;}
+        public static int IdU { get; set; }
+        public static string NameCat { get; set; }
 
-        public AdminController(HelperUploadFiles helperUpload,  Eats_TechDB contextDB)
+        public AdminController(HelperUploadFiles helperUpload, Eats_TechDB contextDB)
         {
             _contextDB = contextDB;
             this.helperUpload = helperUpload;
         }
+
         public void Cookies()
         {
             var miCookie = HttpContext.Request.Cookies["Cookie_EatsTech"];
@@ -43,18 +43,18 @@ namespace Eats_Tech.Controllers
                 }
             }
         }
+
         public IActionResult Index()
         {
             Cookies();
             List<Usuario> user = _contextDB.Usuario.ToList();
-            foreach(var u in user)
+            foreach (var u in user)
             {
-                if(u.Correo == CorreoS)
+                if (u.Correo == CorreoS)
                 {
                     ViewBag.ImagenPerfil = u.DireccionImagen;
                     return View();
                 }
-                    
             }
             return View();
         }
@@ -71,19 +71,20 @@ namespace Eats_Tech.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public IActionResult AgregarMenu(string Categoria)
         {
             List<Categoria> categoria = _contextDB.Categoria.ToList();
-            foreach(var i in categoria)
+            foreach (var i in categoria)
             {
-                if(i.NombreCategoria == Categoria)
+                if (i.NombreCategoria == Categoria)
                 {
-                    if(i.Activo == 0)
+                    if (i.Activo == 0)
                     {
                         var u = _contextDB.Categoria.FirstOrDefault(o => o.NombreCategoria == Categoria);
                         u.Activo = 1;
-                        _contextDB.Entry(u).State = EntityState.Modified; ;
+                        _contextDB.Entry(u).State = EntityState.Modified;
                         _contextDB.SaveChanges();
                         return RedirectToAction("Menu");
                     }
@@ -92,7 +93,6 @@ namespace Eats_Tech.Controllers
                         ViewBag.Mensaje = "Esta categoria ya existe";
                         return View();
                     }
-                    
                 }
             }
 
@@ -107,6 +107,7 @@ namespace Eats_Tech.Controllers
 
             return RedirectToAction("Menu");
         }
+
         [HttpGet]
         public IActionResult ModMenu(string Categoria, int IdCategoria)
         {
@@ -114,6 +115,7 @@ namespace Eats_Tech.Controllers
             IdCat = IdCategoria;
             return View();
         }
+
         [HttpPost]
         public IActionResult ModMenu(string Categoria)
         {
@@ -129,7 +131,7 @@ namespace Eats_Tech.Controllers
                     {
                         var r = _contextDB.Categoria.FirstOrDefault(o => o.NombreCategoria == cat);
                         r.NombreCategoria = Categoria;
-                        _contextDB.Entry(r).State = EntityState.Modified; ;
+                        _contextDB.Entry(r).State = EntityState.Modified;
                         _contextDB.SaveChanges();
                         return RedirectToAction("Menu");
                     }
@@ -141,26 +143,26 @@ namespace Eats_Tech.Controllers
                 }
             }
 
-            
             u.NombreCategoria = Categoria;
-            _contextDB.Entry(u).State = EntityState.Modified; ;
+            _contextDB.Entry(u).State = EntityState.Modified;
             _contextDB.SaveChanges();
 
             List<Menu> menu = _contextDB.Menu.ToList();
 
-           for(int i = 0; i < menu.Count; i++)
-           {
+            for (int i = 0; i < menu.Count; i++)
+            {
                 var j = _contextDB.Menu.FirstOrDefault(o => o.Categoria == cat);
-                if(j != null)
+                if (j != null)
                 {
                     j.Categoria = Categoria;
-                    _contextDB.Entry(j).State = EntityState.Modified; ;
+                    _contextDB.Entry(j).State = EntityState.Modified;
                     _contextDB.SaveChanges();
                 }
-           }
+            }
 
             return RedirectToAction("Menu");
         }
+
         [HttpGet]
         public IActionResult EliMenu(int IdCategoria)
         {
@@ -168,12 +170,13 @@ namespace Eats_Tech.Controllers
             IdCat = IdCategoria;
             return View(Cat);
         }
+
         [HttpPost]
         public IActionResult EliMenu()
         {
             var u = _contextDB.Categoria.FirstOrDefault(o => o.Id == IdCat);
             u.Activo = 0;
-            _contextDB.Entry(u).State = EntityState.Modified; ;
+            _contextDB.Entry(u).State = EntityState.Modified;
             _contextDB.SaveChanges();
             return RedirectToAction("Menu");
         }
@@ -188,18 +191,20 @@ namespace Eats_Tech.Controllers
             List<Menu> menu = _contextDB.Menu.ToList();
             return View(menu);
         }
+
         [HttpGet]
         public IActionResult AgregarPlatillo()
         {
             return View();
         }
+
         [HttpPost]
         public async Task<IActionResult> AgregarPlatillo(IFormFile Imagen, string NombrePlatillo, string Descripcion, double Precio)
         {
             List<Menu> menu = _contextDB.Menu.ToList();
-            foreach(var m in menu)
+            foreach (var m in menu)
             {
-                if(m.NombrePlatillo == NombrePlatillo && m.Activo == 1)
+                if (m.NombrePlatillo == NombrePlatillo && m.Activo == 1)
                 {
                     ViewBag.Mensaje = "Esta platillo ya existe";
                     return View();
@@ -208,9 +213,9 @@ namespace Eats_Tech.Controllers
 
             string nombreImagen = "";
             List<Categoria> categorias = _contextDB.Categoria.ToList();
-            foreach(var i in categorias)
+            foreach (var i in categorias)
             {
-                if(i.NombreCategoria == NameCat)
+                if (i.NombreCategoria == NameCat)
                 {
                     nombreImagen = Convert.ToString(i.Id) + "_" + Convert.ToString(menu.Count + 1) + "_" + Imagen.FileName;
                     await this.helperUpload.UploadFilesAsync(Imagen, nombreImagen, Folders.Platillos);
@@ -228,6 +233,7 @@ namespace Eats_Tech.Controllers
 
             return RedirectToAction("Platillo");
         }
+
         [HttpGet]
         public IActionResult ModPlatillo(int IdPlatillo)
         {
@@ -235,7 +241,7 @@ namespace Eats_Tech.Controllers
             List<Menu> menu = _contextDB.Menu.ToList();
             foreach (var m in menu)
             {
-                if(m.Id == IdPlatillo)
+                if (m.Id == IdPlatillo)
                 {
                     NameCat = m.Categoria;
                     ViewBag.Nombre = m.NombrePlatillo;
@@ -245,6 +251,7 @@ namespace Eats_Tech.Controllers
             }
             return View();
         }
+
         [HttpPost]
         public async Task<IActionResult> ModPlatillo(IFormFile Imagen, string NombrePlatillo, string Descripcion, double Precio)
         {
@@ -260,7 +267,7 @@ namespace Eats_Tech.Controllers
 
             var u = _contextDB.Menu.FirstOrDefault(o => o.Id == IdPlat);
             string nombreImagen = "";
-            if(Imagen != null)
+            if (Imagen != null)
             {
                 List<Categoria> categorias = _contextDB.Categoria.ToList();
                 foreach (var i in categorias)
@@ -274,26 +281,27 @@ namespace Eats_Tech.Controllers
                 }
             }
 
-            
             u.NombrePlatillo = NombrePlatillo;
             u.Descripcion = Descripcion;
             u.Costo = Precio;
-            _contextDB.Entry(u).State = EntityState.Modified; ;
+            _contextDB.Entry(u).State = EntityState.Modified;
             _contextDB.SaveChanges();
             return RedirectToAction("Platillo");
         }
+
         public IActionResult EliPlatillo(int IdPlatillo)
         {
             var Cat = _contextDB.Menu.FirstOrDefault(c => c.Id == IdPlatillo);
             IdPlat = IdPlatillo;
             return View(Cat);
         }
+
         [HttpPost]
         public IActionResult EliPlatillo()
         {
             var u = _contextDB.Menu.FirstOrDefault(o => o.Id == IdPlat);
             u.Activo = 0;
-            _contextDB.Entry(u).State = EntityState.Modified; ;
+            _contextDB.Entry(u).State = EntityState.Modified;
             _contextDB.SaveChanges();
             return RedirectToAction("Platillo");
         }
@@ -304,25 +312,27 @@ namespace Eats_Tech.Controllers
             List<Usuario> user = _contextDB.Usuario.ToList();
             return View(user);
         }
+
         [HttpGet]
         public IActionResult AgregarUsuarios()
         {
             return View();
         }
+
         [HttpPost]
         public async Task<IActionResult> AgregarUsuarios(IFormFile Imagen, string Correo, string Contra1, string Contra2, string Nombre, string Categoria)
         {
             List<Usuario> user = _contextDB.Usuario.ToList();
-            foreach(var u in user)
+            foreach (var u in user)
             {
-                if(u.Correo == Correo && u.Activo != 777)
+                if (u.Correo == Correo && u.Activo != 777)
                 {
                     ViewBag.Mensaje = "Este correo ya esta registrado";
                     return View();
                 }
             }
 
-            if(Contra1 != Contra2)
+            if (Contra1 != Contra2)
             {
                 ViewBag.Mensaje = "Las contraseñas no son iguales";
                 return View();
@@ -340,7 +350,6 @@ namespace Eats_Tech.Controllers
             {
                 nombreImagen = "h";
             }
-            
 
             var insertarusuario = new Usuario[]
             {
@@ -353,6 +362,7 @@ namespace Eats_Tech.Controllers
 
             return RedirectToAction("Usuarios");
         }
+
         [HttpGet]
         public IActionResult ModUsuarios(int Id)
         {
@@ -360,12 +370,13 @@ namespace Eats_Tech.Controllers
             var usuario = _contextDB.Usuario.FirstOrDefault(p => p.ID == Id);
             return View(usuario);
         }
+
         [HttpPost]
         public async Task<IActionResult> ModUsuarios(IFormFile Imagen, string Correo, string Contra1, string Contra2, string Nombre, string Categoria, int Id)
         {
             var usuario = _contextDB.Usuario.FirstOrDefault(p => p.ID == Id);
 
-            if(usuario.Correo != Correo)
+            if (usuario.Correo != Correo)
             {
                 List<Usuario> user = _contextDB.Usuario.ToList();
                 foreach (var u in user)
@@ -379,7 +390,7 @@ namespace Eats_Tech.Controllers
                 usuario.Correo = Correo;
             }
 
-            if(Contra1 != null || Contra2 != null)
+            if (Contra1 != null || Contra2 != null)
             {
                 if (Contra1 != Contra2)
                 {
@@ -392,18 +403,19 @@ namespace Eats_Tech.Controllers
             usuario.Nombre = Nombre;
             usuario.TipoUsuario = Categoria;
 
-            if(Imagen != null)
+            if (Imagen != null)
             {
                 string nombreImagen = Id + "_" + Imagen.FileName;
                 await this.helperUpload.UploadFilesAsync(Imagen, nombreImagen, Folders.Users);
                 nombreImagen = "../Images/Users/" + nombreImagen;
                 usuario.DireccionImagen = nombreImagen;
             }
-            
-            _contextDB.Entry(usuario).State = EntityState.Modified; ;
+
+            _contextDB.Entry(usuario).State = EntityState.Modified;
             _contextDB.SaveChanges();
             return RedirectToAction("Usuarios");
         }
+
         [HttpGet]
         public IActionResult EliUsuarios(int Id)
         {
@@ -411,12 +423,13 @@ namespace Eats_Tech.Controllers
             IdPlat = Id;
             return View(Cat);
         }
+
         [HttpPost]
         public IActionResult EliUsuarios()
         {
             var u = _contextDB.Usuario.FirstOrDefault(o => o.ID == IdPlat);
             u.Activo = 777;
-            _contextDB.Entry(u).State = EntityState.Modified; ;
+            _contextDB.Entry(u).State = EntityState.Modified;
             _contextDB.SaveChanges();
             return RedirectToAction("Usuarios");
         }
@@ -441,17 +454,19 @@ namespace Eats_Tech.Controllers
             admin.Mesa = Mesa;
             admin.Contrasena2 = Contrasena2;
             admin.Contrasena = Contrasena;
-            if(admin.RegisterMesa())
+            if (admin.RegisterMesa())
                 return RedirectToAction("Mesas");
             ViewBag.Mensaje = AdminModel.Mensaje;
             return View();
         }
+
         [HttpGet]
         public IActionResult ModMesas(string Correo)
         {
             CorreoS = Correo;
             return View();
         }
+
         [HttpPost]
         public IActionResult ModMesas(string Contrasena, string Contrasena2)
         {
@@ -464,6 +479,7 @@ namespace Eats_Tech.Controllers
             ViewBag.Mensaje = AdminModel.Mensaje;
             return View();
         }
+
         [HttpGet]
         public IActionResult EliMesas(string Correo)
         {
@@ -471,17 +487,18 @@ namespace Eats_Tech.Controllers
             var Usuario = _contextDB.Usuario.FirstOrDefault(c => c.Correo == Correo);
             return View(Usuario);
         }
+
         [HttpPost]
         public IActionResult EliMesas()
         {
             AdminModel admin = new AdminModel(_contextDB);
             List<Usuario> usuarios = _contextDB.Usuario.ToList();
             List<Cliente> clientes = _contextDB.Cliente.ToList();
-            foreach(Cliente cliente in clientes)
+            foreach (Cliente cliente in clientes)
             {
-                foreach(Usuario usuario in usuarios)
+                foreach (Usuario usuario in usuarios)
                 {
-                    if(usuario.Correo == CorreoS && usuario.ID == cliente.IdMesa && cliente.Status != "Finalizado")
+                    if (usuario.Correo == CorreoS && usuario.ID == cliente.IdMesa && cliente.Status != "Finalizado")
                     {
                         ViewBag.Mensaje = "No puedes eliminar esta mesa ya que se esta ocupando Xd";
                         var Usuario = _contextDB.Usuario.FirstOrDefault(c => c.Correo == CorreoS);
@@ -493,6 +510,7 @@ namespace Eats_Tech.Controllers
             admin.EliMesa();
             return RedirectToAction("Mesas");
         }
+
         [HttpGet]
         public IActionResult Clientes()
         {
@@ -506,6 +524,7 @@ namespace Eats_Tech.Controllers
             };
             return View(viewmodel);
         }
+
         [HttpGet]
         public IActionResult Ordenes()
         {
@@ -515,10 +534,10 @@ namespace Eats_Tech.Controllers
             List<Orden> orden = _contextDB.Orden.ToList();
             List<Menu> menu = _contextDB.Menu.ToList();
 
-            string[,] cliente = new string[clientes.Count,2];
+            string[,] cliente = new string[clientes.Count, 2];
             int i = 0;
             int j = 0;
-            string[,] ordenes = new string[orden.Count,6];
+            string[,] ordenes = new string[orden.Count, 6];
             ViewBag.Rango = orden.Count;
 
             foreach (var o in orden)
@@ -561,6 +580,7 @@ namespace Eats_Tech.Controllers
             };
             return View(viewmodel);
         }
+
         [HttpGet]
         public IActionResult Comentarios()
         {
@@ -575,5 +595,64 @@ namespace Eats_Tech.Controllers
             return View(viewmodel);
         }
 
+        // Nuevo método para obtener datos de ventas del mes
+        private List<MonthlySalesData> GetMonthlySales(int year, int month)
+        {
+            var salesData = from o in _contextDB.Orden
+                            join c in _contextDB.Cliente on o.IdCliente equals c.Id
+                            where c.Hora.Year == year && c.Hora.Month == month
+                            group o by new { c.Hora.Year, c.Hora.Month, c.Hora.Day } into g
+                            select new MonthlySalesData
+                            {
+                                Date = new DateTime(g.Key.Year, g.Key.Month, g.Key.Day),
+                                TotalSales = g.Sum(x => x.Costo)
+                            };
+            return salesData.ToList();
+        }
+
+        // Nuevo método para obtener datos de ventas del día por horas
+        private List<HourlySalesData> GetDailySales(int year, int month, int day)
+        {
+            var salesData = from o in _contextDB.Orden
+                            join c in _contextDB.Cliente on o.IdCliente equals c.Id
+                            where c.Hora.Year == year && c.Hora.Month == month && c.Hora.Day == day
+                            group o by c.Hora.Hour into g
+                            select new HourlySalesData
+                            {
+                                Hour = g.Key,
+                                TotalSales = g.Sum(x => x.Costo)
+                            };
+            return salesData.ToList();
+        }
+
+        [HttpGet]
+        public IActionResult SalesReport()
+        {
+            Cookies();
+
+            var now = DateTime.Now;
+
+            var monthlySalesData = GetMonthlySales(now.Year, now.Month);
+            var dailySalesData = GetDailySales(now.Year, now.Month, now.Day);
+
+            ViewBag.MonthlySalesData = System.Text.Json.JsonSerializer.Serialize(monthlySalesData);
+            ViewBag.DailySalesData = System.Text.Json.JsonSerializer.Serialize(dailySalesData);
+
+            return View();
+        }
+
+
+    }
+
+    public class MonthlySalesData
+    {
+        public DateTime Date { get; set; }
+        public double TotalSales { get; set; }
+    }
+
+    public class HourlySalesData
+    {
+        public int Hour { get; set; }
+        public double TotalSales { get; set; }
     }
 }

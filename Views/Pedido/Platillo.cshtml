@@ -195,6 +195,13 @@
             text-align: center;
             margin-top: 20px;
         }
+        #Tot{
+            font-size: 24px;
+            font-weight: bold;
+            color: #e74c3c;
+            text-align: center;
+            margin-top: 20px;
+        }
 
         .finalize-btn {
             background-color: #e74c3c;
@@ -276,7 +283,15 @@
                             <div class="price">$@ViewBag.Costo</div>
                             <div class="quantity">
                                 <label for="quantity">Cantidad:</label>
-                                <input type="number" id="quantity" name="Cantidad" value="1" min="1">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <button type="button" class="btn btn-outline-secondary decrement-detail-btn">-</button>
+                                    </div>
+                                    <input type="text" id="quantity" name="Cantidad" value="1" class="form-control numeric" readonly>
+                                    <div class="input-group-append">
+                                        <button type="button" class="btn btn-outline-secondary increment-detail-btn">+</button>
+                                    </div>
+                                </div>
                             </div>
                             <button type="submit" asp-action="Platillo" asp-controller="Pedido" class="btn btn-custom">Agregar al pedido</button>
                             <input type="hidden" name="Cate" value="@ViewBag.Categoria">
@@ -353,7 +368,7 @@
                             </tbody>
                         </table>
 
-                        <div class="total">Total: $@Total</div>
+                        <div id="Tot">Total: $@Total</div>
                         @if (Total != 0)
                         {
                             <form asp-action="Orden" asp-controller="Pedido" method="post">
@@ -420,6 +435,23 @@
                 var currentValue = parseInt(input.val());
                 if (currentValue > 1) {
                     input.val(currentValue - 1).change();
+                }
+            });
+
+            // Nuevas funciones para los botones de incremento y decremento en el detalle del contenido
+            $('.increment-detail-btn').on('click', function () {
+                var input = $('#quantity');
+                var currentValue = parseInt(input.val());
+                if (currentValue < 50) {
+                    input.val(currentValue + 1);
+                }
+            });
+
+            $('.decrement-detail-btn').on('click', function () {
+                var input = $('#quantity');
+                var currentValue = parseInt(input.val());
+                if (currentValue > 1) {
+                    input.val(currentValue - 1);
                 }
             });
 
